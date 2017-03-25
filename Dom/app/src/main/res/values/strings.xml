@@ -10,4 +10,7 @@
     <string name="getHousesFromInit">Find Listings!</string>
     <string name="invalid_input">Invalid input. Ensure all fields are filled out.</string>
     <string name="invalid_zip">Invalid zip code.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
