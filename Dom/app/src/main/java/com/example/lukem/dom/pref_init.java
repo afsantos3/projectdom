@@ -7,4 +7,6 @@ package com.example.lukem.dom;
 public class pref_init {
     public int zip_code;
     public int num_beds;
+
+
 }
