@@ -40,11 +40,11 @@ public class HouseActivity extends AppCompatActivity {
 
         pe = new pref_init(zip, numBeds);
         houseFactory = new sorter(pe);
-        currentHouse = houseFactory.get_next_house();
+        currentHouse = houseFactory.temp_get_fake_house();
 
-        if(true || currentHouse != null){
-            sizeText.setText("100000");
-            priceText.setText("999999");
+        if(currentHouse != null){
+            sizeText.setText(Integer.toString(currentHouse.square_foot));
+            priceText.setText(Double.toString(currentHouse.price));
             houseImageView.setImageResource(R.drawable.dom);
         }
 
