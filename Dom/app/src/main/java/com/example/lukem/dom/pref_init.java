@@ -5,8 +5,8 @@ package com.example.lukem.dom;
  */
 
 public class pref_init {
-    public int zip_code;
-    public int num_beds;
+    private int zip_code;
+    private int num_beds;
 
     public pref_init(int zip_code, int num_beds) {
         this.zip_code = zip_code;
