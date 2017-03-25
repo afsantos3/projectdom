@@ -1,5 +1,5 @@
 {
-  "subject": "LivingSpace",
+  "subject": "EdmundsDemo",
   "columns": [
     {
       "key": "price",
@@ -8,24 +8,24 @@
       "is_objective": false,
       "goal": "min",
       "format": "number:0 | taPrefix:'$'",
-      "description": "Listing price"
+      "description": "Manufacturer's Suggested Retail Price (MSRP)"
     },
     {
-      "key": "squareFootage",
-      "full_name": "Square Footage",
+      "key": "engineSize",
+      "full_name": "Engine Volume",
       "type": "numeric",
       "is_objective": false,
       "goal": "max",
-      "format": "number:1 | taSuffix:' sq.ft.'",
+      "format": "number:1 | taSuffix:' L'",
       "range": {
         "low": 0,
         "high": 10
       },
-      "description": "The total floor size in sq.ft"
+      "description": "The engine size in liters"
     },
     {
-      "key": "numBath",
-      "full_name": "Number of Bathrooms",
+      "key": "averageRating",
+      "full_name": "Average Rating",
       "type": "numeric",
       "is_objective": false,
       "goal": "max",
@@ -34,17 +34,43 @@
         "low": 0,
         "high": 5
       },
-      "description": "Number of bathrooms in house"
+      "description": "Average user-generated vehicle ratings and reviews that were submitted on Edmunds.com"
     },
     {
-      "key": "numBed",
-      "full_name": "Number of Bedrooms",
+      "key": "reviewsCount",
+      "full_name": "Number of Reviews",
       "type": "numeric",
       "is_objective": false,
       "goal": "max",
       "format": "number:0",
-      "description": "Number of bedrooms in house"
+      "description": "Number of user-generated vehicle ratings and reviews that were submitted on Edmunds.com"
     },
+    {
+      "key": "power",
+      "full_name": "Power",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "max",
+      "format": "number:0 | taSuffix:' hp'",
+      "range": {
+        "low": 0,
+        "high": 710
+      },
+      "description": "The engine horsepower"
+    },
+    {
+      "key": "MPGCombined",
+      "full_name": "MPG Combined",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "max",
+      "format": "number:1 | taSuffix:' MPG'",
+      "range": {
+        "low": 0,
+        "high": 55
+      },
+      "description": "Miles Per Gallon. Computed as 55% in the city and 45% on a highway."
+    }
   ],
   "options": [
     {
@@ -53,11 +79,11 @@
       "description": "Technology Plus Package 4dr Sedan (2.4L 4cyl 8AM)",
       "values": {
         "price": 32900,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 201,
         "MPGCombined": 30,
-        "numBath": 4.05,
-        "numBed": 15
+        "averageRating": 4.05,
+        "reviewsCount": 15
       }
     },
     {
@@ -66,11 +92,11 @@
       "description": "4dr SUV (3.5L 6cyl 9A)",
       "values": {
         "price": 43015,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 290,
         "MPGCombined": 23,
-        "numBath": 3.791,
-        "numBed": 37
+        "averageRating": 3.791,
+        "reviewsCount": 37
       }
     },
     {
@@ -79,11 +105,11 @@
       "description": "AcuraWatch Plus Package 4dr SUV AWD (3.5L 6cyl 6A)",
       "values": {
         "price": 38170,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 279,
         "MPGCombined": 23,
-        "numBath": 4.31,
-        "numBed": 29
+        "averageRating": 4.31,
+        "reviewsCount": 29
       }
     },
     {
@@ -92,11 +118,11 @@
       "description": "Advance Package 4dr Sedan (3.5L 6cyl 6A)",
       "values": {
         "price": 60450,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 310,
         "MPGCombined": 25,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -105,11 +131,11 @@
       "description": "Technology Package 4dr Sedan (2.4L 4cyl 8AM)",
       "values": {
         "price": 35750,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 206,
         "MPGCombined": 29,
-        "numBath": 4.429,
-        "numBed": 14
+        "averageRating": 4.429,
+        "reviewsCount": 14
       }
     },
     {
@@ -118,11 +144,11 @@
       "description": "Spider 2dr Convertible (1.7L 4cyl Turbo 6AM)",
       "values": {
         "price": 65900,
-        "squareFootage": 1.7,
+        "engineSize": 1.7,
         "power": 237,
         "MPGCombined": 29,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -131,11 +157,11 @@
       "description": "Bond Edition 2dr Coupe (5.9L 12cyl 6A)",
       "values": {
         "price": 235307,
-        "squareFootage": 5.9,
+        "engineSize": 5.9,
         "power": 540,
         "MPGCombined": 16,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -144,11 +170,11 @@
       "description": "4dr Sedan (5.9L 12cyl 8A)",
       "values": {
         "price": 206000,
-        "squareFootage": 5.9,
+        "engineSize": 5.9,
         "power": 552,
         "MPGCombined": 18,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -157,11 +183,11 @@
       "description": "Roadster 2dr Convertible (5.9L 12cyl 7AM)",
       "values": {
         "price": 198195,
-        "squareFootage": 5.9,
+        "engineSize": 5.9,
         "power": 565,
         "MPGCombined": 15,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -170,11 +196,11 @@
       "description": "GT Roadster 2dr Convertible (4.7L 8cyl 6M)",
       "values": {
         "price": 117800,
-        "squareFootage": 4.7,
+        "engineSize": 4.7,
         "power": 430,
         "MPGCombined": 16,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -183,11 +209,11 @@
       "description": "Carbon Volante 2dr Convertible (5.9L 12cyl 8A)",
       "values": {
         "price": 320695,
-        "squareFootage": 5.9,
+        "engineSize": 5.9,
         "power": 568,
         "MPGCombined": 17,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -196,11 +222,11 @@
       "description": "1.8 TFSI Premium 2dr Convertible (1.8L 4cyl Turbo 6AM)",
       "values": {
         "price": 36600,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 170,
         "MPGCombined": 29,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -209,11 +235,11 @@
       "description": "1.4 TFSI PHEV Premium 4dr Hatchback (1.4L 4cyl gas/electric hybrid Turbo 6AM)",
       "values": {
         "price": 37900,
-        "squareFootage": 1.4,
+        "engineSize": 1.4,
         "power": 204,
         "MPGCombined": null,
-        "numBath": 3.333,
-        "numBed": 3
+        "averageRating": 3.333,
+        "reviewsCount": 3
       }
     },
     {
@@ -222,11 +248,11 @@
       "description": "2.0T Premium quattro 4dr Sedan AWD (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 38000,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 220,
         "MPGCombined": 26,
-        "numBath": 3.333,
-        "numBed": 3
+        "averageRating": 3.333,
+        "reviewsCount": 3
       }
     },
     {
@@ -235,11 +261,11 @@
       "description": "2.0T Premium Plus quattro 2dr Coupe AWD (2.0L 4cyl Turbo 6M)",
       "values": {
         "price": 42800,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 220,
         "MPGCombined": 27,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -248,11 +274,11 @@
       "description": "2.0T Premium Plus 4dr Sedan (2.0L 4cyl Turbo 7AM)",
       "values": {
         "price": 49900,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 252,
         "MPGCombined": 29,
-        "numBath": 5,
-        "numBed": 7
+        "averageRating": 5,
+        "reviewsCount": 7
       }
     },
     {
@@ -261,11 +287,11 @@
       "description": "TDI Premium Plus quattro 4dr Sedan AWD (3.0L 6cyl Turbodiesel 8A)",
       "values": {
         "price": 70400,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 240,
         "MPGCombined": 31,
-        "numBath": 5,
-        "numBed": 3
+        "averageRating": 5,
+        "reviewsCount": 3
       }
     },
     {
@@ -274,11 +300,11 @@
       "description": "L TDI quattro 4dr Sedan AWD (3.0L 6cyl Turbodiesel 8A)",
       "values": {
         "price": 85200,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 240,
         "MPGCombined": 29,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -287,11 +313,11 @@
       "description": "Premium Plus quattro 4dr SUV AWD (2.0L 4cyl Turbo 6A)",
       "values": {
         "price": 35800,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 200,
         "MPGCombined": 24,
-        "numBath": 4.4,
-        "numBed": 5
+        "averageRating": 4.4,
+        "reviewsCount": 5
       }
     },
     {
@@ -300,11 +326,11 @@
       "description": "2.0T Premium Plus quattro 4dr SUV AWD (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 42750,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 220,
         "MPGCombined": 24,
-        "numBath": 5,
-        "numBed": 10
+        "averageRating": 5,
+        "reviewsCount": 10
       }
     },
     {
@@ -313,11 +339,11 @@
       "description": "Prestige quattro 4dr Sedan AWD (4.0L 8cyl Turbo 8A)",
       "values": {
         "price": 108900,
-        "squareFootage": 4,
+        "engineSize": 4,
         "power": 560,
         "MPGCombined": 20,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -326,11 +352,11 @@
       "description": "2.0T Premium Plus quattro 4dr Sedan AWD (2.0L 4cyl Turbo 6AM)",
       "values": {
         "price": 42500,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 292,
         "MPGCombined": 27,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -339,11 +365,11 @@
       "description": "Prestige quattro 4dr Sedan AWD (3.0L 6cyl S/C 7AM)",
       "values": {
         "price": 56100,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 333,
         "MPGCombined": 23,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -352,11 +378,11 @@
       "description": "Premium Plus quattro 2dr Coupe AWD (3.0L 6cyl S/C 6M)",
       "values": {
         "price": 53100,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 333,
         "MPGCombined": 21,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -365,11 +391,11 @@
       "description": "Premium Plus quattro 4dr Sedan AWD (4.0L 8cyl Turbo 7AM)",
       "values": {
         "price": 70900,
-        "squareFootage": 4,
+        "engineSize": 4,
         "power": 450,
         "MPGCombined": 22,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -378,11 +404,11 @@
       "description": "quattro 4dr Sedan AWD (4.0L 8cyl Turbo 7AM)",
       "values": {
         "price": 82900,
-        "squareFootage": 4,
+        "engineSize": 4,
         "power": 450,
         "MPGCombined": 22,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -391,11 +417,11 @@
       "description": "quattro 4dr Sedan AWD (4.0L 8cyl Turbo 8A)",
       "values": {
         "price": 114900,
-        "squareFootage": 4,
+        "engineSize": 4,
         "power": 520,
         "MPGCombined": 20,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -404,11 +430,11 @@
       "description": "3.0T Prestige quattro 4dr SUV AWD (3.0L 6cyl S/C 8A)",
       "values": {
         "price": 60800,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 354,
         "MPGCombined": 20,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -417,11 +443,11 @@
       "description": "2.0T quattro 2dr Convertible AWD (2.0L 4cyl Turbo 6AM)",
       "values": {
         "price": 46400,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 220,
         "MPGCombined": 26,
-        "numBath": 4,
-        "numBed": 1
+        "averageRating": 4,
+        "reviewsCount": 1
       }
     },
     {
@@ -430,11 +456,11 @@
       "description": "quattro 2dr Coupe AWD (2.0L 4cyl Turbo 6AM)",
       "values": {
         "price": 51900,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 292,
         "MPGCombined": 25,
-        "numBath": 4,
-        "numBed": 1
+        "averageRating": 4,
+        "reviewsCount": 1
       }
     },
     {
@@ -443,11 +469,11 @@
       "description": "Premium Plus quattro 4dr Wagon AWD (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 44800,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 220,
         "MPGCombined": 24,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -456,11 +482,11 @@
       "description": "M235i xDrive 2dr Coupe AWD (3.0L 6cyl Turbo 8A)",
       "values": {
         "price": 46150,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 320,
         "MPGCombined": 25,
-        "numBath": 4.8,
-        "numBed": 5
+        "averageRating": 4.8,
+        "reviewsCount": 5
       }
     },
     {
@@ -469,11 +495,11 @@
       "description": "340i 4dr Sedan (3.0L 6cyl Turbo 8A)",
       "values": {
         "price": 45800,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 320,
         "MPGCombined": 27,
-        "numBath": 5,
-        "numBed": 5
+        "averageRating": 5,
+        "reviewsCount": 5
       }
     },
     {
@@ -482,11 +508,11 @@
       "description": "335i xDrive 4dr Hatchback AWD (3.0L 6cyl Turbo 8A)",
       "values": {
         "price": 49200,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 300,
         "MPGCombined": 25,
-        "numBath": 4,
-        "numBed": 2
+        "averageRating": 4,
+        "reviewsCount": 2
       }
     },
     {
@@ -495,11 +521,11 @@
       "description": "428i xDrive SULEV 2dr Convertible AWD (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 52000,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 240,
         "MPGCombined": 26,
-        "numBath": 5,
-        "numBed": 3
+        "averageRating": 5,
+        "reviewsCount": 3
       }
     },
     {
@@ -508,11 +534,11 @@
       "description": "428i xDrive SULEV 4dr Sedan AWD (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 43650,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 240,
         "MPGCombined": 27,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -521,11 +547,11 @@
       "description": "528i xDrive 4dr Sedan AWD (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 52500,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 240,
         "MPGCombined": 27,
-        "numBath": 4.5,
-        "numBed": 6
+        "averageRating": 4.5,
+        "reviewsCount": 6
       }
     },
     {
@@ -534,11 +560,11 @@
       "description": "550i xDrive 4dr Hatchback AWD (4.4L 8cyl Turbo 8A)",
       "values": {
         "price": 72500,
-        "squareFootage": 4.4,
+        "engineSize": 4.4,
         "power": 445,
         "MPGCombined": 20,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -547,11 +573,11 @@
       "description": "640i 2dr Convertible (3.0L 6cyl Turbo 8A)",
       "values": {
         "price": 84800,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 315,
         "MPGCombined": 25,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -560,11 +586,11 @@
       "description": "640i xDrive 4dr Sedan AWD (3.0L 6cyl Turbo 8A)",
       "values": {
         "price": 82500,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 315,
         "MPGCombined": 24,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -573,11 +599,11 @@
       "description": "750i 4dr Sedan (4.4L 8cyl Turbo 8A)",
       "values": {
         "price": 94400,
-        "squareFootage": 4.4,
+        "engineSize": 4.4,
         "power": 445,
         "MPGCombined": 21,
-        "numBath": 4,
-        "numBed": 2
+        "averageRating": 4,
+        "reviewsCount": 2
       }
     },
     {
@@ -586,11 +612,11 @@
       "description": "xDrive 4dr Sedan AWD (4.4L 8cyl Turbo 8A)",
       "values": {
         "price": 122200,
-        "squareFootage": 4.4,
+        "engineSize": 4.4,
         "power": 600,
         "MPGCombined": 19,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -599,11 +625,11 @@
       "description": "4dr Sedan (3.0L 6cyl Turbo gas/electric hybrid 8A)",
       "values": {
         "price": 62100,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 335,
         "MPGCombined": 26,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -612,11 +638,11 @@
       "description": "2dr Coupe (3.0L 6cyl Turbo 6M)",
       "values": {
         "price": 51700,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 365,
         "MPGCombined": 22,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -625,11 +651,11 @@
       "description": "4dr Sedan (3.0L 6cyl Turbo 6M)",
       "values": {
         "price": 63500,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 425,
         "MPGCombined": 21,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -638,11 +664,11 @@
       "description": "2dr Coupe (3.0L 6cyl Turbo 6M)",
       "values": {
         "price": 65700,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 425,
         "MPGCombined": 21,
-        "numBath": 4,
-        "numBed": 2
+        "averageRating": 4,
+        "reviewsCount": 2
       }
     },
     {
@@ -651,11 +677,11 @@
       "description": "4dr Sedan (4.4L 8cyl Turbo 7AM)",
       "values": {
         "price": 94100,
-        "squareFootage": 4.4,
+        "engineSize": 4.4,
         "power": 560,
         "MPGCombined": 17,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -664,11 +690,11 @@
       "description": "2dr Coupe (4.4L 8cyl Turbo 7AM)",
       "values": {
         "price": 113400,
-        "squareFootage": 4.4,
+        "engineSize": 4.4,
         "power": 552,
         "MPGCombined": 17,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -677,11 +703,11 @@
       "description": "4dr Sedan (4.4L 8cyl Turbo 7AM)",
       "values": {
         "price": 117200,
-        "squareFootage": 4.4,
+        "engineSize": 4.4,
         "power": 552,
         "MPGCombined": 17,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -690,11 +716,11 @@
       "description": "xDrive28i 4dr SUV AWD (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 34800,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 228,
         "MPGCombined": 27,
-        "numBath": 4.5,
-        "numBed": 8
+        "averageRating": 4.5,
+        "reviewsCount": 8
       }
     },
     {
@@ -703,11 +729,11 @@
       "description": "xDrive28i 4dr SUV AWD (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 40950,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 240,
         "MPGCombined": 24,
-        "numBath": 4.375,
-        "numBed": 8
+        "averageRating": 4.375,
+        "reviewsCount": 8
       }
     },
     {
@@ -716,11 +742,11 @@
       "description": "M40i 4dr SUV AWD (3.0L 6cyl Turbo 8A)",
       "values": {
         "price": 57800,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 360,
         "MPGCombined": 21,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -729,11 +755,11 @@
       "description": "xDrive50i 4dr SUV AWD (4.4L 8cyl Turbo 8A)",
       "values": {
         "price": 71500,
-        "squareFootage": 4.4,
+        "engineSize": 4.4,
         "power": 445,
         "MPGCombined": 18,
-        "numBath": 4.875,
-        "numBed": 8
+        "averageRating": 4.875,
+        "reviewsCount": 8
       }
     },
     {
@@ -742,11 +768,11 @@
       "description": "4dr SUV AWD (4.4L 8cyl Turbo 8A)",
       "values": {
         "price": 98800,
-        "squareFootage": 4.4,
+        "engineSize": 4.4,
         "power": 567,
         "MPGCombined": 16,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -755,11 +781,11 @@
       "description": "xDrive40e 4dr SUV AWD (2.0L 4cyl Turbo gas/electric hybrid 8A)",
       "values": {
         "price": 62100,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 240,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -768,11 +794,11 @@
       "description": "sDrive35i 4dr SUV (3.0L 6cyl Turbo 8A)",
       "values": {
         "price": 60600,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 300,
         "MPGCombined": 21,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -781,11 +807,11 @@
       "description": "4dr SUV AWD (4.4L 8cyl Turbo 8A)",
       "values": {
         "price": 102200,
-        "squareFootage": 4.4,
+        "engineSize": 4.4,
         "power": 567,
         "MPGCombined": 16,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -794,11 +820,11 @@
       "description": "sDrive35i 2dr Convertible (3.0L 6cyl Turbo 7AM)",
       "values": {
         "price": 57500,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 300,
         "MPGCombined": 20,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -809,8 +835,8 @@
         "price": 46250,
         "power": 170,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -819,11 +845,11 @@
       "description": "2dr Coupe AWD (1.5L 3cyl Turbo gas/electric hybrid 6A)",
       "values": {
         "price": 140700,
-        "squareFootage": 1.5,
+        "engineSize": 1.5,
         "power": 357,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -832,11 +858,11 @@
       "description": "Premium 2dr Convertible (1.6L 4cyl Turbo 6A)",
       "values": {
         "price": 36065,
-        "squareFootage": 1.6,
+        "engineSize": 1.6,
         "power": 200,
         "MPGCombined": 23,
-        "numBath": 4.25,
-        "numBed": 4
+        "averageRating": 4.25,
+        "reviewsCount": 4
       }
     },
     {
@@ -845,11 +871,11 @@
       "description": "Convenience Group 4dr SUV (3.6L 6cyl 6A)",
       "values": {
         "price": 39065,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 288,
         "MPGCombined": 20,
-        "numBath": 4,
-        "numBed": 2
+        "averageRating": 4,
+        "reviewsCount": 2
       }
     },
     {
@@ -858,11 +884,11 @@
       "description": "4dr SUV (1.4L 4cyl Turbo 6A)",
       "values": {
         "price": 24065,
-        "squareFootage": 1.4,
+        "engineSize": 1.4,
         "power": 138,
         "MPGCombined": 29,
-        "numBath": 3,
-        "numBed": 4
+        "averageRating": 3,
+        "reviewsCount": 4
       }
     },
     {
@@ -871,11 +897,11 @@
       "description": "4dr Sedan (3.6L 6cyl 6A)",
       "values": {
         "price": 33810,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 304,
         "MPGCombined": 23,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -884,11 +910,11 @@
       "description": "1SV 4dr Sedan (2.4L 4cyl 6A)",
       "values": {
         "price": 27065,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 182,
         "MPGCombined": 24,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -897,11 +923,11 @@
       "description": "Premium Turbo Group 4dr Sedan (2.0L 4cyl Turbo 6A)",
       "values": {
         "price": 28670,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 250,
         "MPGCombined": 25,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -910,11 +936,11 @@
       "description": "Premium 4dr Sedan AWD (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 47210,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 272,
         "MPGCombined": 26,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -923,11 +949,11 @@
       "description": "Premium 2dr Coupe (3.6L 6cyl 8A)",
       "values": {
         "price": 50835,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 335,
         "MPGCombined": 25,
-        "numBath": 4,
-        "numBed": 1
+        "averageRating": 4,
+        "reviewsCount": 1
       }
     },
     {
@@ -936,11 +962,11 @@
       "description": "4dr Sedan (3.6L 6cyl Turbo 6M)",
       "values": {
         "price": 60465,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 464,
         "MPGCombined": 20,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -949,11 +975,11 @@
       "description": "4dr Sedan AWD (3.6L 6cyl 8A)",
       "values": {
         "price": 55495,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 335,
         "MPGCombined": 22,
-        "numBath": 3,
-        "numBed": 1
+        "averageRating": 3,
+        "reviewsCount": 1
       }
     },
     {
@@ -962,11 +988,11 @@
       "description": "Standard 4dr Sedan AWD (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 47560,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 268,
         "MPGCombined": 25,
-        "numBath": 4,
-        "numBed": 3
+        "averageRating": 4,
+        "reviewsCount": 3
       }
     },
     {
@@ -975,11 +1001,11 @@
       "description": "4dr Sedan (6.2L 8cyl S/C 8A)",
       "values": {
         "price": 83995,
-        "squareFootage": 6.2,
+        "engineSize": 6.2,
         "power": 640,
         "MPGCombined": 17,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -990,8 +1016,8 @@
         "price": 65000,
         "power": 233,
         "MPGCombined": null,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -1000,11 +1026,11 @@
       "description": "Luxury 4dr SUV 4WD (6.2L 8cyl 8A)",
       "values": {
         "price": 79645,
-        "squareFootage": 6.2,
+        "engineSize": 6.2,
         "power": 420,
         "MPGCombined": 18,
-        "numBath": 4,
-        "numBed": 1
+        "averageRating": 4,
+        "reviewsCount": 1
       }
     },
     {
@@ -1013,11 +1039,11 @@
       "description": "Luxury 4dr SUV (6.2L 8cyl 8A)",
       "values": {
         "price": 80045,
-        "squareFootage": 6.2,
+        "engineSize": 6.2,
         "power": 420,
         "MPGCombined": 18,
-        "numBath": 3.5,
-        "numBed": 2
+        "averageRating": 3.5,
+        "reviewsCount": 2
       }
     },
     {
@@ -1026,11 +1052,11 @@
       "description": "Premium 4dr SUV (3.6L 6cyl 6A)",
       "values": {
         "price": 48920,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 308,
         "MPGCombined": 20,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -1039,11 +1065,11 @@
       "description": "Platinum 4dr Sedan (3.6L 6cyl 6A)",
       "values": {
         "price": 64550,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 304,
         "MPGCombined": 23,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1052,11 +1078,11 @@
       "description": "SS w/1SS 2dr Coupe (6.2L 8cyl 6M)",
       "values": {
         "price": 36300,
-        "squareFootage": 6.2,
+        "engineSize": 6.2,
         "power": 455,
         "MPGCombined": 20,
-        "numBath": 4.25,
-        "numBed": 4
+        "averageRating": 4.25,
+        "reviewsCount": 4
       }
     },
     {
@@ -1065,11 +1091,11 @@
       "description": "LS 4dr Minivan (2.0L 4cyl CVT)",
       "values": {
         "price": 21955,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 131,
         "MPGCombined": 25,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1078,11 +1104,11 @@
       "description": "Work Truck 4dr Crew Cab 4WD LB (3.6L 6cyl 6A)",
       "values": {
         "price": 30305,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 305,
         "MPGCombined": 20,
-        "numBath": 4.118,
-        "numBed": 17
+        "averageRating": 4.118,
+        "reviewsCount": 17
       }
     },
     {
@@ -1091,11 +1117,11 @@
       "description": "Z06 w/2LZ 2dr Coupe (6.2L 8cyl S/C 7M)",
       "values": {
         "price": 82965,
-        "squareFootage": 6.2,
+        "engineSize": 6.2,
         "power": 650,
         "MPGCombined": 18,
-        "numBath": 5,
-        "numBed": 4
+        "averageRating": 5,
+        "reviewsCount": 4
       }
     },
     {
@@ -1104,11 +1130,11 @@
       "description": "L 4dr Sedan (1.4L 4cyl 6M)",
       "values": {
         "price": 16620,
-        "squareFootage": 1.4,
+        "engineSize": 1.4,
         "power": 153,
         "MPGCombined": 34,
-        "numBath": 3.5,
-        "numBed": 2
+        "averageRating": 3.5,
+        "reviewsCount": 2
       }
     },
     {
@@ -1117,11 +1143,11 @@
       "description": "Eco 4dr Sedan (1.4L 4cyl Turbo 6M)",
       "values": {
         "price": 20195,
-        "squareFootage": 1.4,
+        "engineSize": 1.4,
         "power": 138,
         "MPGCombined": 34,
-        "numBath": 4,
-        "numBed": 3
+        "averageRating": 4,
+        "reviewsCount": 3
       }
     },
     {
@@ -1130,11 +1156,11 @@
       "description": "L 4dr SUV (2.4L 4cyl 6A)",
       "values": {
         "price": 22600,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 182,
         "MPGCombined": 27,
-        "numBath": 4.364,
-        "numBed": 11
+        "averageRating": 4.364,
+        "reviewsCount": 11
       }
     },
     {
@@ -1143,11 +1169,11 @@
       "description": "LS 3500 3dr Van (4.8L 8cyl 6A)",
       "values": {
         "price": 35285,
-        "squareFootage": 4.8,
+        "engineSize": 4.8,
         "power": 285,
         "MPGCombined": 13,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1156,11 +1182,11 @@
       "description": "3500 3dr Ext Van (4.8L 8cyl 6A)",
       "values": {
         "price": 34800,
-        "squareFootage": 4.8,
+        "engineSize": 4.8,
         "power": 285,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1169,11 +1195,11 @@
       "description": "LT CNG w/3LT 4dr Sedan (3.6L 6cyl 6A)",
       "values": {
         "price": 40810,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": null,
         "MPGCombined": 21,
-        "numBath": 3.25,
-        "numBed": 4
+        "averageRating": 3.25,
+        "reviewsCount": 4
       }
     },
     {
@@ -1182,11 +1208,11 @@
       "description": "LT w/2LT 4dr Sedan (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 28620,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 250,
         "MPGCombined": 27,
-        "numBath": 4.286,
-        "numBed": 7
+        "averageRating": 4.286,
+        "reviewsCount": 7
       }
     },
     {
@@ -1195,11 +1221,11 @@
       "description": "LTZ 4dr Sedan (2.5L 4cyl 6A)",
       "values": {
         "price": 28420,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 197,
         "MPGCombined": 29,
-        "numBath": 4.6,
-        "numBed": 5
+        "averageRating": 4.6,
+        "reviewsCount": 5
       }
     },
     {
@@ -1208,11 +1234,11 @@
       "description": "4dr Sedan (6.2L 8cyl 6A)",
       "values": {
         "price": 46575,
-        "squareFootage": 6.2,
+        "engineSize": 6.2,
         "power": 415,
         "MPGCombined": 17,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1221,11 +1247,11 @@
       "description": "LS 4dr Crew Cab 6.5 ft. SB (5.3L 8cyl 6A)",
       "values": {
         "price": 38300,
-        "squareFootage": 5.3,
+        "engineSize": 5.3,
         "power": 355,
         "MPGCombined": 19,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -1234,11 +1260,11 @@
       "description": "Work Truck 4dr Crew Cab LB (6.0L 8cyl 6A)",
       "values": {
         "price": 36935,
-        "squareFootage": 6,
+        "engineSize": 6,
         "power": 360,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1247,11 +1273,11 @@
       "description": "Work Truck 4dr Crew Cab LB (6.0L 8cyl 6A)",
       "values": {
         "price": 38810,
-        "squareFootage": 6,
+        "engineSize": 6,
         "power": 360,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1260,11 +1286,11 @@
       "description": "LT 4dr Hatchback (1.8L 4cyl 5M)",
       "values": {
         "price": 16755,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 138,
         "MPGCombined": 30,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1273,11 +1299,11 @@
       "description": "LS 4dr Hatchback (1.4L 4cyl CVT)",
       "values": {
         "price": 13760,
-        "squareFootage": 1.4,
+        "engineSize": 1.4,
         "power": 98,
         "MPGCombined": 36,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -1288,8 +1314,8 @@
         "price": 25510,
         "power": 140,
         "MPGCombined": 119,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1298,11 +1324,11 @@
       "description": "LT 4dr SUV 4WD (5.3L 8cyl 6A)",
       "values": {
         "price": 57730,
-        "squareFootage": 5.3,
+        "engineSize": 5.3,
         "power": 355,
         "MPGCombined": 18,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1311,11 +1337,11 @@
       "description": "LS 4dr SUV (5.3L 8cyl 6A)",
       "values": {
         "price": 47000,
-        "squareFootage": 5.3,
+        "engineSize": 5.3,
         "power": 355,
         "MPGCombined": 19,
-        "numBath": 4,
-        "numBed": 3
+        "averageRating": 4,
+        "reviewsCount": 3
       }
     },
     {
@@ -1324,11 +1350,11 @@
       "description": "LS 4dr SUV AWD (3.6L 6cyl 6A)",
       "values": {
         "price": 33205,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 281,
         "MPGCombined": 19,
-        "numBath": 4,
-        "numBed": 6
+        "averageRating": 4,
+        "reviewsCount": 6
       }
     },
     {
@@ -1337,11 +1363,11 @@
       "description": "LTZ 4dr SUV AWD (1.4L 4cyl Turbo 6A)",
       "values": {
         "price": 26730,
-        "squareFootage": 1.4,
+        "engineSize": 1.4,
         "power": 138,
         "MPGCombined": 27,
-        "numBath": 4.5,
-        "numBed": 2
+        "averageRating": 4.5,
+        "reviewsCount": 2
       }
     },
     {
@@ -1352,8 +1378,8 @@
         "price": 33170,
         "power": 149,
         "MPGCombined": null,
-        "numBath": 3.833,
-        "numBed": 18
+        "averageRating": 3.833,
+        "reviewsCount": 18
       }
     },
     {
@@ -1362,11 +1388,11 @@
       "description": "Touring 4dr Sedan (2.4L 4cyl 9A)",
       "values": {
         "price": 22490,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 184,
         "MPGCombined": 29,
-        "numBath": 3.4,
-        "numBed": 5
+        "averageRating": 3.4,
+        "reviewsCount": 5
       }
     },
     {
@@ -1375,11 +1401,11 @@
       "description": "C Platinum 4dr Sedan (3.6L 6cyl 8A)",
       "values": {
         "price": 42565,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 292,
         "MPGCombined": 24,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1388,11 +1414,11 @@
       "description": "Touring-L 4dr Minivan (3.6L 6cyl 6A)",
       "values": {
         "price": 35845,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 283,
         "MPGCombined": 21,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -1401,11 +1427,11 @@
       "description": "SRT 392 2dr Coupe (6.4L 8cyl 6M)",
       "values": {
         "price": 49195,
-        "squareFootage": 6.4,
+        "engineSize": 6.4,
         "power": 485,
         "MPGCombined": 18,
-        "numBath": 5,
-        "numBed": 8
+        "averageRating": 5,
+        "reviewsCount": 8
       }
     },
     {
@@ -1414,11 +1440,11 @@
       "description": "SRT Hellcat 4dr Sedan (6.2L 8cyl S/C 8A)",
       "values": {
         "price": 65945,
-        "squareFootage": 6.2,
+        "engineSize": 6.2,
         "power": 707,
         "MPGCombined": 17,
-        "numBath": 4,
-        "numBed": 4
+        "averageRating": 4,
+        "reviewsCount": 4
       }
     },
     {
@@ -1427,11 +1453,11 @@
       "description": "SXT 4dr Sedan (2.4L 4cyl 6M)",
       "values": {
         "price": 19395,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 184,
         "MPGCombined": 28,
-        "numBath": 4,
-        "numBed": 4
+        "averageRating": 4,
+        "reviewsCount": 4
       }
     },
     {
@@ -1440,11 +1466,11 @@
       "description": "Anodized Platinum 4dr SUV AWD (3.6L 6cyl 8A)",
       "values": {
         "price": 44990,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 295,
         "MPGCombined": 21,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1453,11 +1479,11 @@
       "description": "SE 4dr Minivan (3.6L 6cyl 6A)",
       "values": {
         "price": 24595,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 283,
         "MPGCombined": 21,
-        "numBath": 3,
-        "numBed": 4
+        "averageRating": 3,
+        "reviewsCount": 4
       }
     },
     {
@@ -1466,11 +1492,11 @@
       "description": "SXT 4dr SUV (2.4L 4cyl 4A)",
       "values": {
         "price": 24895,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 173,
         "MPGCombined": 22,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -1479,11 +1505,11 @@
       "description": "GTS 2dr Coupe (8.4L 10cyl 6M)",
       "values": {
         "price": 107995,
-        "squareFootage": 8.4,
+        "engineSize": 8.4,
         "power": 645,
         "MPGCombined": 16,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1492,11 +1518,11 @@
       "description": "Turbo 2dr Hatchback (1.4L 4cyl Turbo 5M)",
       "values": {
         "price": 19700,
-        "squareFootage": 1.4,
+        "engineSize": 1.4,
         "power": 135,
         "MPGCombined": 31,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1505,11 +1531,11 @@
       "description": "Pop 4dr Wagon (1.4L 4cyl Turbo 6M)",
       "values": {
         "price": 19495,
-        "squareFootage": 1.4,
+        "engineSize": 1.4,
         "power": 160,
         "MPGCombined": 29,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1518,11 +1544,11 @@
       "description": "Trekking Plus 4dr SUV AWD (2.4L 4cyl 9A)",
       "values": {
         "price": 29110,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 180,
         "MPGCombined": 25,
-        "numBath": 3,
-        "numBed": 13
+        "averageRating": 3,
+        "reviewsCount": 13
       }
     },
     {
@@ -1533,8 +1559,8 @@
         "price": 31800,
         "power": null,
         "MPGCombined": 116,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1543,11 +1569,11 @@
       "description": "SEL 4dr Wagon (2.0L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 31770,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 188,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1556,11 +1582,11 @@
       "description": "SEL 4dr Wagon (2.0L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 27170,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 188,
         "MPGCombined": 40,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1569,11 +1595,11 @@
       "description": "SE 4dr SUV AWD (2.0L 4cyl Turbo 6A)",
       "values": {
         "price": 30695,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 245,
         "MPGCombined": 24,
-        "numBath": 4.667,
-        "numBed": 3
+        "averageRating": 4.667,
+        "reviewsCount": 3
       }
     },
     {
@@ -1582,11 +1608,11 @@
       "description": "SE 4dr SUV (1.6L 4cyl Turbo 6A)",
       "values": {
         "price": 25790,
-        "squareFootage": 1.6,
+        "engineSize": 1.6,
         "power": 178,
         "MPGCombined": 27,
-        "numBath": 4.091,
-        "numBed": 22
+        "averageRating": 4.091,
+        "reviewsCount": 22
       }
     },
     {
@@ -1595,11 +1621,11 @@
       "description": "Limited 4dr SUV (3.5L 6cyl Turbo 6A)",
       "values": {
         "price": 55145,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 365,
         "MPGCombined": 19,
-        "numBath": 4,
-        "numBed": 2
+        "averageRating": 4,
+        "reviewsCount": 2
       }
     },
     {
@@ -1608,11 +1634,11 @@
       "description": "4dr SUV (3.5L 6cyl 6A)",
       "values": {
         "price": 31050,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 290,
         "MPGCombined": 20,
-        "numBath": 3.909,
-        "numBed": 33
+        "averageRating": 3.909,
+        "reviewsCount": 33
       }
     },
     {
@@ -1621,11 +1647,11 @@
       "description": "XLT 2dr Regular Cab 6.5 ft. SB (3.5L 6cyl 6A)",
       "values": {
         "price": 31790,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 282,
         "MPGCombined": 21,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -1634,11 +1660,11 @@
       "description": "Lariat 4dr Crew Cab 4WD SB (6.2L 8cyl 6A)",
       "values": {
         "price": 50380,
-        "squareFootage": 6.2,
+        "engineSize": 6.2,
         "power": 385,
         "MPGCombined": null,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -1647,11 +1673,11 @@
       "description": "Platinum 4dr Crew Cab LB DRW (6.2L 8cyl 6A)",
       "values": {
         "price": 56150,
-        "squareFootage": 6.2,
+        "engineSize": 6.2,
         "power": 316,
         "MPGCombined": null,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -1660,11 +1686,11 @@
       "description": "Platinum 4dr Crew Cab Pickup 4WD (6.7L 8cyl Turbodiesel 6A)",
       "values": {
         "price": 71320,
-        "squareFootage": 6.7,
+        "engineSize": 6.7,
         "power": 440,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1673,11 +1699,11 @@
       "description": "SE 4dr Hatchback (1.6L 4cyl 5M)",
       "values": {
         "price": 16110,
-        "squareFootage": 1.6,
+        "engineSize": 1.6,
         "power": 120,
         "MPGCombined": 32,
-        "numBath": 3.25,
-        "numBed": 4
+        "averageRating": 3.25,
+        "reviewsCount": 4
       }
     },
     {
@@ -1686,11 +1712,11 @@
       "description": "Limited 4dr Wagon AWD (3.5L 6cyl 6A)",
       "values": {
         "price": 39750,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 287,
         "MPGCombined": 19,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1699,11 +1725,11 @@
       "description": "S 4dr Sedan (2.0L 4cyl 5M)",
       "values": {
         "price": 17225,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 160,
         "MPGCombined": 31,
-        "numBath": 4.5,
-        "numBed": 4
+        "averageRating": 4.5,
+        "reviewsCount": 4
       }
     },
     {
@@ -1712,11 +1738,11 @@
       "description": "4dr Hatchback w/EcoBoost AWD (2.3L 4cyl Turbo 6M)",
       "values": {
         "price": 35730,
-        "squareFootage": 2.3,
+        "engineSize": 2.3,
         "power": 350,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1725,11 +1751,11 @@
       "description": "4dr Hatchback w/EcoBoost (2.0L 4cyl Turbo 6M)",
       "values": {
         "price": 24425,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 252,
         "MPGCombined": 27,
-        "numBath": 5,
-        "numBed": 5
+        "averageRating": 5,
+        "reviewsCount": 5
       }
     },
     {
@@ -1738,11 +1764,11 @@
       "description": "Titanium 4dr Sedan AWD w/EcoBoost (2.0L 4cyl Turbo 6A)",
       "values": {
         "price": 33270,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 231,
         "MPGCombined": 26,
-        "numBath": 4.714,
-        "numBed": 21
+        "averageRating": 4.714,
+        "reviewsCount": 21
       }
     },
     {
@@ -1751,11 +1777,11 @@
       "description": "Titanium 4dr Sedan (2.0L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 35730,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 188,
         "MPGCombined": null,
-        "numBath": 4.667,
-        "numBed": 6
+        "averageRating": 4.667,
+        "reviewsCount": 6
       }
     },
     {
@@ -1764,11 +1790,11 @@
       "description": "Titanium 4dr Sedan (2.0L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 31430,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 188,
         "MPGCombined": 43,
-        "numBath": 4.521,
-        "numBed": 6
+        "averageRating": 4.521,
+        "reviewsCount": 6
       }
     },
     {
@@ -1777,11 +1803,11 @@
       "description": "V6 2dr Convertible (3.7L 6cyl 6M)",
       "values": {
         "price": 29645,
-        "squareFootage": 3.7,
+        "engineSize": 3.7,
         "power": 300,
         "MPGCombined": 22,
-        "numBath": 4.375,
-        "numBed": 16
+        "averageRating": 4.375,
+        "reviewsCount": 16
       }
     },
     {
@@ -1790,11 +1816,11 @@
       "description": "R 2dr Coupe (5.2L 8cyl 6M)",
       "values": {
         "price": 61295,
-        "squareFootage": 5.2,
+        "engineSize": 5.2,
         "power": 526,
         "MPGCombined": 17,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -1803,11 +1829,11 @@
       "description": "Limited 4dr Sedan AWD (3.5L 6cyl 6A)",
       "values": {
         "price": 36310,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 288,
         "MPGCombined": 22,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1816,11 +1842,11 @@
       "description": "Cargo Van XL SWB 4dr Minivan w/Rear 180 Degree Door (2.5L 4cyl 6A)",
       "values": {
         "price": 22675,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 169,
         "MPGCombined": 25,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1829,11 +1855,11 @@
       "description": "350 High Roof 4dr Cargo Van w/Extended Length, Dual Sliding Doors (3.7L 6cyl 6A)",
       "values": {
         "price": 39290,
-        "squareFootage": 3.7,
+        "engineSize": 3.7,
         "power": 275,
         "MPGCombined": null,
-        "numBath": 4,
-        "numBed": 1
+        "averageRating": 4,
+        "reviewsCount": 1
       }
     },
     {
@@ -1842,11 +1868,11 @@
       "description": "150 XLT Low Roof w/60/40 Passenger Side Door Passenger Van (3.7L 6cyl 6A)",
       "values": {
         "price": 34470,
-        "squareFootage": 3.7,
+        "engineSize": 3.7,
         "power": 275,
         "MPGCombined": 16,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1855,11 +1881,11 @@
       "description": "SLE-2 4dr SUV AWD (3.6L 6cyl 6A)",
       "values": {
         "price": 38755,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 281,
         "MPGCombined": 19,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -1868,11 +1894,11 @@
       "description": "SL 4dr Extended Cab SB (2.5L 4cyl 6M)",
       "values": {
         "price": 20955,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 200,
         "MPGCombined": 22,
-        "numBath": 4.667,
-        "numBed": 9
+        "averageRating": 4.667,
+        "reviewsCount": 9
       }
     },
     {
@@ -1881,11 +1907,11 @@
       "description": "LS 3500 3dr Ext Van (6.6L 8cyl Turbodiesel 6A)",
       "values": {
         "price": 50095,
-        "squareFootage": 6.6,
+        "engineSize": 6.6,
         "power": 260,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1894,11 +1920,11 @@
       "description": "3500 3dr Van (4.8L 8cyl 6A)",
       "values": {
         "price": 33915,
-        "squareFootage": 4.8,
+        "engineSize": 4.8,
         "power": 285,
         "MPGCombined": 13,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1907,11 +1933,11 @@
       "description": "SLE 4dr Crew Cab 4WD 6.5 ft. SB (5.3L 8cyl 6A)",
       "values": {
         "price": 44405,
-        "squareFootage": 5.3,
+        "engineSize": 5.3,
         "power": 355,
         "MPGCombined": 19,
-        "numBath": 3,
-        "numBed": 1
+        "averageRating": 3,
+        "reviewsCount": 1
       }
     },
     {
@@ -1920,11 +1946,11 @@
       "description": "SLT 4dr Double Cab 4WD LB (6.0L 8cyl 6A)",
       "values": {
         "price": 49595,
-        "squareFootage": 6,
+        "engineSize": 6,
         "power": 360,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1933,11 +1959,11 @@
       "description": "2dr Regular Cab LB DRW (6.0L 8cyl 6A)",
       "values": {
         "price": 35415,
-        "squareFootage": 6,
+        "engineSize": 6,
         "power": 360,
         "MPGCombined": null,
-        "numBath": 1,
-        "numBed": 1
+        "averageRating": 1,
+        "reviewsCount": 1
       }
     },
     {
@@ -1946,11 +1972,11 @@
       "description": "SL 4dr SUV (2.4L 4cyl 6A)",
       "values": {
         "price": 23975,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 182,
         "MPGCombined": 27,
-        "numBath": 4,
-        "numBed": 1
+        "averageRating": 4,
+        "reviewsCount": 1
       }
     },
     {
@@ -1959,11 +1985,11 @@
       "description": "Denali 4dr SUV (6.2L 8cyl 8A)",
       "values": {
         "price": 65045,
-        "squareFootage": 6.2,
+        "engineSize": 6.2,
         "power": 420,
         "MPGCombined": 18,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -1972,11 +1998,11 @@
       "description": "Denali 4dr SUV (6.2L 8cyl 8A)",
       "values": {
         "price": 67745,
-        "squareFootage": 6.2,
+        "engineSize": 6.2,
         "power": 420,
         "MPGCombined": 18,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -1985,11 +2011,11 @@
       "description": "Sport 4dr Sedan (2.4L 4cyl 6M)",
       "values": {
         "price": 24265,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 189,
         "MPGCombined": 28,
-        "numBath": 4.429,
-        "numBed": 70
+        "averageRating": 4.429,
+        "reviewsCount": 70
       }
     },
     {
@@ -1998,11 +2024,11 @@
       "description": "EX 4dr SUV (2.4L 4cyl CVT)",
       "values": {
         "price": 25995,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 185,
         "MPGCombined": 29,
-        "numBath": 4.3,
-        "numBed": 50
+        "averageRating": 4.3,
+        "reviewsCount": 50
       }
     },
     {
@@ -2011,11 +2037,11 @@
       "description": "LX 2dr Hatchback (1.5L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 20945,
-        "squareFootage": 1.5,
+        "engineSize": 1.5,
         "power": 130,
         "MPGCombined": 37,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2024,11 +2050,11 @@
       "description": "EX-L 2dr Coupe (1.5L 4cyl Turbo CVT)",
       "values": {
         "price": 23425,
-        "squareFootage": 1.5,
+        "engineSize": 1.5,
         "power": 174,
         "MPGCombined": 36,
-        "numBath": 4.353,
-        "numBed": 17
+        "averageRating": 4.353,
+        "reviewsCount": 17
       }
     },
     {
@@ -2037,11 +2063,11 @@
       "description": "EX 4dr Hatchback (1.5L 4cyl CVT)",
       "values": {
         "price": 18600,
-        "squareFootage": 1.5,
+        "engineSize": 1.5,
         "power": 130,
         "MPGCombined": 35,
-        "numBath": 4.636,
-        "numBed": 11
+        "averageRating": 4.636,
+        "reviewsCount": 11
       }
     },
     {
@@ -2050,11 +2076,11 @@
       "description": "LX 4dr SUV (1.8L 4cyl 6M)",
       "values": {
         "price": 19215,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 141,
         "MPGCombined": 29,
-        "numBath": 4.032,
-        "numBed": 71
+        "averageRating": 4.032,
+        "reviewsCount": 71
       }
     },
     {
@@ -2063,11 +2089,11 @@
       "description": "Touring Elite 4dr Minivan (3.5L 6cyl 6A)",
       "values": {
         "price": 44875,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 248,
         "MPGCombined": 23,
-        "numBath": 4.3,
-        "numBed": 20
+        "averageRating": 4.3,
+        "reviewsCount": 20
       }
     },
     {
@@ -2076,11 +2102,11 @@
       "description": "Touring w/Navigation and Rear Entertainment System 4dr SUV AWD (3.5L 6cyl 9A)",
       "values": {
         "price": 42970,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 280,
         "MPGCombined": 22,
-        "numBath": 3.681,
-        "numBed": 138
+        "averageRating": 3.681,
+        "reviewsCount": 138
       }
     },
     {
@@ -2089,11 +2115,11 @@
       "description": "SE 4dr Sedan (1.6L 4cyl 6M)",
       "values": {
         "price": 14745,
-        "squareFootage": 1.6,
+        "engineSize": 1.6,
         "power": 137,
         "MPGCombined": 32,
-        "numBath": 4,
-        "numBed": 1
+        "averageRating": 4,
+        "reviewsCount": 1
       }
     },
     {
@@ -2102,11 +2128,11 @@
       "description": "4dr Sedan (3.3L 6cyl 6A)",
       "values": {
         "price": 34100,
-        "squareFootage": 3.3,
+        "engineSize": 3.3,
         "power": 293,
         "MPGCombined": 24,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2115,11 +2141,11 @@
       "description": "Limited PZEV 4dr Sedan (1.8L 4cyl 6A)",
       "values": {
         "price": 21700,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 145,
         "MPGCombined": 32,
-        "numBath": 4.52,
-        "numBed": 25
+        "averageRating": 4.52,
+        "reviewsCount": 25
       }
     },
     {
@@ -2128,11 +2154,11 @@
       "description": "4dr Hatchback (2.0L 4cyl 6A)",
       "values": {
         "price": 19800,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 173,
         "MPGCombined": 28,
-        "numBath": 4.5,
-        "numBed": 2
+        "averageRating": 4.5,
+        "reviewsCount": 2
       }
     },
     {
@@ -2141,11 +2167,11 @@
       "description": "Signature 4dr Sedan (5.0L 8cyl 8A)",
       "values": {
         "price": 61500,
-        "squareFootage": 5,
+        "engineSize": 5,
         "power": 429,
         "MPGCombined": 19,
-        "numBath": 4.4,
-        "numBed": 5
+        "averageRating": 4.4,
+        "reviewsCount": 5
       }
     },
     {
@@ -2154,11 +2180,11 @@
       "description": "5.0 4dr Sedan (5.0L 8cyl 8A)",
       "values": {
         "price": 53850,
-        "squareFootage": 5,
+        "engineSize": 5,
         "power": 420,
         "MPGCombined": 19,
-        "numBath": 4.75,
-        "numBed": 16
+        "averageRating": 4.75,
+        "reviewsCount": 16
       }
     },
     {
@@ -2167,11 +2193,11 @@
       "description": "3.8 R-Spec 2dr Coupe (3.8L 6cyl 6M)",
       "values": {
         "price": 29900,
-        "squareFootage": 3.8,
+        "engineSize": 3.8,
         "power": 348,
         "MPGCombined": 20,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2180,11 +2206,11 @@
       "description": "SE 4dr SUV AWD (3.3L 6cyl 6A)",
       "values": {
         "price": 32150,
-        "squareFootage": 3.3,
+        "engineSize": 3.3,
         "power": 290,
         "MPGCombined": 21,
-        "numBath": 4.6,
-        "numBed": 5
+        "averageRating": 4.6,
+        "reviewsCount": 5
       }
     },
     {
@@ -2193,11 +2219,11 @@
       "description": "4dr SUV AWD (2.4L 4cyl 6A)",
       "values": {
         "price": 26700,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 190,
         "MPGCombined": 22,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2206,11 +2232,11 @@
       "description": "Sport PZEV 4dr Sedan (2.4L 4cyl 6A)",
       "values": {
         "price": 23400,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 185,
         "MPGCombined": 30,
-        "numBath": 4.333,
-        "numBed": 6
+        "averageRating": 4.333,
+        "reviewsCount": 6
       }
     },
     {
@@ -2219,11 +2245,11 @@
       "description": "4dr Sedan (2.0L 4cyl gas/electric hybrid 6A)",
       "values": {
         "price": 26000,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 193,
         "MPGCombined": 42,
-        "numBath": 4.833,
-        "numBed": 12
+        "averageRating": 4.833,
+        "reviewsCount": 12
       }
     },
     {
@@ -2232,11 +2258,11 @@
       "description": "Limited w/Blue Pearl Interior 4dr Sedan (2.0L 4cyl gas/electric hybrid 6A)",
       "values": {
         "price": 38600,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 202,
         "MPGCombined": null,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -2245,11 +2271,11 @@
       "description": "SE 4dr SUV AWD (2.0L 4cyl 6A)",
       "values": {
         "price": 24100,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 164,
         "MPGCombined": 23,
-        "numBath": 4.152,
-        "numBed": 33
+        "averageRating": 4.152,
+        "reviewsCount": 33
       }
     },
     {
@@ -2258,11 +2284,11 @@
       "description": "Turbo R-Spec 3dr Hatchback w/Red Interior (1.6L 4cyl Turbo 6M)",
       "values": {
         "price": 21600,
-        "squareFootage": 1.6,
+        "engineSize": 1.6,
         "power": 201,
         "MPGCombined": 29,
-        "numBath": 3.667,
-        "numBed": 3
+        "averageRating": 3.667,
+        "reviewsCount": 3
       }
     },
     {
@@ -2271,11 +2297,11 @@
       "description": "Hybrid Premium 4dr Sedan AWD (3.5L 6cyl gas/electric hybrid 7A)",
       "values": {
         "price": 49050,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 360,
         "MPGCombined": 29,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2284,11 +2310,11 @@
       "description": "Hybrid 4dr Sedan (3.5L 6cyl gas/electric hybrid 7A)",
       "values": {
         "price": 55900,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 360,
         "MPGCombined": 31,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2297,11 +2323,11 @@
       "description": "4dr SUV AWD (3.7L 6cyl 7A)",
       "values": {
         "price": 35850,
-        "squareFootage": 3.7,
+        "engineSize": 3.7,
         "power": 325,
         "MPGCombined": 20,
-        "numBath": 4.5,
-        "numBed": 2
+        "averageRating": 4.5,
+        "reviewsCount": 2
       }
     },
     {
@@ -2310,11 +2336,11 @@
       "description": "4dr SUV (3.5L 6cyl CVT)",
       "values": {
         "price": 42600,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 265,
         "MPGCombined": 24,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2323,11 +2349,11 @@
       "description": "4dr SUV (3.7L 6cyl 7A)",
       "values": {
         "price": 45850,
-        "squareFootage": 3.7,
+        "engineSize": 3.7,
         "power": 325,
         "MPGCombined": 20,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2336,11 +2362,11 @@
       "description": "4dr SUV (5.6L 8cyl 7A)",
       "values": {
         "price": 63250,
-        "squareFootage": 5.6,
+        "engineSize": 5.6,
         "power": 400,
         "MPGCombined": 17,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2349,11 +2375,11 @@
       "description": "Project 7 2dr Convertible (5.0L 8cyl S/C 8A)",
       "values": {
         "price": 165000,
-        "squareFootage": 5,
+        "engineSize": 5,
         "power": 575,
         "MPGCombined": null,
-        "numBath": 4.5,
-        "numBed": 2
+        "averageRating": 4.5,
+        "reviewsCount": 2
       }
     },
     {
@@ -2362,11 +2388,11 @@
       "description": "35t Prestige 4dr Sedan AWD (3.0L 6cyl S/C 8A)",
       "values": {
         "price": 59550,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 340,
         "MPGCombined": 24,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -2375,11 +2401,11 @@
       "description": "Supercharged 4dr Sedan (5.0L 8cyl S/C 8A)",
       "values": {
         "price": 92000,
-        "squareFootage": 5,
+        "engineSize": 5,
         "power": 470,
         "MPGCombined": 19,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2388,11 +2414,11 @@
       "description": "High Altitude 4dr SUV (2.4L 4cyl 9A)",
       "values": {
         "price": 29790,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 184,
         "MPGCombined": 26,
-        "numBath": 4,
-        "numBed": 25
+        "averageRating": 4,
+        "reviewsCount": 25
       }
     },
     {
@@ -2401,11 +2427,11 @@
       "description": "75th Anniversary 4dr SUV (2.4L 4cyl 6A)",
       "values": {
         "price": 21080,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 172,
         "MPGCombined": 24,
-        "numBath": 3.75,
-        "numBed": 8
+        "averageRating": 3.75,
+        "reviewsCount": 8
       }
     },
     {
@@ -2414,11 +2440,11 @@
       "description": "High Altitude 4dr SUV (3.6L 6cyl 8A)",
       "values": {
         "price": 46690,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 290,
         "MPGCombined": 22,
-        "numBath": 5,
-        "numBed": 3
+        "averageRating": 5,
+        "reviewsCount": 3
       }
     },
     {
@@ -2427,11 +2453,11 @@
       "description": "4dr SUV 4WD (6.4L 8cyl 8A)",
       "values": {
         "price": 65495,
-        "squareFootage": 6.4,
+        "engineSize": 6.4,
         "power": 475,
         "MPGCombined": 16,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2440,11 +2466,11 @@
       "description": "75th Anniversary 4dr SUV 4WD (2.4L 4cyl 6A)",
       "values": {
         "price": 21025,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 172,
         "MPGCombined": 23,
-        "numBath": 4.909,
-        "numBed": 11
+        "averageRating": 4.909,
+        "reviewsCount": 11
       }
     },
     {
@@ -2453,11 +2479,11 @@
       "description": "Sport 4dr SUV (1.4L 4cyl Turbo 6M)",
       "values": {
         "price": 17995,
-        "squareFootage": 1.4,
+        "engineSize": 1.4,
         "power": 160,
         "MPGCombined": 27,
-        "numBath": 4.125,
-        "numBed": 8
+        "averageRating": 4.125,
+        "reviewsCount": 8
       }
     },
     {
@@ -2466,11 +2492,11 @@
       "description": "75th Anniversary 2dr SUV 4WD (3.6L 6cyl 6M)",
       "values": {
         "price": 34575,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 285,
         "MPGCombined": 19,
-        "numBath": 4.588,
-        "numBed": 17
+        "averageRating": 4.588,
+        "reviewsCount": 17
       }
     },
     {
@@ -2479,11 +2505,11 @@
       "description": "Premium 4dr Sedan (3.3L 6cyl 6A)",
       "values": {
         "price": 35990,
-        "squareFootage": 3.3,
+        "engineSize": 3.3,
         "power": 293,
         "MPGCombined": 23,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2492,11 +2518,11 @@
       "description": "Koup EX 2dr Coupe (2.0L 4cyl 6A)",
       "values": {
         "price": 19890,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 173,
         "MPGCombined": 29,
-        "numBath": 4.25,
-        "numBed": 4
+        "averageRating": 4.25,
+        "reviewsCount": 4
       }
     },
     {
@@ -2505,11 +2531,11 @@
       "description": "Premium V6 4dr Sedan (3.8L 6cyl 8A)",
       "values": {
         "price": 49000,
-        "squareFootage": 3.8,
+        "engineSize": 3.8,
         "power": 311,
         "MPGCombined": 21,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2518,11 +2544,11 @@
       "description": "SX Turbo 4dr Sedan (2.0L 4cyl Turbo 6A)",
       "values": {
         "price": 29790,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 245,
         "MPGCombined": 27,
-        "numBath": 4.667,
-        "numBed": 3
+        "averageRating": 4.667,
+        "reviewsCount": 3
       }
     },
     {
@@ -2531,11 +2557,11 @@
       "description": "4dr Sedan (2.4L 4cyl gas/electric hybrid 6A)",
       "values": {
         "price": 25995,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 199,
         "MPGCombined": 38,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2544,11 +2570,11 @@
       "description": "LX 4dr Hatchback (1.6L 4cyl 6A)",
       "values": {
         "price": 15495,
-        "squareFootage": 1.6,
+        "engineSize": 1.6,
         "power": 138,
         "MPGCombined": 32,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2557,11 +2583,11 @@
       "description": "SX Limited 4dr Minivan (3.3L 6cyl 6A)",
       "values": {
         "price": 39900,
-        "squareFootage": 3.3,
+        "engineSize": 3.3,
         "power": 276,
         "MPGCombined": 19,
-        "numBath": 5,
-        "numBed": 4
+        "averageRating": 5,
+        "reviewsCount": 4
       }
     },
     {
@@ -2570,11 +2596,11 @@
       "description": "Limited 4dr SUV AWD (3.3L 6cyl 6A)",
       "values": {
         "price": 43300,
-        "squareFootage": 3.3,
+        "engineSize": 3.3,
         "power": 290,
         "MPGCombined": 20,
-        "numBath": 4.688,
-        "numBed": 50
+        "averageRating": 4.688,
+        "reviewsCount": 50
       }
     },
     {
@@ -2583,11 +2609,11 @@
       "description": "+ 4dr Wagon (2.0L 4cyl 6A)",
       "values": {
         "price": 19300,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 164,
         "MPGCombined": 27,
-        "numBath": 4.571,
-        "numBed": 21
+        "averageRating": 4.571,
+        "reviewsCount": 21
       }
     },
     {
@@ -2598,8 +2624,8 @@
         "price": 33950,
         "power": null,
         "MPGCombined": 107,
-        "numBath": 5,
-        "numBed": 3
+        "averageRating": 5,
+        "reviewsCount": 3
       }
     },
     {
@@ -2608,11 +2634,11 @@
       "description": "LX 4dr SUV (2.4L 4cyl 6A)",
       "values": {
         "price": 22150,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 182,
         "MPGCombined": 24,
-        "numBath": 4.5,
-        "numBed": 2
+        "averageRating": 4.5,
+        "reviewsCount": 2
       }
     },
     {
@@ -2621,11 +2647,11 @@
       "description": "SE 4dr SUV AWD (2.0L 4cyl Turbo 9A)",
       "values": {
         "price": 37455,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 240,
         "MPGCombined": 23,
-        "numBath": 4,
-        "numBed": 5
+        "averageRating": 4,
+        "reviewsCount": 5
       }
     },
     {
@@ -2634,11 +2660,11 @@
       "description": "4dr SUV 4WD (3.0L 6cyl S/C 8A)",
       "values": {
         "price": 50400,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 340,
         "MPGCombined": 17,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2647,11 +2673,11 @@
       "description": "HSE 4dr SUV 4WD (3.0L 6cyl S/C 8A)",
       "values": {
         "price": 91950,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 380,
         "MPGCombined": 20,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2660,11 +2686,11 @@
       "description": "Autobiography 4dr SUV AWD (2.0L 4cyl Turbo 9A)",
       "values": {
         "price": 60775,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 240,
         "MPGCombined": 25,
-        "numBath": 4,
-        "numBed": 1
+        "averageRating": 4,
+        "reviewsCount": 1
       }
     },
     {
@@ -2673,11 +2699,11 @@
       "description": "SE 4dr SUV 4WD (3.0L 6cyl S/C 8A)",
       "values": {
         "price": 64950,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 340,
         "MPGCombined": 20,
-        "numBath": 4.25,
-        "numBed": 4
+        "averageRating": 4.25,
+        "reviewsCount": 4
       }
     },
     {
@@ -2686,11 +2712,11 @@
       "description": "4dr Hatchback (1.8L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 31250,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 134,
         "MPGCombined": 42,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -2699,11 +2725,11 @@
       "description": "4dr Sedan (2.5L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 41020,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 200,
         "MPGCombined": 40,
-        "numBath": 4,
-        "numBed": 2
+        "averageRating": 4,
+        "reviewsCount": 2
       }
     },
     {
@@ -2712,11 +2738,11 @@
       "description": "4dr Sedan (3.5L 6cyl 6A)",
       "values": {
         "price": 38100,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 268,
         "MPGCombined": 26,
-        "numBath": 4.5,
-        "numBed": 12
+        "averageRating": 4.5,
+        "reviewsCount": 12
       }
     },
     {
@@ -2725,11 +2751,11 @@
       "description": "4dr Sedan (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 45615,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 241,
         "MPGCombined": 27,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2738,11 +2764,11 @@
       "description": "4dr Sedan AWD (3.5L 6cyl 6A)",
       "values": {
         "price": 50470,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 311,
         "MPGCombined": 22,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2751,11 +2777,11 @@
       "description": "4dr Sedan (3.5L 6cyl gas/electric hybrid CVT)",
       "values": {
         "price": 63080,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 338,
         "MPGCombined": 31,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2764,11 +2790,11 @@
       "description": "4dr Sedan (5.0L 8cyl 8A)",
       "values": {
         "price": 84440,
-        "squareFootage": 5,
+        "engineSize": 5,
         "power": 467,
         "MPGCombined": 20,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2777,11 +2803,11 @@
       "description": "4dr SUV 4WD (4.6L 8cyl 6A)",
       "values": {
         "price": 50780,
-        "squareFootage": 4.6,
+        "engineSize": 4.6,
         "power": 301,
         "MPGCombined": 17,
-        "numBath": 4,
-        "numBed": 1
+        "averageRating": 4,
+        "reviewsCount": 1
       }
     },
     {
@@ -2790,11 +2816,11 @@
       "description": "4dr Sedan (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 37325,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 241,
         "MPGCombined": 27,
-        "numBath": 4.667,
-        "numBed": 6
+        "averageRating": 4.667,
+        "reviewsCount": 6
       }
     },
     {
@@ -2803,11 +2829,11 @@
       "description": "4dr Sedan AWD (3.5L 6cyl 6A)",
       "values": {
         "price": 39700,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 255,
         "MPGCombined": 22,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2816,11 +2842,11 @@
       "description": "4dr Sedan AWD (3.5L 6cyl 6A)",
       "values": {
         "price": 43035,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 306,
         "MPGCombined": 22,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2829,11 +2855,11 @@
       "description": "L 4dr Sedan (4.6L 8cyl 8A)",
       "values": {
         "price": 78820,
-        "squareFootage": 4.6,
+        "engineSize": 4.6,
         "power": 386,
         "MPGCombined": 20,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2842,11 +2868,11 @@
       "description": "4dr Sedan AWD (5.0L 8cyl gas/electric hybrid CVT)",
       "values": {
         "price": 120440,
-        "squareFootage": 5,
+        "engineSize": 5,
         "power": 438,
         "MPGCombined": 21,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2855,11 +2881,11 @@
       "description": "4dr SUV 4WD (5.7L 8cyl 8A)",
       "values": {
         "price": 88880,
-        "squareFootage": 5.7,
+        "engineSize": 5.7,
         "power": 383,
         "MPGCombined": 15,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -2868,11 +2894,11 @@
       "description": "4dr SUV (2.0L 4cyl Turbo 6A)",
       "values": {
         "price": 34965,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 235,
         "MPGCombined": 25,
-        "numBath": 4.75,
-        "numBed": 8
+        "averageRating": 4.75,
+        "reviewsCount": 8
       }
     },
     {
@@ -2881,11 +2907,11 @@
       "description": "4dr SUV AWD (2.5L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 41310,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 194,
         "MPGCombined": 32,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2894,11 +2920,11 @@
       "description": "2dr Coupe (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 39995,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 241,
         "MPGCombined": 27,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2907,11 +2933,11 @@
       "description": "2dr Coupe AWD (3.5L 6cyl 6A)",
       "values": {
         "price": 42610,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 255,
         "MPGCombined": 22,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -2920,11 +2946,11 @@
       "description": "2dr Coupe AWD (3.5L 6cyl 6A)",
       "values": {
         "price": 45015,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 306,
         "MPGCombined": 22,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2933,11 +2959,11 @@
       "description": "2dr Coupe (5.0L 8cyl 8A)",
       "values": {
         "price": 62805,
-        "squareFootage": 5,
+        "engineSize": 5,
         "power": 467,
         "MPGCombined": 20,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2946,11 +2972,11 @@
       "description": "4dr SUV AWD (3.5L 6cyl 8A)",
       "values": {
         "price": 43300,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 295,
         "MPGCombined": 22,
-        "numBath": 4.192,
-        "numBed": 26
+        "averageRating": 4.192,
+        "reviewsCount": 26
       }
     },
     {
@@ -2959,11 +2985,11 @@
       "description": "F Sport 4dr SUV AWD (3.5L 6cyl gas/electric hybrid CVT)",
       "values": {
         "price": 57045,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 308,
         "MPGCombined": 29,
-        "numBath": 4,
-        "numBed": 3
+        "averageRating": 4,
+        "reviewsCount": 3
       }
     },
     {
@@ -2972,11 +2998,11 @@
       "description": "Reserve 4dr SUV AWD (2.0L 4cyl Turbo 6A)",
       "values": {
         "price": 42955,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 240,
         "MPGCombined": 22,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -2985,11 +3011,11 @@
       "description": "4dr Sedan (3.7L 6cyl 6A)",
       "values": {
         "price": 39010,
-        "squareFootage": 3.7,
+        "engineSize": 3.7,
         "power": 350,
         "MPGCombined": 21,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -2998,11 +3024,11 @@
       "description": "4dr Wagon AWD w/EcoBoost (3.5L 6cyl Turbo 6A)",
       "values": {
         "price": 45365,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 365,
         "MPGCombined": 18,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3011,11 +3037,11 @@
       "description": "Reserve 4dr SUV (3.7L 6cyl 6A)",
       "values": {
         "price": 45315,
-        "squareFootage": 3.7,
+        "engineSize": 3.7,
         "power": 303,
         "MPGCombined": 21,
-        "numBath": 4.625,
-        "numBed": 8
+        "averageRating": 4.625,
+        "reviewsCount": 8
       }
     },
     {
@@ -3024,11 +3050,11 @@
       "description": "Black Label 4dr Sedan (2.0L 4cyl Turbo 6A)",
       "values": {
         "price": 45605,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 231,
         "MPGCombined": 27,
-        "numBath": 4.611,
-        "numBed": 18
+        "averageRating": 4.611,
+        "reviewsCount": 18
       }
     },
     {
@@ -3037,11 +3063,11 @@
       "description": "Reserve 4dr SUV 4WD (3.5L 6cyl Turbo 6A)",
       "values": {
         "price": 74260,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 365,
         "MPGCombined": 17,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3050,11 +3076,11 @@
       "description": "2dr Convertible (1.5L 3cyl Turbo 6M)",
       "values": {
         "price": 25950,
-        "squareFootage": 1.5,
+        "engineSize": 1.5,
         "power": 134,
         "MPGCombined": 32,
-        "numBath": 4.5,
-        "numBed": 2
+        "averageRating": 4.5,
+        "reviewsCount": 2
       }
     },
     {
@@ -3063,11 +3089,11 @@
       "description": "4dr Hatchback (1.5L 3cyl Turbo 6M)",
       "values": {
         "price": 24100,
-        "squareFootage": 1.5,
+        "engineSize": 1.5,
         "power": 134,
         "MPGCombined": 30,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3076,11 +3102,11 @@
       "description": "S 4dr Wagon (1.6L 4cyl Turbo 6M)",
       "values": {
         "price": 26100,
-        "squareFootage": 1.6,
+        "engineSize": 1.6,
         "power": 181,
         "MPGCombined": 29,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -3089,11 +3115,11 @@
       "description": "John Cooper Works ALL4 2dr Hatchback AWD (1.6L 4cyl Turbo 6M)",
       "values": {
         "price": 35600,
-        "squareFootage": 1.6,
+        "engineSize": 1.6,
         "power": 208,
         "MPGCombined": 28,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3102,11 +3128,11 @@
       "description": "S Q4 4dr Sedan AWD (3.0L 6cyl Turbo 8A)",
       "values": {
         "price": 78550,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 404,
         "MPGCombined": 20,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3115,11 +3141,11 @@
       "description": "MC Centennial 2dr Coupe (4.7L 8cyl 6A)",
       "values": {
         "price": 165627,
-        "squareFootage": 4.7,
+        "engineSize": 4.7,
         "power": 454,
         "MPGCombined": 17,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3128,11 +3154,11 @@
       "description": "Sport 2dr Convertible (4.7L 8cyl 6A)",
       "values": {
         "price": 150465,
-        "squareFootage": 4.7,
+        "engineSize": 4.7,
         "power": 454,
         "MPGCombined": 16,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3141,11 +3167,11 @@
       "description": "S 4dr Sedan (3.0L 6cyl Turbo 8A)",
       "values": {
         "price": 99900,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 404,
         "MPGCombined": 19,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3154,11 +3180,11 @@
       "description": "i Touring 4dr Hatchback (2.0L 4cyl 6M)",
       "values": {
         "price": 20745,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 155,
         "MPGCombined": 34,
-        "numBath": 4.4,
-        "numBed": 15
+        "averageRating": 4.4,
+        "reviewsCount": 15
       }
     },
     {
@@ -3167,11 +3193,11 @@
       "description": "i Sport 4dr Sedan (2.5L 4cyl 6M)",
       "values": {
         "price": 21495,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 184,
         "MPGCombined": 30,
-        "numBath": 4.754,
-        "numBed": 28
+        "averageRating": 4.754,
+        "reviewsCount": 28
       }
     },
     {
@@ -3180,11 +3206,11 @@
       "description": "Grand Touring 4dr SUV (2.0L 4cyl 6A)",
       "values": {
         "price": 24990,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 146,
         "MPGCombined": 32,
-        "numBath": 4.5,
-        "numBed": 20
+        "averageRating": 4.5,
+        "reviewsCount": 20
       }
     },
     {
@@ -3193,11 +3219,11 @@
       "description": "Touring 4dr SUV AWD (2.5L 4cyl 6A)",
       "values": {
         "price": 26515,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 184,
         "MPGCombined": 27,
-        "numBath": 4.319,
-        "numBed": 100
+        "averageRating": 4.319,
+        "reviewsCount": 100
       }
     },
     {
@@ -3206,11 +3232,11 @@
       "description": "Grand Touring 2dr Convertible (2.0L 4cyl 6M)",
       "values": {
         "price": 30065,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 155,
         "MPGCombined": 30,
-        "numBath": 4.87,
-        "numBed": 23
+        "averageRating": 4.87,
+        "reviewsCount": 23
       }
     },
     {
@@ -3219,11 +3245,11 @@
       "description": "S 2dr Coupe (4.0L 8cyl Turbo 7AM)",
       "values": {
         "price": 129900,
-        "squareFootage": 4,
+        "engineSize": 4,
         "power": 503,
         "MPGCombined": 19,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3234,8 +3260,8 @@
         "price": 41450,
         "power": 177,
         "MPGCombined": 84,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3244,11 +3270,11 @@
       "description": "C300 Sport 4MATIC 4dr Sedan AWD (2.0L 4cyl Turbo 7A)",
       "values": {
         "price": 43125,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 241,
         "MPGCombined": 27,
-        "numBath": 4.833,
-        "numBed": 6
+        "averageRating": 4.833,
+        "reviewsCount": 6
       }
     },
     {
@@ -3257,11 +3283,11 @@
       "description": "AMG CLA45 4dr Sedan AWD (2.0L 4cyl Turbo 7AM)",
       "values": {
         "price": 49500,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 375,
         "MPGCombined": 27,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3270,11 +3296,11 @@
       "description": "AMG CLS63 S 4MATIC 4dr Sedan AWD (5.5L 8cyl Turbo 7A)",
       "values": {
         "price": 107800,
-        "squareFootage": 5.5,
+        "engineSize": 5.5,
         "power": 577,
         "MPGCombined": 19,
-        "numBath": 4,
-        "numBed": 2
+        "averageRating": 4,
+        "reviewsCount": 2
       }
     },
     {
@@ -3283,11 +3309,11 @@
       "description": "E400 4MATIC 4dr Sedan AWD (3.0L 6cyl Turbo 7A)",
       "values": {
         "price": 65600,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 329,
         "MPGCombined": 24,
-        "numBath": 4.833,
-        "numBed": 6
+        "averageRating": 4.833,
+        "reviewsCount": 6
       }
     },
     {
@@ -3296,11 +3322,11 @@
       "description": "AMG G63 4dr SUV 4WD (5.5L 8cyl Turbo 7A)",
       "values": {
         "price": 139900,
-        "squareFootage": 5.5,
+        "engineSize": 5.5,
         "power": 563,
         "MPGCombined": 13,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -3309,11 +3335,11 @@
       "description": "GL350 BlueTEC 4MATIC 4dr SUV AWD (3.0L 6cyl Turbodiesel 7A)",
       "values": {
         "price": 63600,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 240,
         "MPGCombined": 22,
-        "numBath": 4,
-        "numBed": 1
+        "averageRating": 4,
+        "reviewsCount": 1
       }
     },
     {
@@ -3322,11 +3348,11 @@
       "description": "GLA250 4MATIC 4dr SUV AWD (2.0L 4cyl Turbo 7AM)",
       "values": {
         "price": 34500,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 208,
         "MPGCombined": 28,
-        "numBath": 4.333,
-        "numBed": 3
+        "averageRating": 4.333,
+        "reviewsCount": 3
       }
     },
     {
@@ -3335,11 +3361,11 @@
       "description": "GLC300 4MATIC 4dr SUV AWD (2.0L 4cyl Turbo 9A)",
       "values": {
         "price": 40950,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 241,
         "MPGCombined": 24,
-        "numBath": 4.333,
-        "numBed": 9
+        "averageRating": 4.333,
+        "reviewsCount": 9
       }
     },
     {
@@ -3348,11 +3374,11 @@
       "description": "GLE350 4MATIC 4dr SUV AWD (3.5L 6cyl 7A)",
       "values": {
         "price": 53600,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 302,
         "MPGCombined": 19,
-        "numBath": 4.714,
-        "numBed": 7
+        "averageRating": 4.714,
+        "reviewsCount": 7
       }
     },
     {
@@ -3361,11 +3387,11 @@
       "description": "GLE450 AMG 4MATIC 4dr SUV AWD (3.0L 6cyl Turbo 9A)",
       "values": {
         "price": 65100,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 362,
         "MPGCombined": 20,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -3374,11 +3400,11 @@
       "description": "S600 4dr Sedan (6.0L 12cyl Turbo 7A)",
       "values": {
         "price": 189350,
-        "squareFootage": 6,
+        "engineSize": 6,
         "power": 523,
         "MPGCombined": 16,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3387,11 +3413,11 @@
       "description": "Cargo 3dr Minivan (2.0L 4cyl Turbo 7A)",
       "values": {
         "price": 28950,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 208,
         "MPGCombined": 22,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3400,11 +3426,11 @@
       "description": "S63 AMG 4MATIC 2dr Coupe AWD (5.5 8cyl Turbo 7A)",
       "values": {
         "price": 163150,
-        "squareFootage": 5.5,
+        "engineSize": 5.5,
         "power": 577,
         "MPGCombined": 19,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3413,11 +3439,11 @@
       "description": "SL400 2dr Convertible (3.0L 6cyl Turbo 7A)",
       "values": {
         "price": 85050,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 329,
         "MPGCombined": 23,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3426,11 +3452,11 @@
       "description": "SLK350 2dr Convertible (3.5L 6cyl 7A)",
       "values": {
         "price": 59200,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 302,
         "MPGCombined": 25,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3439,11 +3465,11 @@
       "description": "2500 144 WB Crew 3dr Van (2.1L 4cyl Turbodiesel 7A)",
       "values": {
         "price": 39170,
-        "squareFootage": 2.1,
+        "engineSize": 2.1,
         "power": 161,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3452,11 +3478,11 @@
       "description": "Cargo 3dr Van (2.1L 4cyl Turbodiesel 7A)",
       "values": {
         "price": 32495,
-        "squareFootage": 2.1,
+        "engineSize": 2.1,
         "power": 161,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3465,11 +3491,11 @@
       "description": "GT 4dr Sedan (2.4L 4cyl 5M)",
       "values": {
         "price": 22495,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 168,
         "MPGCombined": 26,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3478,11 +3504,11 @@
       "description": "ES 4dr SUV (2.4L 4cyl CVT)",
       "values": {
         "price": 22995,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 166,
         "MPGCombined": 28,
-        "numBath": 4.476,
-        "numBed": 21
+        "averageRating": 4.476,
+        "reviewsCount": 21
       }
     },
     {
@@ -3491,11 +3517,11 @@
       "description": "2.4 SE 4dr SUV (2.4L 4cyl CVT)",
       "values": {
         "price": 22495,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 168,
         "MPGCombined": 25,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3506,8 +3532,8 @@
         "price": 22995,
         "power": 66,
         "MPGCombined": 114,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3516,11 +3542,11 @@
       "description": "Touring Sport 2dr Convertible (3.7L 6cyl 6M)",
       "values": {
         "price": 48100,
-        "squareFootage": 3.7,
+        "engineSize": 3.7,
         "power": 332,
         "MPGCombined": 20,
-        "numBath": 4.562,
-        "numBed": 6
+        "averageRating": 4.562,
+        "reviewsCount": 6
       }
     },
     {
@@ -3529,11 +3555,11 @@
       "description": "3.5 SR 4dr Sedan w/Prod. End 1/16 (3.5L 6cyl CVT)",
       "values": {
         "price": 27390,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 270,
         "MPGCombined": 27,
-        "numBath": 4.4,
-        "numBed": 5
+        "averageRating": 4.4,
+        "reviewsCount": 5
       }
     },
     {
@@ -3542,11 +3568,11 @@
       "description": "SV 4dr King Cab 6.1 ft. SB (2.5L 4cyl 5A)",
       "values": {
         "price": 23230,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 152,
         "MPGCombined": 20,
-        "numBath": 4,
-        "numBed": 6
+        "averageRating": 4,
+        "reviewsCount": 6
       }
     },
     {
@@ -3555,11 +3581,11 @@
       "description": "Premium 2dr Coupe AWD (3.8L 6cyl Turbo 6AM)",
       "values": {
         "price": 101770,
-        "squareFootage": 3.8,
+        "engineSize": 3.8,
         "power": 545,
         "MPGCombined": 19,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3568,11 +3594,11 @@
       "description": "NISMO 4dr Hatchback (1.6L 4cyl Turbo 6M)",
       "values": {
         "price": 24830,
-        "squareFootage": 1.6,
+        "engineSize": 1.6,
         "power": 188,
         "MPGCombined": 31,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3583,8 +3609,8 @@
         "price": 29010,
         "power": null,
         "MPGCombined": 115,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3593,11 +3619,11 @@
       "description": "3.5 SR 4dr Sedan (3.5L 6cyl CVT)",
       "values": {
         "price": 37770,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 300,
         "MPGCombined": 26,
-        "numBath": 4.238,
-        "numBed": 41
+        "averageRating": 4.238,
+        "reviewsCount": 41
       }
     },
     {
@@ -3606,11 +3632,11 @@
       "description": "SL 4dr SUV (3.5L 6cyl CVT)",
       "values": {
         "price": 37050,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 260,
         "MPGCombined": 24,
-        "numBath": 3.75,
-        "numBed": 4
+        "averageRating": 3.75,
+        "reviewsCount": 4
       }
     },
     {
@@ -3619,11 +3645,11 @@
       "description": "2500 S 3dr Van w/High Roof (4.0L 6cyl 5A)",
       "values": {
         "price": 29890,
-        "squareFootage": 4,
+        "engineSize": 4,
         "power": 261,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3632,11 +3658,11 @@
       "description": "3500 SV 3dr Van (5.6L 8cyl 5A)",
       "values": {
         "price": 36210,
-        "squareFootage": 5.6,
+        "engineSize": 5.6,
         "power": 317,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3645,11 +3671,11 @@
       "description": "S 4dr Minivan (2.0L 4cyl CVT)",
       "values": {
         "price": 20870,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 131,
         "MPGCombined": 25,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3658,11 +3684,11 @@
       "description": "SL 4dr SUV (3.5L 6cyl CVT)",
       "values": {
         "price": 36410,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 260,
         "MPGCombined": 23,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -3671,11 +3697,11 @@
       "description": "SV 4dr Minivan (3.5L 6cyl CVT)",
       "values": {
         "price": 30540,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 260,
         "MPGCombined": 23,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3684,11 +3710,11 @@
       "description": "S 4dr SUV (2.5L 4cyl CVT)",
       "values": {
         "price": 23290,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 170,
         "MPGCombined": 29,
-        "numBath": 4.316,
-        "numBed": 19
+        "averageRating": 4.316,
+        "reviewsCount": 19
       }
     },
     {
@@ -3697,11 +3723,11 @@
       "description": "SV 4dr Sedan (1.8L 4cyl CVT)",
       "values": {
         "price": 18550,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 130,
         "MPGCombined": 33,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3710,11 +3736,11 @@
       "description": "Platinum Reserve 4dr Crew Cab 4WD SB (5.0L 8cyl Turbodiesel 6A)",
       "values": {
         "price": 60520,
-        "squareFootage": 5,
+        "engineSize": 5,
         "power": 310,
         "MPGCombined": null,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -3723,11 +3749,11 @@
       "description": "1.6 S 4dr Sedan (1.6L 4cyl 4A)",
       "values": {
         "price": 13540,
-        "squareFootage": 1.6,
+        "engineSize": 1.6,
         "power": 109,
         "MPGCombined": 30,
-        "numBath": 4.5,
-        "numBed": 2
+        "averageRating": 4.5,
+        "reviewsCount": 2
       }
     },
     {
@@ -3736,11 +3762,11 @@
       "description": "1.6 SR 4dr Hatchback (1.6L 4cyl CVT)",
       "values": {
         "price": 17980,
-        "squareFootage": 1.6,
+        "engineSize": 1.6,
         "power": 109,
         "MPGCombined": 35,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3749,11 +3775,11 @@
       "description": "GT3 2dr Coupe (3.8L 6cyl 7AM)",
       "values": {
         "price": 130400,
-        "squareFootage": 3.8,
+        "engineSize": 3.8,
         "power": 475,
         "MPGCombined": 17,
-        "numBath": 4,
-        "numBed": 2
+        "averageRating": 4,
+        "reviewsCount": 2
       }
     },
     {
@@ -3762,11 +3788,11 @@
       "description": "2dr Convertible (2.7L 6cyl 6M)",
       "values": {
         "price": 52100,
-        "squareFootage": 2.7,
+        "engineSize": 2.7,
         "power": 265,
         "MPGCombined": 25,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3775,11 +3801,11 @@
       "description": "Turbo S 4dr SUV AWD (4.8L 8cyl Turbo 8A)",
       "values": {
         "price": 157300,
-        "squareFootage": 4.8,
+        "engineSize": 4.8,
         "power": 570,
         "MPGCombined": 17,
-        "numBath": 3,
-        "numBed": 6
+        "averageRating": 3,
+        "reviewsCount": 6
       }
     },
     {
@@ -3788,11 +3814,11 @@
       "description": "GTS 2dr Coupe (3.4L 6cyl 6M)",
       "values": {
         "price": 75200,
-        "squareFootage": 3.4,
+        "engineSize": 3.4,
         "power": 340,
         "MPGCombined": 22,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -3801,11 +3827,11 @@
       "description": "Turbo 4dr SUV AWD (3.6L 6cyl Turbo 7AM)",
       "values": {
         "price": 73900,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 400,
         "MPGCombined": 20,
-        "numBath": 5,
-        "numBed": 5
+        "averageRating": 5,
+        "reviewsCount": 5
       }
     },
     {
@@ -3814,11 +3840,11 @@
       "description": "S 4dr Sedan (3.0L 6cyl Turbo 7AM)",
       "values": {
         "price": 93200,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 420,
         "MPGCombined": 22,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -3827,11 +3853,11 @@
       "description": "SLT 2dr Regular Cab SB (3.6L 6cyl 8A)",
       "values": {
         "price": 31495,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 305,
         "MPGCombined": 21,
-        "numBath": 4.7,
-        "numBed": 10
+        "averageRating": 4.7,
+        "reviewsCount": 10
       }
     },
     {
@@ -3840,11 +3866,11 @@
       "description": "Outdoorsman 4dr Crew Cab 4WD SB (5.7L 8cyl 6A)",
       "values": {
         "price": 46220,
-        "squareFootage": 5.7,
+        "engineSize": 5.7,
         "power": 383,
         "MPGCombined": null,
-        "numBath": 4,
-        "numBed": 4
+        "averageRating": 4,
+        "reviewsCount": 4
       }
     },
     {
@@ -3853,11 +3879,11 @@
       "description": "Longhorn 4dr Mega Cab 4WD SB (5.7L 8cyl 6A)",
       "values": {
         "price": 58275,
-        "squareFootage": 5.7,
+        "engineSize": 5.7,
         "power": 383,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3866,11 +3892,11 @@
       "description": "1500 Low Roof 3dr Van w/136\" Wheelbase (3.6L 6cyl 6A)",
       "values": {
         "price": 30630,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 280,
         "MPGCombined": null,
-        "numBath": 3.2,
-        "numBed": 5
+        "averageRating": 3.2,
+        "reviewsCount": 5
       }
     },
     {
@@ -3879,11 +3905,11 @@
       "description": "Tradesman SLT Cargo 4dr Minivan (2.4L 4cyl 9A)",
       "values": {
         "price": 25070,
-        "squareFootage": 2.4,
+        "engineSize": 2.4,
         "power": 178,
         "MPGCombined": 26,
-        "numBath": 3,
-        "numBed": 1
+        "averageRating": 3,
+        "reviewsCount": 1
       }
     },
     {
@@ -3892,11 +3918,11 @@
       "description": "2500 High Roof 3dr Van (3.6L 6cyl 6A)",
       "values": {
         "price": 34150,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 280,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3905,11 +3931,11 @@
       "description": "2dr Convertible (6.6L 12cyl Turbo 8A)",
       "values": {
         "price": 335000,
-        "squareFootage": 6.6,
+        "engineSize": 6.6,
         "power": 563,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3918,11 +3944,11 @@
       "description": "EWB 4dr Sedan (6.6L 12cyl Turbo 8A)",
       "values": {
         "price": 329325,
-        "squareFootage": 6.6,
+        "engineSize": 6.6,
         "power": 563,
         "MPGCombined": 17,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3931,11 +3957,11 @@
       "description": "4dr Sedan (6.7L 12cyl 8A)",
       "values": {
         "price": 417825,
-        "squareFootage": 6.7,
+        "engineSize": 6.7,
         "power": 453,
         "MPGCombined": 15,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3944,11 +3970,11 @@
       "description": "2dr Coupe (6.7L 12cyl 8A)",
       "values": {
         "price": 449525,
-        "squareFootage": 6.7,
+        "engineSize": 6.7,
         "power": 453,
         "MPGCombined": 15,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3957,11 +3983,11 @@
       "description": "2dr Convertible (6.7L 12cyl 8A)",
       "values": {
         "price": 492000,
-        "squareFootage": 6.7,
+        "engineSize": 6.7,
         "power": 453,
         "MPGCombined": 15,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3970,11 +3996,11 @@
       "description": "2dr Coupe (6.6L 12cyl Turbo 8A)",
       "values": {
         "price": 304350,
-        "squareFootage": 6.6,
+        "engineSize": 6.6,
         "power": 624,
         "MPGCombined": 17,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3983,11 +4009,11 @@
       "description": "2dr Coupe (2.0L 4cyl 6A)",
       "values": {
         "price": 26405,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 200,
         "MPGCombined": 29,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -3996,11 +4022,11 @@
       "description": "4dr Sedan (1.5L 4cyl 6M)",
       "values": {
         "price": 15700,
-        "squareFootage": 1.5,
+        "engineSize": 1.5,
         "power": 106,
         "MPGCombined": 36,
-        "numBath": 4.8,
-        "numBed": 5
+        "averageRating": 4.8,
+        "reviewsCount": 5
       }
     },
     {
@@ -4009,11 +4035,11 @@
       "description": "4dr Hatchback (1.8L 4cyl CVT)",
       "values": {
         "price": 19200,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 137,
         "MPGCombined": 32,
-        "numBath": 4.667,
-        "numBed": 9
+        "averageRating": 4.667,
+        "reviewsCount": 9
       }
     },
     {
@@ -4022,11 +4048,11 @@
       "description": "2dr Hatchback (2.5L 4cyl 6M)",
       "values": {
         "price": 19385,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 179,
         "MPGCombined": 27,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -4035,11 +4061,11 @@
       "description": "Limited 2dr Coupe (2.0L 4cyl 6M)",
       "values": {
         "price": 27395,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 200,
         "MPGCombined": 26,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -4048,11 +4074,11 @@
       "description": "2.0i Limited PZEV 4dr SUV AWD (2.0L 4cyl CVT)",
       "values": {
         "price": 25095,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 148,
         "MPGCombined": 30,
-        "numBath": 4.25,
-        "numBed": 16
+        "averageRating": 4.25,
+        "reviewsCount": 16
       }
     },
     {
@@ -4061,11 +4087,11 @@
       "description": "2.5i Premium PZEV 4dr SUV AWD (2.5L 4cyl 6M)",
       "values": {
         "price": 25295,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 170,
         "MPGCombined": 25,
-        "numBath": 4.419,
-        "numBed": 62
+        "averageRating": 4.419,
+        "reviewsCount": 62
       }
     },
     {
@@ -4074,11 +4100,11 @@
       "description": "2.0i Sport Limited PZEV 4dr Hatchback AWD (2.0L 4cyl CVT)",
       "values": {
         "price": 23595,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 148,
         "MPGCombined": 31,
-        "numBath": 4.714,
-        "numBed": 7
+        "averageRating": 4.714,
+        "reviewsCount": 7
       }
     },
     {
@@ -4087,11 +4113,11 @@
       "description": "2.5i 4dr Sedan AWD (2.5L 4cyl CVT)",
       "values": {
         "price": 21745,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 175,
         "MPGCombined": 31,
-        "numBath": 4.267,
-        "numBed": 15
+        "averageRating": 4.267,
+        "reviewsCount": 15
       }
     },
     {
@@ -4100,11 +4126,11 @@
       "description": "2.5i Limited 4dr Wagon AWD (2.5L 4cyl CVT)",
       "values": {
         "price": 30395,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 175,
         "MPGCombined": 29,
-        "numBath": 4.586,
-        "numBed": 70
+        "averageRating": 4.586,
+        "reviewsCount": 70
       }
     },
     {
@@ -4113,11 +4139,11 @@
       "description": "Limited 4dr Sedan AWD (2.0L 4cyl Turbo 6M)",
       "values": {
         "price": 30395,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 268,
         "MPGCombined": 23,
-        "numBath": 4.632,
-        "numBed": 19
+        "averageRating": 4.632,
+        "reviewsCount": 19
       }
     },
     {
@@ -4128,8 +4154,8 @@
         "price": 75000,
         "power": null,
         "MPGCombined": 101,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -4138,11 +4164,11 @@
       "description": "Limited 4dr SUV 4WD (4.0L 6cyl 5A)",
       "values": {
         "price": 44160,
-        "squareFootage": 4,
+        "engineSize": 4,
         "power": 270,
         "MPGCombined": 19,
-        "numBath": 4.8,
-        "numBed": 5
+        "averageRating": 4.8,
+        "reviewsCount": 5
       }
     },
     {
@@ -4151,11 +4177,11 @@
       "description": "XLE 4dr Sedan (3.5L 6cyl 6A)",
       "values": {
         "price": 32650,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 268,
         "MPGCombined": 26,
-        "numBath": 3.75,
-        "numBed": 4
+        "averageRating": 3.75,
+        "reviewsCount": 4
       }
     },
     {
@@ -4164,11 +4190,11 @@
       "description": "Limited 4dr Sedan (2.5L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 41950,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 200,
         "MPGCombined": 40,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -4177,11 +4203,11 @@
       "description": "Special Edition 4dr Sedan (2.5L 4cyl 6A)",
       "values": {
         "price": 25715,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 178,
         "MPGCombined": 30,
-        "numBath": 3.788,
-        "numBed": 33
+        "averageRating": 3.788,
+        "reviewsCount": 33
       }
     },
     {
@@ -4190,11 +4216,11 @@
       "description": "LE 4dr Sedan (2.5L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 26790,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 200,
         "MPGCombined": 41,
-        "numBath": 4.5,
-        "numBed": 2
+        "averageRating": 4.5,
+        "reviewsCount": 2
       }
     },
     {
@@ -4203,11 +4229,11 @@
       "description": "S 4dr Sedan (1.8L 4cyl CVT)",
       "values": {
         "price": 19365,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 132,
         "MPGCombined": 33,
-        "numBath": 4.64,
-        "numBed": 25
+        "averageRating": 4.64,
+        "reviewsCount": 25
       }
     },
     {
@@ -4216,11 +4242,11 @@
       "description": "Limited 4dr SUV AWD (3.5L 6cyl 6A)",
       "values": {
         "price": 41875,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 270,
         "MPGCombined": 21,
-        "numBath": 4.5,
-        "numBed": 18
+        "averageRating": 4.5,
+        "reviewsCount": 18
       }
     },
     {
@@ -4229,11 +4255,11 @@
       "description": "Limited 4dr SUV AWD (3.5L 6cyl gas/electric hybrid CVT)",
       "values": {
         "price": 47870,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 280,
         "MPGCombined": 27,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -4242,11 +4268,11 @@
       "description": "4dr SUV 4WD (5.7L 8cyl 8A)",
       "values": {
         "price": 83825,
-        "squareFootage": 5.7,
+        "engineSize": 5.7,
         "power": 381,
         "MPGCombined": 15,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -4257,8 +4283,8 @@
         "price": 57500,
         "power": 153,
         "MPGCombined": null,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -4267,11 +4293,11 @@
       "description": "Four Touring 4dr Hatchback (1.8L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 30000,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 121,
         "MPGCombined": 52,
-        "numBath": 4.5,
-        "numBed": 8
+        "averageRating": 4.5,
+        "reviewsCount": 8
       }
     },
     {
@@ -4280,11 +4306,11 @@
       "description": "Persona Series Special Edition 4dr Hatchback (1.5L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 21355,
-        "squareFootage": 1.5,
+        "engineSize": 1.5,
         "power": 99,
         "MPGCombined": 50,
-        "numBath": 4,
-        "numBed": 2
+        "averageRating": 4,
+        "reviewsCount": 2
       }
     },
     {
@@ -4293,11 +4319,11 @@
       "description": "Two 4dr Wagon (1.8L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 26675,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 134,
         "MPGCombined": 42,
-        "numBath": 4.75,
-        "numBed": 4
+        "averageRating": 4.75,
+        "reviewsCount": 4
       }
     },
     {
@@ -4306,11 +4332,11 @@
       "description": "SE 4dr SUV (2.5L 4cyl 6A)",
       "values": {
         "price": 29265,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 176,
         "MPGCombined": 27,
-        "numBath": 3.9,
-        "numBed": 20
+        "averageRating": 3.9,
+        "reviewsCount": 20
       }
     },
     {
@@ -4319,11 +4345,11 @@
       "description": "XLE 4dr SUV AWD (2.5L 4cyl gas/electric hybrid CVT)",
       "values": {
         "price": 28370,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 194,
         "MPGCombined": 33,
-        "numBath": 4.533,
-        "numBed": 15
+        "averageRating": 4.533,
+        "reviewsCount": 15
       }
     },
     {
@@ -4332,11 +4358,11 @@
       "description": "SR5 4dr SUV (5.7L 8cyl 6A)",
       "values": {
         "price": 45325,
-        "squareFootage": 5.7,
+        "engineSize": 5.7,
         "power": 381,
         "MPGCombined": 15,
-        "numBath": 4.5,
-        "numBed": 2
+        "averageRating": 4.5,
+        "reviewsCount": 2
       }
     },
     {
@@ -4345,11 +4371,11 @@
       "description": "LE 7-Passenger Mobility 4dr Minivan (3.5L 6cyl 6A)",
       "values": {
         "price": 31840,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 266,
         "MPGCombined": 21,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -4358,11 +4384,11 @@
       "description": "TRD Off Road 4dr Double Cab 4WD 5.0 ft. SB (3.5L 6cyl 6A)",
       "values": {
         "price": 33730,
-        "squareFootage": 3.5,
+        "engineSize": 3.5,
         "power": 278,
         "MPGCombined": 20,
-        "numBath": 3.563,
-        "numBed": 87
+        "averageRating": 3.563,
+        "reviewsCount": 87
       }
     },
     {
@@ -4371,11 +4397,11 @@
       "description": "SR5 4dr CrewMax SB (5.7L 8cyl 6A)",
       "values": {
         "price": 34970,
-        "squareFootage": 5.7,
+        "engineSize": 5.7,
         "power": 381,
         "MPGCombined": 15,
-        "numBath": 4.632,
-        "numBed": 19
+        "averageRating": 4.632,
+        "reviewsCount": 19
       }
     },
     {
@@ -4384,11 +4410,11 @@
       "description": "LE 2dr Hatchback (1.5L 4cyl 4A)",
       "values": {
         "price": 16555,
-        "squareFootage": 1.5,
+        "engineSize": 1.5,
         "power": 106,
         "MPGCombined": 33,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -4397,11 +4423,11 @@
       "description": "1.8T Wolfsburg Edition 2dr Hatchback (1.8L 4cyl Turbo 6A)",
       "values": {
         "price": 19595,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 170,
         "MPGCombined": 29,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -4410,11 +4436,11 @@
       "description": "1.8T Denim PZEV 2dr Convertible (1.8L 4cyl Turbo 6A)",
       "values": {
         "price": 25995,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 170,
         "MPGCombined": 29,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -4423,11 +4449,11 @@
       "description": "3.6L V6 4Motion Executive 4dr Sedan AWD (3.6L 6cyl 6AM)",
       "values": {
         "price": 44355,
-        "squareFootage": 3.6,
+        "engineSize": 3.6,
         "power": 280,
         "MPGCombined": 21,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -4436,11 +4462,11 @@
       "description": "Komfort 2dr Convertible (2.0L 4cyl Turbo 6AM)",
       "values": {
         "price": 31995,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 200,
         "MPGCombined": 26,
-        "numBath": 5,
-        "numBed": 2
+        "averageRating": 5,
+        "reviewsCount": 2
       }
     },
     {
@@ -4449,11 +4475,11 @@
       "description": "TSI 2dr Hatchback (1.8L 4cyl Turbo 6A)",
       "values": {
         "price": 19595,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 170,
         "MPGCombined": 30,
-        "numBath": 5,
-        "numBed": 1
+        "averageRating": 5,
+        "reviewsCount": 1
       }
     },
     {
@@ -4462,11 +4488,11 @@
       "description": "S w/Performance Package 4dr Hatchback (2.0L 4cyl Turbo 6AM)",
       "values": {
         "price": 28190,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 220,
         "MPGCombined": 29,
-        "numBath": 4.882,
-        "numBed": 17
+        "averageRating": 4.882,
+        "reviewsCount": 17
       }
     },
     {
@@ -4475,11 +4501,11 @@
       "description": "w/Dynamic Chassis Control and Navigation 4dr Hatchback AWD (2.0L 4cyl Turbo 6AM)",
       "values": {
         "price": 38995,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 292,
         "MPGCombined": 26,
-        "numBath": 4.75,
-        "numBed": 4
+        "averageRating": 4.75,
+        "reviewsCount": 4
       }
     },
     {
@@ -4488,11 +4514,11 @@
       "description": "TSI Limited Edition 4dr Wagon (1.8L 4cyl Turbo 6A)",
       "values": {
         "price": 24995,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 170,
         "MPGCombined": 30,
-        "numBath": 4.5,
-        "numBed": 4
+        "averageRating": 4.5,
+        "reviewsCount": 4
       }
     },
     {
@@ -4501,11 +4527,11 @@
       "description": "1.4T S 4dr Sedan (1.4L 4cyl Turbo 5M)",
       "values": {
         "price": 17680,
-        "squareFootage": 1.4,
+        "engineSize": 1.4,
         "power": 150,
         "MPGCombined": 33,
-        "numBath": 4.833,
-        "numBed": 24
+        "averageRating": 4.833,
+        "reviewsCount": 24
       }
     },
     {
@@ -4514,11 +4540,11 @@
       "description": "R-Line PZEV 4dr Sedan (1.8L 4cyl Turbo 6A)",
       "values": {
         "price": 23975,
-        "squareFootage": 1.8,
+        "engineSize": 1.8,
         "power": 170,
         "MPGCombined": 31,
-        "numBath": 5,
-        "numBed": 5
+        "averageRating": 5,
+        "reviewsCount": 5
       }
     },
     {
@@ -4527,11 +4553,11 @@
       "description": "SE 4dr SUV (2.0L 4cyl Turbo 6A)",
       "values": {
         "price": 31390,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 200,
         "MPGCombined": 23,
-        "numBath": 4.25,
-        "numBed": 8
+        "averageRating": 4.25,
+        "reviewsCount": 8
       }
     },
     {
@@ -4540,11 +4566,11 @@
       "description": "TDI Sport w/Technology 4dr SUV AWD (3.0L 6cyl Turbodiesel 8A)",
       "values": {
         "price": 50245,
-        "squareFootage": 3,
+        "engineSize": 3,
         "power": 240,
         "MPGCombined": 25,
-        "numBath": 4.667,
-        "numBed": 3
+        "averageRating": 4.667,
+        "reviewsCount": 3
       }
     },
     {
@@ -4555,8 +4581,8 @@
         "price": 35595,
         "power": 115,
         "MPGCombined": 117,
-        "numBath": 3.667,
-        "numBed": 3
+        "averageRating": 3.667,
+        "reviewsCount": 3
       }
     },
     {
@@ -4565,11 +4591,11 @@
       "description": "T6 Drive-E R-Design Platinum 4dr Sedan AWD (2.0L 4cyl Twincharger 8A)",
       "values": {
         "price": 47900,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 302,
         "MPGCombined": 26,
-        "numBath": 5,
-        "numBed": 3
+        "averageRating": 5,
+        "reviewsCount": 3
       }
     },
     {
@@ -4578,11 +4604,11 @@
       "description": "T5 Drive-E 4dr Sedan (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 43450,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 240,
         "MPGCombined": 30,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -4591,11 +4617,11 @@
       "description": "T5 4dr Wagon AWD (2.5L 5cyl Turbo 6A)",
       "values": {
         "price": 37650,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 250,
         "MPGCombined": 24,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -4604,11 +4630,11 @@
       "description": "T5 4dr Wagon AWD (2.5L 5cyl Turbo)",
       "values": {
         "price": 41200,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 250,
         "MPGCombined": 24,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     },
     {
@@ -4617,11 +4643,11 @@
       "description": "T6 Drive-E R-Design Platinum 4dr SUV AWD (2.0L 4cyl Twincharger 8A)",
       "values": {
         "price": 51300,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 302,
         "MPGCombined": 24,
-        "numBath": 5,
-        "numBed": 3
+        "averageRating": 5,
+        "reviewsCount": 3
       }
     },
     {
@@ -4630,11 +4656,11 @@
       "description": "T5 Classic Platinum 4dr Wagon AWD (2.5L 5cyl Turbo 6A)",
       "values": {
         "price": 48175,
-        "squareFootage": 2.5,
+        "engineSize": 2.5,
         "power": 250,
         "MPGCombined": 22,
-        "numBath": 4.75,
-        "numBed": 4
+        "averageRating": 4.75,
+        "reviewsCount": 4
       }
     },
     {
@@ -4643,11 +4669,11 @@
       "description": "T5 R-Design 4dr SUV AWD (2.0L 4cyl Turbo 8A)",
       "values": {
         "price": 51350,
-        "squareFootage": 2,
+        "engineSize": 2,
         "power": 250,
         "MPGCombined": 23,
-        "numBath": 4.091,
-        "numBed": 22
+        "averageRating": 4.091,
+        "reviewsCount": 22
       }
     },
     {
@@ -4656,11 +4682,11 @@
       "description": "pure coupe 2dr Hatchback (1.0L 3cyl Turbo 5M)",
       "values": {
         "price": 14650,
-        "squareFootage": 1,
+        "engineSize": 1,
         "power": 89,
         "MPGCombined": 35,
-        "numBath": null,
-        "numBed": null
+        "averageRating": null,
+        "reviewsCount": null
       }
     }
   ]

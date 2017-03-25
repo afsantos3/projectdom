@@ -53,7 +53,7 @@
 
   /**********INPUTS**********/
   function initColumns() {
-    $.getJSON('/data/auto.json').then(function(problem) {
+    $.getJSON('/data/home.json').then(function(problem) {
       theProblem = problem;
       showInputCode();
       var cols = problem.columns.filter(function(col){
