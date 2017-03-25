@@ -1,0 +1,62 @@
+{
+  "subject": "LivingSpace",
+  "columns": [
+    {
+      "key": "price",
+      "full_name": "Price",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "min",
+      "format": "number:0 | taPrefix:'$'",
+      "description": "Listing price"
+    },
+    {
+      "key": "squareFootage",
+      "full_name": "Square Footage",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "max",
+      "format": "number:1 | taSuffix:' sq.ft.'",
+      "range": {
+        "low": 0,
+        "high": 10
+      },
+      "description": "The total floor size in sq.ft"
+    },
+    {
+      "key": "numBath",
+      "full_name": "Number of Bathrooms",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "max",
+      "format": "number:1 | taSuffix:' stars'",
+      "range": {
+        "low": 0,
+        "high": 5
+      },
+      "description": "Number of bathrooms in house"
+    },
+    {
+      "key": "numBed",
+      "full_name": "Number of Bedrooms",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "max",
+      "format": "number:0",
+      "description": "Number of bedrooms in house"
+    }
+  ],
+  "options": [
+    {
+      "key": 200727569,
+      "address": "Address",
+      "description": "Short description.",
+      "values": {
+        "price": 32900,
+        "squareFootage": 2.4,
+        "numBath": 4.05,
+        "numBed": 15
+      }
+    }
+  ]
+}
