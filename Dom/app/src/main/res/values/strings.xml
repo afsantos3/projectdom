@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Dom</string>
+    <string name="bedrooms_prompt">Bedrooms: </string>
+    <string name="bedrooms_hint">Please enter the minimum</string>
+    <string name="zip_prompt">Desired location</string>
+    <string name="zip_hint">Please enter the zip code</string>
+    <string name="getHousesFromInit">Find Listings!</string>
 </resources>
