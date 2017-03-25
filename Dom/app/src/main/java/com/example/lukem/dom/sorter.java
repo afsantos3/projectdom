@@ -1,5 +1,7 @@
 package com.example.lukem.dom;
 
+import android.util.Log;
+
 /**
  * Created by jacob on 3/25/2017.
  */
@@ -21,5 +23,12 @@ public class sorter {
 
     public house get_next_house() {
         return house_list.pop();
+    }
+
+    public house temp_get_fake_house(){
+        house temp = new house();
+        Log.v("TEMP", Double.toString(temp.price));
+        Log.v("TEMP", Integer.toString(temp.square_foot));
+        return temp;
     }
 }

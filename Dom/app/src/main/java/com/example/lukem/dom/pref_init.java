@@ -17,7 +17,15 @@ public class pref_init {
         return zip_code;
     }
 
+    public void setZip_code(int zip_code) {
+        this.zip_code = zip_code;
+    }
+
     public int getNum_beds() {
         return num_beds;
+    }
+
+    public void setNum_beds(int num_beds) {
+        this.num_beds = num_beds;
     }
 }
