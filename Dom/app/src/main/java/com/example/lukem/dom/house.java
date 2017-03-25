@@ -29,8 +29,4 @@ public class house {
     public String getPhoto() {
         return photos.pop();
     }
-
-    public void initPhotos() {
-
-    }
 }
