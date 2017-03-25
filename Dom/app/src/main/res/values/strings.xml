@@ -4,5 +4,10 @@
     <string name="bedrooms_hint">Please enter the minimum</string>
     <string name="zip_prompt">Desired location</string>
     <string name="zip_hint">Please enter the zip code</string>
+    <string name="price">Price:</string>
+    <string name="size">Size:</string>
+    <string name="square_feet">square feet</string>
     <string name="getHousesFromInit">Find Listings!</string>
+    <string name="invalid_input">Invalid input. Ensure all fields are filled out.</string>
+    <string name="invalid_zip">Invalid zip code.</string>
 </resources>
