@@ -17,4 +17,13 @@ public class houselist extends ArrayList<house> {
         house2 = new house(20, 20);
         this.add(house2);
     }
+
+    public house pop() {
+        int end_index = this.size() - 1;
+
+        house this_house = this.get(end_index);
+        this.remove(end_index);
+
+        return this_house;
+    }
 }
