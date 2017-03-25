@@ -16,6 +16,6 @@ public class sorter {
     }
 
     public house get_next_house() {
-        return  null;
+        return house_list.pop();
     }
 }
