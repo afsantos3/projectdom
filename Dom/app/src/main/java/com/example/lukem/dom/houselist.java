@@ -1,3 +1,5 @@
+package com.example.lukem.dom;
+
 import java.util.ArrayList;
 
 /**
@@ -5,7 +7,7 @@ import java.util.ArrayList;
  */
 
 public class houselist extends ArrayList<house> {
-    public houselist(init initial_data) {
+    public houselist(pref_init initial_data) {
         // make fake data here
         house house1;
         house1 = new house(10, 10);
