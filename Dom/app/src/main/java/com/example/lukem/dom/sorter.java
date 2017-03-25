@@ -11,7 +11,7 @@ public class sorter {
         this.house_list = new houselist(this_init);
     }
 
-    public void get_feedback(boolean like) {
+    public void store_feedback(boolean like) {
         // store feedback
     }
 
