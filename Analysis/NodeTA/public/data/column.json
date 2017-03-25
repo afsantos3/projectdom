@@ -1,0 +1,27 @@
+{
+  "subject": "LivingSpace",
+  "columns": [
+    {
+      "key": "price",
+      "full_name": "Price",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "min",
+      "format": "number:0 | taPrefix:'$'",
+      "description": "Listing price"
+    },
+    {
+      "key": "squareFootage",
+      "full_name": "Square Footage",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "max",
+      "format": "number:1 | taSuffix:' sq.ft.'",
+      "range": {
+        "low": 0,
+        "high": 10
+      },
+      "description": "The total floor size in sq.ft"
+    }
+  ]
+}
