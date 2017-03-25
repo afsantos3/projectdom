@@ -3,6 +3,6 @@
  */
 
 public class init {
-    int zip_code;
-    int num_beds;
+    public int zip_code;
+    public int num_beds;
 }

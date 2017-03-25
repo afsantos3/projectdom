@@ -5,4 +5,9 @@
 public class house {
     public double price;
     public int square_foot;
+
+    public house(double price, int square_foot) {
+        this.price = price;
+        this.square_foot = square_foot;
+    }
 }

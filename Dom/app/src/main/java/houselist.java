@@ -5,5 +5,14 @@ import java.util.ArrayList;
  */
 
 public class houselist extends ArrayList<house> {
+    public houselist(init initial_data) {
+        // make fake data here
+        house house1;
+        house1 = new house(10, 10);
+        this.add(house1);
 
+        house house2;
+        house2 = new house(20, 20);
+        this.add(house2);
+    }
 }
