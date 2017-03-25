@@ -12,6 +12,4 @@ public class house {
         this.price = price;
         this.square_foot = square_foot;
     }
-
-
 }
