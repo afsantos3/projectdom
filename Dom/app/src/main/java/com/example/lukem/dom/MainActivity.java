@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 public class MainActivity extends AppCompatActivity {
+
     String LOG_TAG = "DOM:MainActivity";
     String zip;
     String numBeds;
@@ -20,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText zipEditText = (EditText) findViewById(R.id.zip_edittext);
         final EditText bedroomsEditText = (EditText) findViewById(R.id.bedrooms_edittext);
+
+        zipEditText.setText("38716");
+        bedroomsEditText.setText("5");
+
         Button findListingsButton = (Button) findViewById(R.id.find_button);
         findListingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.v(LOG_TAG, "numBeds is invalid");
                 }
                 else {
-                    Intent houseIntent = new Intent(MainActivity.this, HouseActivity.class);
+                    Intent houseIntent = new Intent(MainActivity.this, HouseActivityEncapsule.class);
                     houseIntent.putExtra("zip", zip);
                     houseIntent.putExtra("numBeds", numBeds);
                     startActivity(houseIntent);
@@ -45,4 +51,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        Log.v(LOG_TAG, "Back pressed");
+        this.finishAffinity();
+    }
+
 }
