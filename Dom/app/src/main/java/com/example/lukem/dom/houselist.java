@@ -47,6 +47,7 @@ public class houselist {
     ArrayList<house> thisHouseList;
 
     public houselist(pref_init initial_data) {
+        avgScores = new avg_scores(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         resultString = "";
         thisHouseList = new ArrayList<house>();
         set_list();
@@ -56,6 +57,8 @@ public class houselist {
         HttpRequestClass task = new HttpRequestClass();
         URL reqUrl = task.makeUrl("https://tradeoff-analytics-nodejs-wisehacks-dom.mybluemix.net/dom");
         task.execute(reqUrl);
+        HTTPPostAsyncTask postTask = new HTTPPostAsyncTask();
+        postTask.execute(reqUrl);
         try {
             task.get(100000, TimeUnit.MILLISECONDS);
         } catch (Exception e){
@@ -125,6 +128,7 @@ public class houselist {
     }
 
     public houselist() {
+        avgScores = new avg_scores(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         resultString = "";
         thisHouseList = new ArrayList<house>();
         set_list();
@@ -149,7 +153,7 @@ public class houselist {
 
     public String convert_to_gson() {
         Gson gson = new Gson();
-        JsonElement jsonElement = gson.toJsonTree(avgScores);
+        JsonElement jsonElement = gson.toJsonTree(avgScores).getAsJsonObject();
         return jsonElement.getAsString();
     }
 

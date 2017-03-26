@@ -72,7 +72,9 @@ public class HouseActivity extends AppCompatActivity {
     }
 
     private house getHouseExtras(Bundle b) {
-        return new house(b.getDouble("price"), b.getInt("square_foot"));
+        return new house(
+                b.getDouble("price"),
+                b.getInt("square_foot"));
     }
 
     @Override
