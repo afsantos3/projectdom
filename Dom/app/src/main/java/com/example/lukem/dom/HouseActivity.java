@@ -1,13 +1,16 @@
 package com.example.lukem.dom;
 
+import android.content.Intent;
 import android.media.Image;
+import android.provider.ContactsContract;
 import android.support.annotation.IntegerRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import org.w3c.dom.Text;
 
 public class HouseActivity extends AppCompatActivity {
@@ -16,13 +19,6 @@ public class HouseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        String numBedsStr;
-        String zipStr;
-        int zip;
-        int numBeds;
-        pref_init pe;
-        sorter houseFactory;
-        house currentHouse;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.house_activity);
@@ -30,23 +26,40 @@ public class HouseActivity extends AppCompatActivity {
         TextView priceText = (TextView) findViewById(R.id.price_variable_field);
         TextView sizeText = (TextView) findViewById(R.id.size_variable_field);
         ImageView houseImageView = (ImageView) findViewById(R.id.house_imageview);
-
+        ImageButton likeButton = (ImageButton) findViewById(R.id.like_button);
+        ImageButton dislikeButton = (ImageButton) findViewById(R.id.dislike_button);
 
         Bundle bundle = getIntent().getExtras();
-        numBedsStr = bundle.getString("numBeds");
-        zipStr = bundle.getString("zip");
-        numBeds = Integer.parseInt(numBedsStr);
-        zip = Integer.parseInt(zipStr);
+        house currentHouse = getHouseExtras(bundle);
 
-        pe = new pref_init(zip, numBeds);
-        houseFactory = new sorter(pe);
-        currentHouse = houseFactory.temp_get_fake_house();
+        sizeText.setText(Integer.toString(currentHouse.square_foot));
+        priceText.setText(Double.toString(currentHouse.price));
+        houseImageView.setImageResource(R.drawable.dom);
 
-        if(currentHouse != null){
-            sizeText.setText(Integer.toString(currentHouse.square_foot));
-            priceText.setText(Double.toString(currentHouse.price));
-            houseImageView.setImageResource(R.drawable.dom);
-        }
+        likeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
+        dislikeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+    }
+
+    private house getHouseExtras(Bundle b) {
+        return new house(b.getDouble("price"), b.getInt("square_foot"));
+    }
+
+    @Override
+    public void onBackPressed() {
+        Log.v(LOG_TAG, "Back pressed");
+         Intent parent = new Intent(HouseActivity.this, MainActivity.class);
+        startActivity(parent);
     }
 }
