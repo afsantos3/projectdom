@@ -20,29 +20,6 @@
   var dilemmaServiceUrl = 'https://gateway.watsonplatform.net/tradeoff-analytics/api/v1/dilemmas?generate_visualization=false';
 
   /**
-   * @typedef ColumnData
-   * @type {Object}
-   * @property {String} key
-   * @property {String} full_name
-   * @property {String} type - (text, numeric, categorical, etc.)
-   * @property {Boolean} is_objective
-   * @property {String} goal - min, max
-   * @property {String} [format]
-   * @property {Array.<String>} [range]
-  */
-
-  /**
-   * @typedef ProblemData
-   *
-   * See public/data/auto.json for an example
-   *
-   * @type {Object}
-   * @property {String} subject
-   * @property {Array.<ColumnData>} columns
-   * @property {Array} options
-   */
-
-  /**
    * @type {ProblemData}
    */
   var theProblem;
@@ -58,7 +35,7 @@
       showInputCode();
       var cols = problem.columns.filter(function(col){
         var type = col.type && col.type.toLowerCase();
-        return _.contains(['numeric', 'categorical', 'datetime'], type);
+        return _.contains(['numeric', 'categorical', 'datetime', 'text'], type);
       });
 
       function disableButton(){
