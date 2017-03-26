@@ -1,0 +1,1162 @@
+{
+  "subject": "LivingSpace",
+  "columns": [
+    {
+      "key": "price",
+      "full_name": "Price",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "min",
+      "format": "number:0 | taPrefix:'$'",
+      "description": "Listing price"
+    },
+    {
+      "key": "square_footage",
+      "full_name": "Square Footage",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "max",
+      "format": "number:0 | taSuffix:' sq.ft.'",
+      "description": "The total floor size in sq.ft"
+    },
+    {
+      "key": "utilities",
+      "full_name": "Utilities Included",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "min",
+      "range": {
+        "low": 0,
+        "high": 1
+      },
+      "description": "True if utilities included in rent"
+    },
+    {
+      "key": "number_bedrooms",
+      "full_name": "Number of Bedrooms",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "max",
+      "format": "number:0 | taSuffix:' bed'",
+      "description": "Number of bedrooms in house"
+    },
+    {
+      "key": "number_bathrooms",
+      "full_name": "Numer of Bedrooms",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "max",
+      "format": "number:0 | taSuffix:' bath'",
+      "description": "Number of bathrooms in house"
+    },
+    {
+      "key": "property_type",
+      "full_name": "Property Type",
+      "type": "text",
+      "is_objective": false,
+      "description": "Type of property"
+    }
+  ],
+  "options": [
+    {
+      "key": 0,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 38308,
+        "square_footage": 17909,
+        "utilities": 0,
+        "number_bedrooms": 0,
+        "number_bathrooms": 2
+      }
+    },
+    {
+      "key": 1,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 35744,
+        "square_footage": 1523,
+        "utilities": 0,
+        "number_bedrooms": 2,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 2,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 216190,
+        "square_footage": 8043,
+        "utilities": 1,
+        "number_bedrooms": 5,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 3,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 75325,
+        "square_footage": 5519,
+        "utilities": 1,
+        "number_bedrooms": 4,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 4,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 113001,
+        "square_footage": 22621,
+        "utilities": 1,
+        "number_bedrooms": 3,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 5,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 54007,
+        "square_footage": 23606,
+        "utilities": 0,
+        "number_bedrooms": 0,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 6,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 263144,
+        "square_footage": 17685,
+        "utilities": 1,
+        "number_bedrooms": 4,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 7,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 22491,
+        "square_footage": 1322,
+        "utilities": 1,
+        "number_bedrooms": 5,
+        "number_bathrooms": 3
+      }
+    },
+    {
+      "key": 8,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 254132,
+        "square_footage": 22223,
+        "utilities": 1,
+        "number_bedrooms": 2,
+        "number_bathrooms": 2
+      }
+    },
+    {
+      "key": 9,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 132155,
+        "square_footage": 1431,
+        "utilities": 1,
+        "number_bedrooms": 5,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 10,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 128701,
+        "square_footage": 9456,
+        "utilities": 1,
+        "number_bedrooms": 1,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 11,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 40251,
+        "square_footage": 2208,
+        "utilities": 1,
+        "number_bedrooms": 2,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 12,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 36802,
+        "square_footage": 19814,
+        "utilities": 0,
+        "number_bedrooms": 0,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 13,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 199906,
+        "square_footage": 6540,
+        "utilities": 0,
+        "number_bedrooms": 2,
+        "number_bathrooms": 3
+      }
+    },
+    {
+      "key": 14,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 275601,
+        "square_footage": 18312,
+        "utilities": 0,
+        "number_bedrooms": 0,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 15,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 44903,
+        "square_footage": 7150,
+        "utilities": 0,
+        "number_bedrooms": 1,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 16,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 141104,
+        "square_footage": 24566,
+        "utilities": 1,
+        "number_bedrooms": 3,
+        "number_bathrooms": 3
+      }
+    },
+    {
+      "key": 17,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 234543,
+        "square_footage": 12869,
+        "utilities": 1,
+        "number_bedrooms": 5,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 18,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 189430,
+        "square_footage": 20640,
+        "utilities": 1,
+        "number_bedrooms": 1,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 19,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 285118,
+        "square_footage": 2843,
+        "utilities": 1,
+        "number_bedrooms": 4,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 20,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 172620,
+        "square_footage": 12821,
+        "utilities": 0,
+        "number_bedrooms": 3,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 21,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 52989,
+        "square_footage": 20320,
+        "utilities": 0,
+        "number_bedrooms": 4,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 22,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 237123,
+        "square_footage": 24105,
+        "utilities": 1,
+        "number_bedrooms": 1,
+        "number_bathrooms": 3
+      }
+    },
+    {
+      "key": 23,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 76596,
+        "square_footage": 5091,
+        "utilities": 1,
+        "number_bedrooms": 1,
+        "number_bathrooms": 2
+      }
+    },
+    {
+      "key": 24,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 160916,
+        "square_footage": 9857,
+        "utilities": 0,
+        "number_bedrooms": 4,
+        "number_bathrooms": 2
+      }
+    },
+    {
+      "key": 25,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 233800,
+        "square_footage": 15900,
+        "utilities": 0,
+        "number_bedrooms": 0,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 26,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 211605,
+        "square_footage": 3312,
+        "utilities": 1,
+        "number_bedrooms": 2,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 27,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 76957,
+        "square_footage": 3421,
+        "utilities": 1,
+        "number_bedrooms": 0,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 28,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 287645,
+        "square_footage": 12239,
+        "utilities": 0,
+        "number_bedrooms": 4,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 29,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 48694,
+        "square_footage": 7115,
+        "utilities": 0,
+        "number_bedrooms": 2,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 30,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 250966,
+        "square_footage": 7855,
+        "utilities": 0,
+        "number_bedrooms": 2,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 31,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 167015,
+        "square_footage": 19086,
+        "utilities": 1,
+        "number_bedrooms": 0,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 32,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 122158,
+        "square_footage": 8244,
+        "utilities": 0,
+        "number_bedrooms": 2,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 33,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 137972,
+        "square_footage": 14335,
+        "utilities": 1,
+        "number_bedrooms": 4,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 34,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 144063,
+        "square_footage": 7041,
+        "utilities": 1,
+        "number_bedrooms": 0,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 35,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 96463,
+        "square_footage": 3270,
+        "utilities": 0,
+        "number_bedrooms": 2,
+        "number_bathrooms": 3
+      }
+    },
+    {
+      "key": 36,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 166301,
+        "square_footage": 12790,
+        "utilities": 1,
+        "number_bedrooms": 4,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 37,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 221309,
+        "square_footage": 15839,
+        "utilities": 1,
+        "number_bedrooms": 0,
+        "number_bathrooms": 2
+      }
+    },
+    {
+      "key": 38,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 17636,
+        "square_footage": 2639,
+        "utilities": 0,
+        "number_bedrooms": 2,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 39,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 22422,
+        "square_footage": 17600,
+        "utilities": 0,
+        "number_bedrooms": 0,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 40,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 19434,
+        "square_footage": 13005,
+        "utilities": 1,
+        "number_bedrooms": 2,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 41,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 220680,
+        "square_footage": 21276,
+        "utilities": 1,
+        "number_bedrooms": 3,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 42,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 59305,
+        "square_footage": 16695,
+        "utilities": 1,
+        "number_bedrooms": 1,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 43,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 18504,
+        "square_footage": 16778,
+        "utilities": 1,
+        "number_bedrooms": 1,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 44,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 162630,
+        "square_footage": 10333,
+        "utilities": 0,
+        "number_bedrooms": 0,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 45,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 111627,
+        "square_footage": 12934,
+        "utilities": 1,
+        "number_bedrooms": 4,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 46,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 125648,
+        "square_footage": 19774,
+        "utilities": 1,
+        "number_bedrooms": 2,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 47,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 282936,
+        "square_footage": 19621,
+        "utilities": 1,
+        "number_bedrooms": 4,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 48,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 118009,
+        "square_footage": 18808,
+        "utilities": 0,
+        "number_bedrooms": 5,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 49,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 184712,
+        "square_footage": 19166,
+        "utilities": 1,
+        "number_bedrooms": 0,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 50,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 252418,
+        "square_footage": 19464,
+        "utilities": 0,
+        "number_bedrooms": 5,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 51,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 260300,
+        "square_footage": 11502,
+        "utilities": 0,
+        "number_bedrooms": 4,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 52,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 89869,
+        "square_footage": 12852,
+        "utilities": 0,
+        "number_bedrooms": 3,
+        "number_bathrooms": 3
+      }
+    },
+    {
+      "key": 53,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 231056,
+        "square_footage": 19949,
+        "utilities": 1,
+        "number_bedrooms": 3,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 54,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 173215,
+        "square_footage": 5447,
+        "utilities": 0,
+        "number_bedrooms": 1,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 55,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 102326,
+        "square_footage": 10379,
+        "utilities": 0,
+        "number_bedrooms": 1,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 56,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 208234,
+        "square_footage": 20691,
+        "utilities": 1,
+        "number_bedrooms": 3,
+        "number_bathrooms": 3
+      }
+    },
+    {
+      "key": 57,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 159137,
+        "square_footage": 2714,
+        "utilities": 1,
+        "number_bedrooms": 0,
+        "number_bathrooms": 2
+      }
+    },
+    {
+      "key": 58,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 216282,
+        "square_footage": 19725,
+        "utilities": 0,
+        "number_bedrooms": 3,
+        "number_bathrooms": 2
+      }
+    },
+    {
+      "key": 59,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 38254,
+        "square_footage": 10754,
+        "utilities": 0,
+        "number_bedrooms": 3,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 60,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 49808,
+        "square_footage": 14456,
+        "utilities": 0,
+        "number_bedrooms": 2,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 61,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 147554,
+        "square_footage": 12209,
+        "utilities": 0,
+        "number_bedrooms": 4,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 62,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 264182,
+        "square_footage": 24958,
+        "utilities": 1,
+        "number_bedrooms": 2,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 63,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 134658,
+        "square_footage": 19630,
+        "utilities": 1,
+        "number_bedrooms": 2,
+        "number_bathrooms": 3
+      }
+    },
+    {
+      "key": 64,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 16847,
+        "square_footage": 13125,
+        "utilities": 0,
+        "number_bedrooms": 3,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 65,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 202347,
+        "square_footage": 21472,
+        "utilities": 0,
+        "number_bedrooms": 5,
+        "number_bathrooms": 3
+      }
+    },
+    {
+      "key": 66,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 40417,
+        "square_footage": 13263,
+        "utilities": 0,
+        "number_bedrooms": 5,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 67,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 263387,
+        "square_footage": 23229,
+        "utilities": 1,
+        "number_bedrooms": 0,
+        "number_bathrooms": 3
+      }
+    },
+    {
+      "key": 68,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 12514,
+        "square_footage": 13306,
+        "utilities": 0,
+        "number_bedrooms": 4,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 69,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 176518,
+        "square_footage": 4017,
+        "utilities": 1,
+        "number_bedrooms": 0,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 70,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 25331,
+        "square_footage": 2105,
+        "utilities": 0,
+        "number_bedrooms": 1,
+        "number_bathrooms": 3
+      }
+    },
+    {
+      "key": 71,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 32445,
+        "square_footage": 9479,
+        "utilities": 1,
+        "number_bedrooms": 0,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 72,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 237349,
+        "square_footage": 4225,
+        "utilities": 1,
+        "number_bedrooms": 2,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 73,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 15923,
+        "square_footage": 3661,
+        "utilities": 0,
+        "number_bedrooms": 0,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 74,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 287289,
+        "square_footage": 4349,
+        "utilities": 0,
+        "number_bedrooms": 0,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 75,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 91401,
+        "square_footage": 5636,
+        "utilities": 1,
+        "number_bedrooms": 1,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 76,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 33276,
+        "square_footage": 16047,
+        "utilities": 1,
+        "number_bedrooms": 1,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 77,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 11781,
+        "square_footage": 3734,
+        "utilities": 0,
+        "number_bedrooms": 1,
+        "number_bathrooms": 2
+      }
+    },
+    {
+      "key": 78,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 24677,
+        "square_footage": 17619,
+        "utilities": 1,
+        "number_bedrooms": 5,
+        "number_bathrooms": 2
+      }
+    },
+    {
+      "key": 79,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 289043,
+        "square_footage": 11426,
+        "utilities": 1,
+        "number_bedrooms": 0,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 80,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 70137,
+        "square_footage": 6617,
+        "utilities": 0,
+        "number_bedrooms": 0,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 81,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 78999,
+        "square_footage": 10900,
+        "utilities": 0,
+        "number_bedrooms": 2,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 82,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 171679,
+        "square_footage": 11325,
+        "utilities": 0,
+        "number_bedrooms": 5,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 83,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 123487,
+        "square_footage": 19958,
+        "utilities": 1,
+        "number_bedrooms": 2,
+        "number_bathrooms": 2
+      }
+    },
+    {
+      "key": 84,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 141880,
+        "square_footage": 15769,
+        "utilities": 1,
+        "number_bedrooms": 0,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 85,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 87544,
+        "square_footage": 21961,
+        "utilities": 0,
+        "number_bedrooms": 1,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 86,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 202448,
+        "square_footage": 6441,
+        "utilities": 1,
+        "number_bedrooms": 3,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 87,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 50206,
+        "square_footage": 9499,
+        "utilities": 1,
+        "number_bedrooms": 2,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 88,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 125205,
+        "square_footage": 3647,
+        "utilities": 0,
+        "number_bedrooms": 5,
+        "number_bathrooms": 2
+      }
+    },
+    {
+      "key": 89,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 207564,
+        "square_footage": 12517,
+        "utilities": 0,
+        "number_bedrooms": 5,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 90,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 15744,
+        "square_footage": 4529,
+        "utilities": 0,
+        "number_bedrooms": 4,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 91,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 158340,
+        "square_footage": 107,
+        "utilities": 0,
+        "number_bedrooms": 1,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 92,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 250486,
+        "square_footage": 5734,
+        "utilities": 0,
+        "number_bedrooms": 4,
+        "number_bathrooms": 1
+      }
+    },
+    {
+      "key": 93,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 76127,
+        "square_footage": 13488,
+        "utilities": 1,
+        "number_bedrooms": 2,
+        "number_bathrooms": 2
+      }
+    },
+    {
+      "key": 94,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 141909,
+        "square_footage": 14416,
+        "utilities": 0,
+        "number_bedrooms": 4,
+        "number_bathrooms": 4
+      }
+    },
+    {
+      "key": 95,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 286889,
+        "square_footage": 19041,
+        "utilities": 1,
+        "number_bedrooms": 0,
+        "number_bathrooms": 5
+      }
+    },
+    {
+      "key": 96,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 224786,
+        "square_footage": 20722,
+        "utilities": 0,
+        "number_bedrooms": 1,
+        "number_bathrooms": 3
+      }
+    },
+    {
+      "key": 97,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 283113,
+        "square_footage": 22287,
+        "utilities": 1,
+        "number_bedrooms": 4,
+        "number_bathrooms": 0
+      }
+    },
+    {
+      "key": 98,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 117264,
+        "square_footage": 17312,
+        "utilities": 0,
+        "number_bedrooms": 2,
+        "number_bathrooms": 2
+      }
+    },
+    {
+      "key": 99,
+      "address": "1701 NCC Enterprise St.",
+      "values": {
+        "price": 264697,
+        "square_footage": 9472,
+        "utilities": 1,
+        "number_bedrooms": 2,
+        "number_bathrooms": 0
+      }
+    }
+  ]
+}
