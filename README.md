@@ -1,4 +1,4 @@
-# Proejct DOM
+# Project DOM
 
 ## Created By
 * Luke Mills
