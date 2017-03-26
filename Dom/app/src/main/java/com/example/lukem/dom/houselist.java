@@ -1,7 +1,13 @@
 package com.example.lukem.dom;
 
-import java.util.ArrayList;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.ibm.watson.developer_cloud.tradeoff_analytics.v1.TradeoffAnalytics;
+import com.ibm.watson.developer_cloud.tradeoff_analytics.v1.model.Problem;
 
+import java.sql.Wrapper;
+import java.util.ArrayList;
+import com.google.gson.Gson;
 /**
  * Created by jacob on 3/25/2017.
  */
@@ -51,7 +57,11 @@ public class houselist {
         currHouse = this_house;
         return this_house;
     }
-
+    public String convert_to_gson(){
+        Gson gson = new Gson();
+        JsonElement jsonElement = gson.toJsonTree(avgScores);
+        return jsonElement.getAsString();
+    }
     public void set_feedback(int like) {
         if(like == 1) {
             //set total
