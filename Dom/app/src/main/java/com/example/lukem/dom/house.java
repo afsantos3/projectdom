@@ -12,6 +12,8 @@ public class house {
     private String photo;
     private int utilities;
     private String type;
+    private int bedrooms;
+    private int bathrooms;
 
     public double getPrice() {
         return price;
@@ -33,6 +35,14 @@ public class house {
         return type;
     }
 
+    public int getBedrooms() {
+        return bedrooms;
+    }
+
+    public int getBathrooms() {
+        return bathrooms;
+    }
+
     public void setPrice(double price) {
         this.price = price;
     }
@@ -51,6 +61,14 @@ public class house {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public void setBedrooms(int bedrooms) {
+        this.bedrooms = bedrooms;
+    }
+
+    public void setBathrooms(int bathrooms) {
+        this.bathrooms = bathrooms;
     }
 
     public house(double price, int square_foot) {
