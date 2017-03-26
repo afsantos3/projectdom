@@ -9,8 +9,12 @@
           return this.square_footage * 20;
         },
         utilities: '{{random(0, 1)}}',
-        number_bedrooms: '{{integer(1, 5)}}',
-        number_bathrooms: '{{integer(1, 5)}}'
+        number_bedrooms: function (tags) {
+          return (this.square_footage) / 5000;
+        },
+        number_bathrooms: function (tags) {
+          return (this.square_footage + 5000) / 5000;
+        }
       }
     }
   }

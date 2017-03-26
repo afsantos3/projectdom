@@ -49,9 +49,14 @@ app.use(bodyParser.json());
 
 var json = JSON.parse(fs.readFileSync('./public/data/rw.json', 'utf8'));
 var updates = Object;
+var count = 0;
 
 router.get('/dom', function(req, res) {
-  res.json(json.options);
+  var ret = [];
+  for (var i = count; i < (count+5); i++) {
+    ret.push(json.options[i]);
+  }
+  res.json(ret);
 });
 
 router.post('/dom', function(req, res) {
