@@ -1,6 +1,7 @@
 package com.example.lukem.dom;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.provider.ContactsContract;
 import android.support.annotation.IntegerRes;
@@ -12,6 +13,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import org.w3c.dom.Text;
+
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class HouseActivity extends AppCompatActivity {
 
@@ -50,6 +55,17 @@ public class HouseActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public Drawable getImage(String photoUrl){
+        try{
+            InputStream inputStream = (InputStream) new URL(photoUrl).getContent();
+            Drawable housePhoto = Drawable.createFromStream(inputStream, "web");
+            return housePhoto;
+        } catch (Exception e){
+            Log.v(LOG_TAG, "Malformed URL or IOException", e);
+            return null;
+        }
     }
 
     private house getHouseExtras(Bundle b) {
