@@ -2,8 +2,6 @@ package com.example.lukem.dom;
 
 import android.util.Log;
 
-import com.ibm.watson.developer_cloud.tradeoff_analytics.v1.TradeoffAnalytics;
-
 /**
  * Created by jacob on 3/25/2017.
  */
@@ -17,8 +15,6 @@ public class sorter {
 
     public sorter() {
         this.house_list = new houselist();
-
-        TradeoffAnalytics service = new TradeoffAnalytics();
     }
 
     public void store_feedback(boolean like) {
