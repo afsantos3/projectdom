@@ -20,9 +20,12 @@
 require('dotenv').load({silent: true});
 
 var express    = require('express'),
-  app          = express();
+  app          = express(),
+  path         = require('path');
 // Bootstrap application settings
 require('./config/express')(app);
+
+// var demo       = require('./public/js/demo.js');
 
 var watson = require('watson-developer-cloud');
 var vcapServices = require('vcap_services');
@@ -44,7 +47,7 @@ var fs = require('fs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var json = JSON.parse(fs.readFileSync('./public/data/home.json', 'utf8'));
+var json = JSON.parse(fs.readFileSync('./public/data/rw.json', 'utf8'));
 var updates = Object;
 
 router.get('/dom', function(req, res) {
@@ -52,13 +55,21 @@ router.get('/dom', function(req, res) {
 });
 
 router.post('/dom', function(req, res) {
-  var updates = res.json();
+  var updates = req.json;
 
   res.json({ 'message': 'recieved'});
 })
 
 router.get('/about', function(req, res) {
-  
+  res.sendFile(path.join(__dirname + '/public/about.html'));
+});
+
+router.get('/devpost', function(req, res) {
+  res.redirect('https://devpost.com/software/dom-ti5b7m');
+});
+
+router.get('/github', function(req, res) {
+  res.redirect('https://github.com/jacobScottAllen/projectdom');
 });
 
 app.use('/', router);

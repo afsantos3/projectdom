@@ -30,7 +30,7 @@
 
   /**********INPUTS**********/
   function initColumns() {
-    $.getJSON('/data/home.json').then(function(problem) {
+    $.getJSON('/data/rw.json').then(function(problem) {
       theProblem = problem;
       showInputCode();
       var cols = problem.columns.filter(function(col){
