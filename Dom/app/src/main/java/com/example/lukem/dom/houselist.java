@@ -7,8 +7,13 @@ import java.util.ArrayList;
  */
 
 public class houselist extends ArrayList<house> {
+    house avgHouse;
 
     public houselist(pref_init initial_data) {
+        set_list();
+    }
+
+    public void set_list() {
         // make fake data here
         house house1;
         house1 = new house(10, 10);
@@ -25,7 +30,7 @@ public class houselist extends ArrayList<house> {
         }
     }
 
-    public house pop() {
+    public house getNextHouse() {
         int end_index = this.size() - 1;
 
         if (end_index == -1) {
@@ -37,4 +42,9 @@ public class houselist extends ArrayList<house> {
 
         return this_house;
     }
+
+    public void set_feedback(int like) {
+        //
+    }
 }
+
