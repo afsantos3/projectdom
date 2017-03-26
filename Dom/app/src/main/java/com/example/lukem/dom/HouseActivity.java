@@ -58,6 +58,8 @@ public class HouseActivity extends AppCompatActivity {
         likeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent returnIntent = getIntent();
+                returnIntent.putExtra("liked", 1);
                 finish();
             }
         });
@@ -65,10 +67,11 @@ public class HouseActivity extends AppCompatActivity {
         dislikeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent returnIntent = getIntent();
+                returnIntent.putExtra("liked", 1);
                 finish();
             }
         });
-
     }
 
     private house getHouseExtras(Bundle b) {
@@ -96,7 +99,12 @@ public class HouseActivity extends AppCompatActivity {
         }
 
         protected void onPostExecute(Drawable resultDrawable) {
-            houseImageView.setImageDrawable(resultDrawable);
+            if(resultDrawable != null) {
+                houseImageView.setImageDrawable(resultDrawable);
+            }
+            else{
+                houseImageView.setImageResource(R.drawable.dom);
+            }
         }
 
         private URL makeUrl(String urlString) {

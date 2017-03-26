@@ -52,7 +52,8 @@ public class HouseActivityEncapsule extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == DISPLAY_HOUSE) {
-            Log.v(LOG_TAG, "Returned to encapsule");
+            // TODO: Fix this if(resultCode == )
+            Log.v(LOG_TAG, "Resulted");
             this.recreate();
         }
     }
