@@ -40,6 +40,7 @@
     "express": "^4.14.0",
     "express-rate-limit": "^2.6.0",
     "express-secure-only": "^0.2.1",
+    "fs": "0.0.1-security",
     "helmet": "^3.4.0",
     "log4js": "^1.1.0",
     "underscore": "1.8.3",

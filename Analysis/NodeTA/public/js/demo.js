@@ -300,7 +300,7 @@
   /**********OPTIONS TILES**********/
   function showResults(winners, parent) {
     var cols = analyzedCols;
-
+    console.log(winners);
     function opTile(op){
       var paraValue = '';
       cols.forEach(function(col){

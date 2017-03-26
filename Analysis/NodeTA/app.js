@@ -36,6 +36,29 @@ var credentials = Object.assign({
 
 var authorizationService = watson.authorization(credentials);
 
+var router = express.Router();
+var bodyParser = require('body-parser');
+
+var fs = require('fs');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+var json = JSON.parse(fs.readFileSync('./public/data/home.json', 'utf8'));
+var updates = Object;
+
+router.get('/', function(req, res) {
+  res.json(json.options);
+});
+
+router.post('/', function(req, res) {
+  var updates = res.json();
+
+  res.json({ 'message': 'recieved'});
+})
+
+app.use('/dom', router);
+
 app.post('/api/tradeoff-analytics-token', function(req, res) {
   authorizationService.getToken(credentials, function (err, token) {
     if (!token) {
@@ -46,7 +69,6 @@ app.post('/api/tradeoff-analytics-token', function(req, res) {
     }
   });
 });
-
 
 app.get('/refresh', function(req, res) {
   refreshData();

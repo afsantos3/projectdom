@@ -25,6 +25,10 @@
       "type": "numeric",
       "is_objective": true,
       "goal": "max",
+      "range": {
+        "low": "0",
+        "high": "1"
+      },
       "description": "True if utilities included in rent"
     },
     {
