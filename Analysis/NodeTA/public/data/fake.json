@@ -1,0 +1,50 @@
+{
+  "options": [
+    {
+      "rental_prices":{
+        "per_week":"350",
+        "accurate":"per_week",
+        "per_month":"1517"
+      },
+      "num_floors":"0",
+      "listing_status":"rent",
+      "num_bedrooms":"1",
+      "latitude":51.56676,
+      "agent_address":"97 Newington Green Road, Islington",
+      "property_type":"Flat",
+      "letting_fees":"Should you wish to proceed with a tenancy through M &amp; M Property, the following fees/charges will apply in addition to the rent agreed:-<br><br>There is a holding fee payable to secure a property until the agreed move-in date. This fee is usually equivalent to one weeks’ rent and acts as part payment towards your first months’ rent. It is only refundable if on our part or the landlord's part, the tenancy cannot proceed.<br><br>There is an administration fee equivalent to the sum of the holding fee, payable by the Tenant/s should you cancel a proposed tenancy or fail to move in without prior agreement, by the agreed move-in date.<br><br>There is an administration fee of £100.00 + vat per person payable for processing a tenancy through M &amp; M Property.There is usually a Check-out fee payable by the tenant/s for the final \"schedule of condition\" of the property. The Check-Out fee is estimated in advance and varies according to the size and contents of the property. Prices range approximately between £85.00 and £200.00 per property and is payable at the start of the tenancy.<br><br>There is a security Deposit payable, equivalent to the sum of either one months’ rent or six weeks rent or sometimes more depending on the property and/or your personal circumstances.<br><h3 class=\"listing-desc-header top\"><strong><br></strong></h3>",
+      "longitude":-0.058209,
+      "thumbnail_url":"http://li.zoocdn.com/8e02e8e7888537e3458cb860d8d5c8ae196ad0ed_80_60.jpg",
+      "description":"M&M are pleased to offer this stunning four bedroom property, split over two floors. A refurbished period conversion, finished to a high standard with stylish exposed brickwork and exquisite design throughout, this home has the typical traits of high ceilings and big sash windows, making it very bright and airy. The generous front to back open plan living space leads out on to the private garden at the rear. There are two generously sized bedrooms, and two further doubles, modern three piece family bathroom, with shower over the bath and an additional guest WC. A perfect option for a family home or an option for professional sharers that want easy access to the city with a 12 minute train journey from the nearby Clapton station, only a 9 minute walk from the property. Other transport links connect via bus routes to The City, West End and Highbury and Islington, with the luxury of a night bus regularly running from Tottenham Court Road. Storage is not a problem here as there are a number of cupboards and built in wardrobes throughout the house. Further benefiting from wood floors, gas central heating and double glazing.Definitely a must see.Furnishings: UnfurnishedAvailable: NowTo view, call M&M Property on Fees Apply)",
+      "post_town":"London",
+      "details_url":"http://www.zoopla.co.uk/to-rent/details/38023058?utm_source=v1:o7rGG2TbCgnV5wqvarovsi3oPBcqj-7d&utm_medium=api",
+      "short_description":"<p class=\"top\">M&amp;M are pleased to offer this stunning four bedroom property, split over two floors. A refurbished period conversion, finished to a high standard with stylish exposed brickwork and exquisite design throughout, this home has the typical traits of high ceilings and big sash windows, making it very bright and airy. The generous front to back open plan living space leads out on to the private garden at the rear. There are two generously sized bedrooms, and two further doubles, modern three piece family bathroom, with shower over the bath and an additional guest WC. A perfect option for a family home or an option for professional sharers that want easy access to the city with a 12 minute train journey from the nearby Clapton station, only a 9 minute walk from the property. Other transport links connect via bus routes to The City, West End and Highbury and Islington, with the luxury of a night bus regularly running from Tottenham Court Road. Storage is not a problem here as there are a number of cupboards and built in wardrobes throughout the house. Further benefiting from wood floors, gas central heating and double glazing. Definitely a must see.  Furnishings: Unfurnished  Available: Now  To view, call M&amp;M Property on Fees Apply)</p>",
+      "outcode":"E5",
+      "county":"London",
+      "price":"350",
+      "listing_id":"38023058",
+      "image_caption":"Kitchen.Jpg",
+      "status":"to_rent",
+      "agent_name":"M&M Property",
+      "num_recepts":"1",
+      "country":"England",
+      "displayable_address":"Moresby Road, London E5",
+      "first_published_date":"2015-09-05 09:26:00",
+      "floor_plan":[
+        "http://lc.zoocdn.com/bffcd4b9ba0711bab00df859c960845979730c2a.jpg"
+      ],
+      "street_name":"Moresby Road",
+      "num_bathrooms":"1",
+      "price_change":[
+        {
+           "date":"2015-09-05 09:25:09",
+           "price":"350.00"
+        }
+      ],
+      "agent_logo":"http://st.zoocdn.com/zoopla_static_agent_logo_(64777).jpeg",
+      "agent_phone":"020 3318 7014",
+      "image_url":"http://li.zoocdn.com/8e02e8e7888537e3458cb860d8d5c8ae196ad0ed_354_255.jpg",
+      "last_published_date":"2015-09-05 09:26:57"
+    }
+  ]
+}

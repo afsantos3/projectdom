@@ -11,17 +11,16 @@
       "description": "Listing price"
     },
     {
-      "key": "squareFootage",
+      "key": "square_footage",
       "full_name": "Square Footage",
       "type": "numeric",
       "is_objective": false,
       "goal": "max",
       "format": "number:1 | taSuffix:' sq.ft.'",
-      "range": {
-        "low": 0,
-        "high": 10
-      },
       "description": "The total floor size in sq.ft"
     }
+  ],
+  "options": [
+    { }
   ]
 }
