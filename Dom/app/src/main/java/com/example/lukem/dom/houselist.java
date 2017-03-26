@@ -13,11 +13,15 @@ import com.google.gson.Gson;
  */
 
 public class houselist {
+
     avg_scores avgScores;
     house currHouse;
     ArrayList<house> thisHouseList;
 
+    ArrayList<house> thisHouseList;
+
     public houselist(pref_init initial_data) {
+        thisHouseList = new ArrayList<house>();
         set_list();
     }
 
