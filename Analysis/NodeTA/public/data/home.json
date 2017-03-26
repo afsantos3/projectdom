@@ -26,8 +26,8 @@
       "is_objective": true,
       "goal": "max",
       "range": {
-        "low": "0",
-        "high": "1"
+        "low": 0,
+        "high": 1
       },
       "description": "True if utilities included in rent"
     },
@@ -38,8 +38,8 @@
       "is_objective": true,
       "goal": "max",
       "range": {
-        "low": "1",
-        "high": "5"
+        "low": 1,
+        "high": 5
       },
       "format": "number:0 | taSuffix:' bed'",
       "description": "Number of bedrooms in house"
@@ -51,8 +51,8 @@
       "is_objective": true,
       "goal": "max",
       "range": {
-        "low": "1",
-        "high": "5"
+        "low": 1,
+        "high": 5
       },
       "format": "number:0 | taSuffix:' bath'",
       "description": "Number of bathrooms in house"

@@ -47,17 +47,21 @@ app.use(bodyParser.json());
 var json = JSON.parse(fs.readFileSync('./public/data/home.json', 'utf8'));
 var updates = Object;
 
-router.get('/', function(req, res) {
+router.get('/dom', function(req, res) {
   res.json(json.options);
 });
 
-router.post('/', function(req, res) {
+router.post('/dom', function(req, res) {
   var updates = res.json();
 
   res.json({ 'message': 'recieved'});
 })
 
-app.use('/dom', router);
+router.get('/about', function(req, res) {
+  
+});
+
+app.use('/', router);
 
 app.post('/api/tradeoff-analytics-token', function(req, res) {
   authorizationService.getToken(credentials, function (err, token) {
