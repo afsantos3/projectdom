@@ -104,4 +104,18 @@ public class avg_scores {
     public void setPrice_avg(double price_avg) {
         this.price_avg = price_avg;
     }
+
+    public avg_scores(double likes, double ut_total, double ut_avg, double bed_total, double bed_avg, double bath_total, double bath_avg, double sqft_total, double sqft_avg, double price_total, double price_avg) {
+        this.likes = likes;
+        this.ut_total = ut_total;
+        this.ut_avg = ut_avg;
+        this.bed_total = bed_total;
+        this.bed_avg = bed_avg;
+        this.bath_total = bath_total;
+        this.bath_avg = bath_avg;
+        this.sqft_total = sqft_total;
+        this.sqft_avg = sqft_avg;
+        this.price_total = price_total;
+        this.price_avg = price_avg;
+    }
 }
