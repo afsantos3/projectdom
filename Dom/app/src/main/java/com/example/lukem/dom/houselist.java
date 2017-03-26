@@ -42,9 +42,13 @@ public class houselist extends ArrayList<house> {
 
         return this_house;
     }
-
+    
     public void set_feedback(int like) {
-        //
+        if(like == 1) {
+
+        } else {
+
+        }
     }
 }
 
