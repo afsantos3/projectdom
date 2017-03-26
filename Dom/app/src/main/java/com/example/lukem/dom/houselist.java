@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 
 public class houselist extends ArrayList<house> {
+
     public houselist(pref_init initial_data) {
         // make fake data here
         house house1;

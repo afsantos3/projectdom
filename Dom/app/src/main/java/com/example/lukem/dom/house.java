@@ -7,14 +7,57 @@ package com.example.lukem.dom;
 import java.util.Random;
 
 public class house {
-    public double price;
-    public int square_foot;
+    private double price;
+    private int square_foot;
+    private String photo;
+    private int utilities;
+    private String type;
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getSquare_foot() {
+        return square_foot;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public int getUtilities() {
+        return utilities;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setSquare_foot(int square_foot) {
+        this.square_foot = square_foot;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+    public void setUtilities(int utilities) {
+        this.utilities = utilities;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public house(double price, int square_foot) {
         this.price = price;
         this.square_foot = square_foot;
     }
-
+    //TODO Delete
     public house() {
         Random rand = new Random();
         this.price = rand.nextInt(5000) + 900;
