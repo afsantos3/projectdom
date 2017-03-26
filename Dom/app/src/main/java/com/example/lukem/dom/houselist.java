@@ -1,5 +1,9 @@
 package com.example.lukem.dom;
 
+import android.text.TextUtils;
+import android.util.Log;
+
+import java.awt.font.TextAttribute;
 import java.util.ArrayList;
 import com.google.gson.Gson;
 import org.json.*;
@@ -15,16 +19,42 @@ public class houselist {
 
     public houselist(pref_init initial_data) {
         thisHouseList = new ArrayList<house>();
-        set_list();
+        set_list(make_request());
     }
 
-    public void set_list() {
-        
+    public void set_list(String jsonResponse) {
+        house listing;
+        if(TextUtils.isEmpty(jsonResponse)){
+            Log.v("Warning", "JSON_str is empty!");
+            return;
+        }
+
+        try {
+            JSONObject features = new JSONObject(jsonResponse);
+            JSONArray options = features.getJSONArray("options");
+            JSONObject entry, values;
+            for(int i = 0; i < 5 && i < jsonResponse.length(); i++){
+                entry = options.getJSONObject(i);
+                values = entry.getJSONObject("values");
+                listing = new house(
+                        values.getDouble("price"),
+                        values.getInt("square_footage"),
+                        values.getInt("utilities")
+                        /* TODO: Add when supported by API
+                        , values.getString("type")
+                        */
+                );
+                Log.v("houselist", listing.toString());
+            }
+        } catch (JSONException e){
+            Log.v("Warning", "JSON Exception", e);
+            return;
+        }
 
     }
 
     public String make_request() {
-        return "\"options\": [\n" +
+        return "{\"options\": [\n" +
                 "    {\n" +
                 "      \"key\": 0,\n" +
                 "      \"address\": \"1701 NCC Enterprise St.\",\n" +
@@ -79,12 +109,12 @@ public class houselist {
                 "        \"number_bedrooms\": 3,\n" +
                 "        \"number_bathrooms\": 0\n" +
                 "      }\n" +
-                "    },}";
+                "    }]}";
     }
 
     public houselist() {
         thisHouseList = new ArrayList<house>();
-        set_list();
+        set_list(make_request());
     }
 
     public house getNextHouse() {

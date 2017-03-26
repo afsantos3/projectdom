@@ -59,6 +59,16 @@ public class house {
         this.price = price;
         this.square_foot = square_foot;
     }
+
+    public house(double price, int square_foot, int utilities/*, String type*/) {
+        this.price = price;
+        this.square_foot = square_foot;
+        this.utilities = utilities;
+        /* TODO: Add when supported by API
+        this.type = type;
+        */
+    }
+
     //TODO Delete
     public house() {
         Random rand = new Random();

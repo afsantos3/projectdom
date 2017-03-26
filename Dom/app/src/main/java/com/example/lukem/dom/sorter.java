@@ -21,9 +21,11 @@ public class sorter {
         // store feedback
     }
 
+    /*
     public house get_next_house() {
         return house_list.pop();
     }
+    */
 
     public house temp_get_fake_house(){
         house temp = new house();
