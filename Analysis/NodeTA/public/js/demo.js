@@ -30,12 +30,12 @@
 
   /**********INPUTS**********/
   function initColumns() {
-    $.getJSON('/data/home.json').then(function(problem) {
+    $.getJSON('/data/auto.json').then(function(problem) {
       theProblem = problem;
       showInputCode();
       var cols = problem.columns.filter(function(col){
         var type = col.type && col.type.toLowerCase();
-        return _.contains(['numeric', 'categorical', 'datetime', 'text'], type);
+        return _.contains(['numeric', 'categorical', 'datetime'], type);
       });
 
       function disableButton(){
