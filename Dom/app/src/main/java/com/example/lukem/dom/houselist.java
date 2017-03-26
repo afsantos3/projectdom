@@ -29,9 +29,7 @@ public class houselist {
 
     public houselist() {
         thisHouseList = new ArrayList<house>();
-        for(int i = 0; i < 50; i++) {
-            thisHouseList.add(new house());
-        }
+        set_list();
     }
 
     public house getNextHouse() {
