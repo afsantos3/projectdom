@@ -4,6 +4,8 @@ package com.example.lukem.dom;
  * Created by jacob on 3/25/2017.
  */
 
+import android.util.Log;
+
 import java.util.Random;
 import java.util.Stack;
 
