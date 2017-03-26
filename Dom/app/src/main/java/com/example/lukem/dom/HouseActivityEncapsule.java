@@ -22,7 +22,7 @@ public class HouseActivityEncapsule extends AppCompatActivity {
         int zip;
         int numBeds;
         pref_init pe;
-        sorter houseFactory;
+        houselist houseFactory;
         house currentHouse;
 
         Bundle bundle = getIntent().getExtras();
@@ -32,8 +32,10 @@ public class HouseActivityEncapsule extends AppCompatActivity {
         zip = Integer.parseInt(zipStr);
 
         pe = new pref_init(zip, numBeds);
-        houseFactory = new sorter(pe);
+        houseFactory = new houselist(pe);
+    }
 
+        /*
         currentHouse = houseFactory.temp_get_fake_house();
 
         Intent houseActivityIntent = new Intent(HouseActivityEncapsule.this, HouseActivity.class);
@@ -63,4 +65,5 @@ public class HouseActivityEncapsule extends AppCompatActivity {
         Intent parent = getParentActivityIntent();
         startActivity(parent);
     }
+    */
 }
