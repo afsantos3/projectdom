@@ -5,8 +5,11 @@ import android.util.Log;
 
 import java.awt.font.TextAttribute;
 import java.util.ArrayList;
+
 import com.google.gson.Gson;
+
 import org.json.*;
+
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -27,6 +30,8 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.sql.Wrapper;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
 import com.google.gson.Gson;
 
 /**
@@ -44,52 +49,22 @@ public class houselist {
     public houselist(pref_init initial_data) {
         resultString = "";
         thisHouseList = new ArrayList<house>();
-        set_list(make_request());
+        set_list();
     }
 
-    public void set_list(String jsonResponse) {
-        house listing;
-        if(TextUtils.isEmpty(jsonResponse)){
-            Log.v("Warning", "JSON_str is empty!");
-            return;
-        }
-
-        try {
-            JSONObject features = new JSONObject(jsonResponse);
-            JSONArray options = features.getJSONArray("options");
-            JSONObject entry, values;
-            for(int i = 0; i < 5 && i < jsonResponse.length(); i++){
-                entry = options.getJSONObject(i);
-                values = entry.getJSONObject("values");
-                listing = new house(
-                        values.getDouble("price"),
-                        values.getInt("square_footage"),
-                        values.getInt("utilities")
-                        /* TODO: Add when supported by API
-                        , values.getString("type")
-                        */
-                );
-                Log.v("houselist", listing.toString());
-            }
-        } catch (JSONException e){
-            Log.v("Warning", "JSON Exception", e);
-            return;
-        }
-
-    }
-
-    public String make_request() {
+    public void set_list() {
         HttpRequestClass task = new HttpRequestClass();
         URL reqUrl = task.makeUrl("https://tradeoff-analytics-nodejs-wisehacks-dom.mybluemix.net/dom");
         task.execute(reqUrl);
-        if(resultString.isEmpty()) {
-            return resultString;
+        try {
+            task.get(100000, TimeUnit.MILLISECONDS);
+        } catch (Exception e){
+            Log.v("HOUSELIST", "Error in set_list()", e);
         }
-        else{
-            return "";
-        }
+    }
 
-        /* return "{\"options\": [\n" +
+    public String make_request() {
+       /* return "{\"options\": [\n" +
                 "    {\n" +
                 "      \"key\": 0,\n" +
                 "      \"address\": \"1701 NCC Enterprise St.\",\n" +
@@ -146,19 +121,22 @@ public class houselist {
                 "      }\n" +
                 "    }]}";
                 */
+       return "";
     }
 
     public houselist() {
         resultString = "";
         thisHouseList = new ArrayList<house>();
-        set_list(make_request());
+        set_list();
     }
 
     public house getNextHouse() {
         int end_index = thisHouseList.size() - 1;
 
         if (end_index == -1) {
-            set_list(make_request());
+            /* set_list(make_request()); */
+            set_list();
+            Log.v("HOUSELIST", "Next set");
             getNextHouse();
         }
 
@@ -169,14 +147,14 @@ public class houselist {
         return this_house;
     }
 
-    public String convert_to_gson(){
+    public String convert_to_gson() {
         Gson gson = new Gson();
         JsonElement jsonElement = gson.toJsonTree(avgScores);
         return jsonElement.getAsString();
     }
 
     public void set_feedback(int like) {
-        if(like == 1) {
+        if (like == 1) {
             //set total
             avgScores.setLikes(avgScores.getLikes() + 1);
             avgScores.setBath_total(avgScores.getBath_total() + currHouse.getBathrooms());
@@ -299,8 +277,33 @@ public class houselist {
         }
 
         @Override
-        protected void onPostExecute(String s) {
-            resultString = s;
+        protected void onPostExecute(String jsonResponse) {
+            house listing;
+            if (TextUtils.isEmpty(jsonResponse)) {
+                Log.v("Warning", "JSON_str is empty!");
+                return;
+            }
+
+            try {
+                JSONArray options = new JSONArray(jsonResponse);
+                JSONObject entry, values;
+                for (int i = 0; i < 5 && i < jsonResponse.length(); i++) {
+                    entry = options.getJSONObject(i);
+                    values = entry.getJSONObject("values");
+                    listing = new house(
+                            values.getDouble("price"),
+                            values.getInt("square_footage"),
+                            values.getInt("utilities")
+                        /* TODO: Add when supported by API
+                        , values.getString("type")
+                        */
+                    );
+                    Log.v("houselist", listing.toString());
+                }
+            } catch (JSONException e) {
+                Log.v("Warning", "JSON Exception", e);
+                return;
+            }
         }
 
         private String makeHttpReq(URL url) throws IOException {
@@ -329,6 +332,8 @@ public class houselist {
                     inStr.close();
                 }
             }
+            Log.v("HOUSELIST:", response);
+            resultString = response;
             return response;
         }
 

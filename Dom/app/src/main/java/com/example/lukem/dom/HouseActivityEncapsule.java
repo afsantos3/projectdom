@@ -33,7 +33,7 @@ public class HouseActivityEncapsule extends AppCompatActivity {
         pe = new pref_init(zip, numBeds);
         houseFactory = new houselist(pe);
 
-        currentHouse = new house();
+        currentHouse = houseFactory.getNextHouse();
 
         Intent houseActivityIntent = new Intent(HouseActivityEncapsule.this, HouseActivity.class);
 
