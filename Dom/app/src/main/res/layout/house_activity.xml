@@ -11,7 +11,8 @@
         android:id="@+id/house_imageview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4" />
+        android:layout_weight="4"
+        android:scaleType="centerCrop"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -65,11 +66,13 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/like_button"
             android:layout_width="192dp"
             android:layout_height="wrap_content"
             android:src="@mipmap/ic_close_black_48dp" />
 
         <ImageButton
+            android:id="@+id/dislike_button"
             android:layout_width="192dp"
             android:layout_height="wrap_content"
             android:src="@mipmap/ic_check_black_48dp" />

@@ -2,8 +2,6 @@ package com.example.lukem.dom;
 
 import android.util.Log;
 
-import com.ibm.watson.developer_cloud.tradeoff_analytics.v1.TradeoffAnalytics;
-
 /**
  * Created by jacob on 3/25/2017.
  */
@@ -17,22 +15,22 @@ public class sorter {
 
     public sorter() {
         this.house_list = new houselist();
-
-        TradeoffAnalytics service = new TradeoffAnalytics();
     }
 
     public void store_feedback(boolean like) {
         // store feedback
     }
 
+    /*
     public house get_next_house() {
-        return house_list.pop();
+        return house_list.getNextHouse();
     }
+    */
 
     public house temp_get_fake_house(){
         house temp = new house();
-        Log.v("TEMP", Double.toString(temp.price));
-        Log.v("TEMP", Integer.toString(temp.square_foot));
+        Log.v("TEMP", Double.toString(temp.getPrice()));
+        Log.v("TEMP", Integer.toString(temp.getSquare_foot()));
         return temp;
     }
 }
