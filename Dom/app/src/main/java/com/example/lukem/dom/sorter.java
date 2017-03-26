@@ -21,14 +21,16 @@ public class sorter {
         // store feedback
     }
 
+    /*
     public house get_next_house() {
-        return house_list.pop();
+        return house_list.getNextHouse();
     }
+    */
 
     public house temp_get_fake_house(){
         house temp = new house();
-        Log.v("TEMP", Double.toString(temp.price));
-        Log.v("TEMP", Integer.toString(temp.square_foot));
+        Log.v("TEMP", Double.toString(temp.getPrice()));
+        Log.v("TEMP", Integer.toString(temp.getSquare_foot()));
         return temp;
     }
 }

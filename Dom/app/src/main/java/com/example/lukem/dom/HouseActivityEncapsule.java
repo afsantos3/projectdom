@@ -13,7 +13,10 @@ public class HouseActivityEncapsule extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
         setContentView(R.layout.house_activity);
         super.onCreate(savedInstanceState);
 
@@ -22,7 +25,11 @@ public class HouseActivityEncapsule extends AppCompatActivity {
         int zip;
         int numBeds;
         pref_init pe;
+<<<<<<< HEAD
         sorter houseFactory;
+=======
+        houselist houseFactory;
+>>>>>>> master
         house currentHouse;
 
         Bundle bundle = getIntent().getExtras();
@@ -32,20 +39,37 @@ public class HouseActivityEncapsule extends AppCompatActivity {
         zip = Integer.parseInt(zipStr);
 
         pe = new pref_init(zip, numBeds);
+<<<<<<< HEAD
         houseFactory = new sorter(pe);
 
         currentHouse = houseFactory.temp_get_fake_house();
 
         Intent houseActivityIntent = new Intent(HouseActivityEncapsule.this, HouseActivity.class);
         putHouseExtras(houseActivityIntent, currentHouse);
+=======
+        houseFactory = new houselist(pe);
+
+        currentHouse = houseFactory.getNextHouse();
+
+        Intent houseActivityIntent = new Intent(HouseActivityEncapsule.this, HouseActivity.class);
+
+        putHouseExtras(houseActivityIntent, currentHouse);
+
+>>>>>>> master
         startActivityForResult(houseActivityIntent, DISPLAY_HOUSE);
 
         Log.v(LOG_TAG, "END");
     }
 
     private void putHouseExtras(Intent intent, house h) {
+<<<<<<< HEAD
         intent.putExtra("price", h.price);
         intent.putExtra("square_foot", h.square_foot);
+=======
+        intent.putExtra("price", h.getPrice());
+        intent.putExtra("square_foot", h.getSquare_foot());
+        intent.putExtra("url", "http://apartmentgeeks.net/wp-content/uploads/2013/03/Apartment.jpg");
+>>>>>>> master
     }
 
     @Override
@@ -62,4 +86,8 @@ public class HouseActivityEncapsule extends AppCompatActivity {
         Intent parent = getParentActivityIntent();
         startActivity(parent);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 }

@@ -46,7 +46,7 @@
     },
     {
       "key": "number_bathrooms",
-      "full_name": "Numer of Bedrooms",
+      "full_name": "Numer of Bathrooms",
       "type": "numeric",
       "is_objective": true,
       "goal": "max",
