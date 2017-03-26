@@ -12,6 +12,7 @@ public class houselist {
     ArrayList<house> thisHouseList;
 
     public houselist(pref_init initial_data) {
+        thisHouseList = new ArrayList<house>();
         set_list();
     }
 
