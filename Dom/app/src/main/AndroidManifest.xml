@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".HouseActivity" />
-        <activity android:name=".HouseEncapsule"></activity>
+        <activity android:name=".HouseActivityEncapsule"></activity>
     </application>
 
 </manifest>
