@@ -2,13 +2,15 @@
   {
     'repeat(100)': {
       key: '{{index()}}',
-      address: '1701 NCC Enterprise St.',
+      address: '{{lorem(1, "words")}}',
       values: {
-        price: '{{integer(10000, 300000)}}',
-        square_footage: '{{integer(100, 25000)}}',
+        square_footage: '{{integer(1000, 25000)}}',
+        price: function (tags) {
+          return this.square_footage * 20;
+        },
         utilities: '{{random(0, 1)}}',
-        number_bedrooms: '{{integer(0, 5)}}',
-        number_bathrooms: '{{integer(0, 5)}}'
+        number_bedrooms: '{{integer(1, 5)}}',
+        number_bathrooms: '{{integer(1, 5)}}'
       }
     }
   }
