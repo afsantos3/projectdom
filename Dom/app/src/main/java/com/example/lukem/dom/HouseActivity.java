@@ -32,8 +32,8 @@ public class HouseActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         house currentHouse = getHouseExtras(bundle);
 
-        sizeText.setText(Integer.toString(currentHouse.square_foot));
-        priceText.setText(Double.toString(currentHouse.price));
+        sizeText.setText(Integer.toString(currentHouse.getSquare_foot()));
+        priceText.setText(Double.toString(currentHouse.getPrice()));
         houseImageView.setImageResource(R.drawable.dom);
 
         likeButton.setOnClickListener(new View.OnClickListener() {

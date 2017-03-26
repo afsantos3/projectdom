@@ -27,8 +27,8 @@ public class sorter {
 
     public house temp_get_fake_house(){
         house temp = new house();
-        Log.v("TEMP", Double.toString(temp.price));
-        Log.v("TEMP", Integer.toString(temp.square_foot));
+        Log.v("TEMP", Double.toString(temp.getPrice()));
+        Log.v("TEMP", Integer.toString(temp.getSquare_foot()));
         return temp;
     }
 }
