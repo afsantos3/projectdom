@@ -5,7 +5,7 @@
       "key": "price",
       "full_name": "Price",
       "type": "numeric",
-      "is_objective": false,
+      "is_objective": true,
       "goal": "min",
       "format": "number:0 | taPrefix:'$'",
       "description": "Listing price"
@@ -14,7 +14,7 @@
       "key": "square_footage",
       "full_name": "Square Footage",
       "type": "numeric",
-      "is_objective": false,
+      "is_objective": true,
       "goal": "max",
       "format": "number:0 | taSuffix:' sq.ft.'",
       "description": "The total floor size in sq.ft"
@@ -23,7 +23,7 @@
       "key": "utilities",
       "full_name": "Utilities Included",
       "type": "numeric",
-      "is_objective": false,
+      "is_objective": true,
       "goal": "min",
       "range": {
         "low": 0,
@@ -35,7 +35,7 @@
       "key": "number_bedrooms",
       "full_name": "Number of Bedrooms",
       "type": "numeric",
-      "is_objective": false,
+      "is_objective": true,
       "goal": "max",
       "format": "number:0 | taSuffix:' bed'",
       "description": "Number of bedrooms in house"
@@ -44,7 +44,7 @@
       "key": "number_bathrooms",
       "full_name": "Numer of Bedrooms",
       "type": "numeric",
-      "is_objective": false,
+      "is_objective": true,
       "goal": "max",
       "format": "number:0 | taSuffix:' bath'",
       "description": "Number of bathrooms in house"
