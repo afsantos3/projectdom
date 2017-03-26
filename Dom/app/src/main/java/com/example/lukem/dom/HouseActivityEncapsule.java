@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.net.URL;
+
 public class HouseActivityEncapsule extends AppCompatActivity {
 
     String LOG_TAG = "DOM:HAEncapsule";
@@ -16,6 +18,13 @@ public class HouseActivityEncapsule extends AppCompatActivity {
 
         setContentView(R.layout.house_activity);
         super.onCreate(savedInstanceState);
+
+        /* TODO: Factor this into the logic for houselist so as to serve
+        entries to the user
+         */
+        HttpRequestAsyncTask task = new HttpRequestAsyncTask();
+        URL myUrl = task.makeUrl("https://tradeoff-analytics-nodejs-wisehacks-dom.mybluemix.net/dom");
+        task.execute(myUrl);
 
         String numBedsStr;
         String zipStr;
