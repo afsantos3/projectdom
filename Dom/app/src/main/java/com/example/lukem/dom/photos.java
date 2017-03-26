@@ -1,5 +1,7 @@
 package com.example.lukem.dom;
 
+import android.util.Log;
+
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Random;
@@ -9,7 +11,7 @@ import java.util.Random;
  */
 
 public class photos extends ArrayList<String> {
-    Random rand;
+    private Random rand;
 
     public void photos() {
         rand = new Random();
@@ -27,6 +29,9 @@ public class photos extends ArrayList<String> {
         this.add("http://www.decorlock.pics/wp-content/uploads/2014/05/luxury-apartment-elevations-Decorating-Design-Ideas.jpg");
         this.add("http://www.hotelmanager.net/wp-content/uploads/2011/06/apartment.jpg");
         this.add("http://www.e-architect.co.uk/images/jpgs/new_york/56th_st_apartment_e060810_5.jpg");
+
+
+        Log.v("TEMP", Integer.toString(this.size()));
     }
 
     public String getPhoto(){
