@@ -48,6 +48,7 @@ public class HouseActivityEncapsule extends AppCompatActivity {
     private void putHouseExtras(Intent intent, house h) {
         intent.putExtra("price", h.getPrice());
         intent.putExtra("square_foot", h.getSquare_foot());
+        intent.putExtra("url", "http://apartmentgeeks.net/wp-content/uploads/2013/03/Apartment.jpg");
     }
 
     @Override

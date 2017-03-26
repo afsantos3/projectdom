@@ -23,7 +23,7 @@ public class sorter {
 
     /*
     public house get_next_house() {
-        return house_list.pop();
+        return house_list.getNextHouse();
     }
     */
 
