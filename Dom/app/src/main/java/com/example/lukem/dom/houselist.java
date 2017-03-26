@@ -8,6 +8,7 @@ import com.ibm.watson.developer_cloud.tradeoff_analytics.v1.model.Problem;
 import java.sql.Wrapper;
 import java.util.ArrayList;
 import com.google.gson.Gson;
+
 /**
  * Created by jacob on 3/25/2017.
  */
@@ -16,7 +17,6 @@ public class houselist {
 
     avg_scores avgScores;
     house currHouse;
-    ArrayList<house> thisHouseList;
 
     ArrayList<house> thisHouseList;
 
@@ -79,7 +79,7 @@ public class houselist {
             avgScores.setUt_avg(avgScores.getUt_total() / avgScores.getLikes());
             avgScores.setSqft_avg(avgScores.getSqft_total() / avgScores.getLikes());
 
-
+            convert_to_gson();
         }
     }
 }
