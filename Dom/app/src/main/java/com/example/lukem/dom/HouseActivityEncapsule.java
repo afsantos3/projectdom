@@ -13,7 +13,6 @@ public class HouseActivityEncapsule extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         setContentView(R.layout.house_activity);
         super.onCreate(savedInstanceState);
 
@@ -33,13 +32,13 @@ public class HouseActivityEncapsule extends AppCompatActivity {
 
         pe = new pref_init(zip, numBeds);
         houseFactory = new houselist(pe);
-    }
 
-        /*
-        currentHouse = houseFactory.temp_get_fake_house();
+        currentHouse = new house();
 
         Intent houseActivityIntent = new Intent(HouseActivityEncapsule.this, HouseActivity.class);
+
         putHouseExtras(houseActivityIntent, currentHouse);
+
         startActivityForResult(houseActivityIntent, DISPLAY_HOUSE);
 
         Log.v(LOG_TAG, "END");
@@ -65,5 +64,5 @@ public class HouseActivityEncapsule extends AppCompatActivity {
         Intent parent = getParentActivityIntent();
         startActivity(parent);
     }
-    */
+
 }

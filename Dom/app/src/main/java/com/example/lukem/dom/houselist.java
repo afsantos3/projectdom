@@ -28,6 +28,7 @@ import java.nio.charset.Charset;
 import java.sql.Wrapper;
 import java.util.ArrayList;
 import com.google.gson.Gson;
+
 /**
  * Created by jacob on 3/25/2017.
  */
@@ -36,10 +37,12 @@ public class houselist {
 
     avg_scores avgScores;
     house currHouse;
+    String resultString;
 
     ArrayList<house> thisHouseList;
 
     public houselist(pref_init initial_data) {
+        resultString = "";
         thisHouseList = new ArrayList<house>();
         set_list(make_request());
     }
@@ -76,7 +79,17 @@ public class houselist {
     }
 
     public String make_request() {
-        return "{\"options\": [\n" +
+        HttpRequestClass task = new HttpRequestClass();
+        URL reqUrl = task.makeUrl("https://tradeoff-analytics-nodejs-wisehacks-dom.mybluemix.net/dom");
+        task.execute(reqUrl);
+        if(resultString.isEmpty()) {
+            return resultString;
+        }
+        else{
+            return "";
+        }
+
+        /* return "{\"options\": [\n" +
                 "    {\n" +
                 "      \"key\": 0,\n" +
                 "      \"address\": \"1701 NCC Enterprise St.\",\n" +
@@ -132,9 +145,11 @@ public class houselist {
                 "        \"number_bathrooms\": 0\n" +
                 "      }\n" +
                 "    }]}";
+                */
     }
 
     public houselist() {
+        resultString = "";
         thisHouseList = new ArrayList<house>();
         set_list(make_request());
     }
@@ -143,7 +158,7 @@ public class houselist {
         int end_index = thisHouseList.size() - 1;
 
         if (end_index == -1) {
-            set_list();
+            set_list(make_request());
             getNextHouse();
         }
 
@@ -252,6 +267,89 @@ public class houselist {
         }
 
         private URL makeUrl(String urlString) {
+            URL res_url;
+            try {
+                res_url = new URL(urlString);
+            } catch (MalformedURLException exc) {
+                Log.e("Error", "Couldn't make url from string", exc);
+                return null;
+            }
+            return res_url;
+        }
+    }
+
+
+    public class HttpRequestClass extends AsyncTask<URL, Void, String> {
+
+        @Override
+        protected String doInBackground(URL... urls) {
+            String response;
+            if (urls.length < 1) {
+                Log.e("Warning", "Passed zero urls to asynctask");
+                return null;
+            }
+            try {
+                response = makeHttpReq(urls[0]);
+            } catch (IOException ioecx) {
+                Log.e("Error", "Couldn't make request", ioecx);
+                return null;
+            }
+            // Log.v("RESPONSE", response);
+            return response;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            resultString = s;
+        }
+
+        private String makeHttpReq(URL url) throws IOException {
+            String response = "";
+            HttpURLConnection urlCon = null;
+            InputStream inStr = null;
+            try {
+                urlCon = (HttpURLConnection) url.openConnection();
+                urlCon.setRequestMethod("GET");
+                urlCon.setReadTimeout(10000 /* milliseconds */);
+                urlCon.setConnectTimeout(15000 /* milliseconds */);
+                urlCon.connect();
+                inStr = urlCon.getInputStream();
+                if (urlCon.getResponseCode() == 200) {
+                    inStr = urlCon.getInputStream();
+                    response = readFromStream(inStr);
+                }
+            } catch (IOException e) {
+                Log.e("Error", "Error getting response from web server.", e);
+            } finally {
+                if (urlCon != null) {
+                    urlCon.disconnect();
+                }
+                if (inStr != null) {
+                    // function must handle java.io.IOException here
+                    inStr.close();
+                }
+            }
+            return response;
+        }
+
+        /**
+         * Convert InputStream into a String with JSON response from HTTP Request.
+         */
+        private String readFromStream(InputStream inputStream) throws IOException {
+            StringBuilder output = new StringBuilder();
+            if (inputStream != null) {
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream, Charset.forName("UTF-8"));
+                BufferedReader reader = new BufferedReader(inputStreamReader);
+                String line = reader.readLine();
+                while (line != null) {
+                    output.append(line);
+                    line = reader.readLine();
+                }
+            }
+            return output.toString();
+        }
+
+        public URL makeUrl(String urlString) {
             URL res_url;
             try {
                 res_url = new URL(urlString);
