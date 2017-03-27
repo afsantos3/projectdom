@@ -1,9 +1,13 @@
 package com.example.lukem.dom;
 
 import android.content.Intent;
+<<<<<<< HEAD
+import android.media.Image;
+=======
 import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.os.AsyncTask;
+>>>>>>> master
 import android.provider.ContactsContract;
 import android.support.annotation.IntegerRes;
 import android.support.v7.app.AppCompatActivity;
@@ -31,6 +35,10 @@ public class HouseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
         super.onCreate(savedInstanceState);
         setContentView(R.layout.house_activity);
 
@@ -38,6 +46,44 @@ public class HouseActivity extends AppCompatActivity {
 
         TextView priceText = (TextView) findViewById(R.id.price_variable_field);
         TextView sizeText = (TextView) findViewById(R.id.size_variable_field);
+<<<<<<< HEAD
+        ImageView houseImageView = (ImageView) findViewById(R.id.house_imageview);
+        ImageButton likeButton = (ImageButton) findViewById(R.id.like_button);
+        ImageButton dislikeButton = (ImageButton) findViewById(R.id.dislike_button);
+
+        Bundle bundle = getIntent().getExtras();
+        house currentHouse = getHouseExtras(bundle);
+
+        sizeText.setText(Integer.toString(currentHouse.square_foot));
+        priceText.setText(Double.toString(currentHouse.price));
+        houseImageView.setImageResource(R.drawable.dom);
+
+        likeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        dislikeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+    }
+
+    private house getHouseExtras(Bundle b) {
+        return new house(b.getDouble("price"), b.getInt("square_foot"));
+    }
+
+    @Override
+    public void onBackPressed() {
+        Log.v(LOG_TAG, "Back pressed");
+         Intent parent = new Intent(HouseActivity.this, MainActivity.class);
+        startActivity(parent);
+=======
         ImageButton likeButton = (ImageButton) findViewById(R.id.like_button);
         ImageButton dislikeButton = (ImageButton) findViewById(R.id.dislike_button);
         houseImageView = (ImageView) findViewById(R.id.house_imageview);
@@ -111,5 +157,6 @@ public class HouseActivity extends AppCompatActivity {
             }
             return res_url;
         }
+>>>>>>> master
     }
 }

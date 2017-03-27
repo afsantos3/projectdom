@@ -9,6 +9,10 @@ import android.util.Log;
 import java.util.Random;
 
 public class house {
+<<<<<<< HEAD
+    public double price;
+    public int square_foot;
+=======
     private double price;
     private int square_foot;
     private String photo;
@@ -16,6 +20,7 @@ public class house {
     private String type;
     private int bedrooms;
     private int bathrooms;
+>>>>>>> master
 
     public double getPrice() {
         return price;
@@ -53,6 +58,8 @@ public class house {
         this.square_foot = square_foot;
     }
 
+<<<<<<< HEAD
+=======
     public void setPhoto(String photo) {
         this.photo = photo;
     }
@@ -88,6 +95,7 @@ public class house {
     }
 
     //TODO Delete
+>>>>>>> master
     public house() {
         Random rand = new Random();
         this.price = rand.nextInt(5000) + 900;

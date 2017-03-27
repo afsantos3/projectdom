@@ -1,0 +1,12 @@
+---
+declared-services:
+  tradeoff-analytics-standard-service:
+    label: tradeoff_analytics
+    plan: standard
+applications:
+- services:
+  - tradeoff-analytics-standard-service
+  name: tradeoff-analytics-nodejs-wisehacks-dom
+  command: npm start
+  path: .
+  memory: 256M

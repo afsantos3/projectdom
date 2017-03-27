@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Tradeoff Analytics</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="og:title" content="Dom Analytics" />
+  <meta name="og:description" content=">When you are looking for a new house, how many criteria do you consider? What's the process like? How do you know when you've found the right one?</p>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- demo body -->
+  <div class="_demo--input">
+    <div class="_demo--content-container">
+      <h2 class="base--h2">Find your living space</h2>
+      <p class="base--p">When you are looking for a new house, how many criteria do you consider? What's the process like? How do you know when you've found the right one?</p>
+      <a href="https://devpost.com/software/dom-ti5b7m"><button class="base--button">
+        See the Devpost
+      </button></a>
+      <a href="https://github.com/jacobScottAllen/projectdom"><button class="base--button">
+        Clone the Repo
+      </button></a>
+
+      <div class="panel">
+        <div class="panel--description base--p">
+          Select the criteria that matter to you when looking for a house:
+        </div>
+        <div class="panel--option-container">
+
+        </div>
+        <button class="base--button panel--button">
+          Help me decide
+        </button>
+      </div>
+
+      <span class="input--show-code-btn show-code">
+        <span class="icon icon-code"></span>
+      <span class="show-code--text">Show Code</span>
+      </span>
+
+      <div class="input--API input--json-container">
+        <pre class="base--pre input--json language-javascript">
+					<code class="base--code language-javascript">
+					</code>
+				</pre>
+      </div>
+
+      <div class="_demo--loading">
+        <img src="images/loading-indicator.gif" width="100px" alt="">
+      </div>
+
+    </div>
+  </div>
+  <div class="_demo--content-container">
+    <div class="_demo--error"></div>
+  </div>
+  <div id="demo-output" class="_demo--output">
+    <div class="_demo--content-container">
+      <h3 class="output--title base--h3">Output</h3>
+
+      <p class="base--p">
+        <span>Tradeoff Analytics found the best</span>
+        <span class="output--frontier-size">_</span>
+        <span>out of </span>
+        <span class="output--dataset-size">_</span>
+        <span>options.</span></p>
+      <p class="base--p">Use the filters and comparison to find the car that is right for you.</p>
+
+      <div class="_demo--filter">
+        <h5 class="filter--title base--h5">Filters</h5>
+        <div class="filter--container">
+
+        </div>
+
+      </div>
+
+      <div class="_demo--candidates">
+        <h5 class="base--h5">
+          Options
+        </h5>
+        <div class="_demo--candidates-container">
+          <div class="winners candidates">
+
+          </div>
+        </div>
+      </div>
+
+      <span class="output--show-code-btn show-code">
+        <span class="icon icon-code"></span>
+      <span class="show-code--text">Show Code</span>
+      </span>
+      <div class="output--API output--json-container">
+        <pre class="base--pre output--json language-javascript">
+          <code class="base--code language-javascript">
+          </code>
+        </pre>
+      </div>
+
+      <div id="demo-comparison" class="_demo--comparison">
+        <h5 class="base--h5">
+          Compare two options
+        </h5>
+        <div class="comparison--container">
+          <div class="comparison--table">
+          </div>
+        </div>
+      </div>
+
+      <div class="output--cong-text">
+        Congratulations! Excellent choice.
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+  <script type="text/javascript" src="js/demo.js"></script>
+  <script type="text/javascript" src="js/vendor/google-analytics.js"></script>
+</body>
+</html>

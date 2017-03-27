@@ -1,0 +1,5570 @@
+{
+  "subject": "LivingSpace",
+  "columns": [
+    {
+      "key": "price",
+      "full_name": "Price",
+      "type": "numeric",
+      "is_objective": true,
+      "goal": "min",
+      "format": "number:0 | taPrefix:'$'",
+      "description": "Listing price"
+    },
+    {
+      "key": "square_footage",
+      "full_name": "Square Footage",
+      "type": "numeric",
+      "is_objective": true,
+      "goal": "max",
+      "format": "number:0 | taSuffix:' sq.ft.'",
+      "description": "The total floor size in sq.ft"
+    },
+    {
+      "key": "utilities",
+      "full_name": "Utilities Included",
+      "type": "numeric",
+      "is_objective": true,
+      "goal": "max",
+      "range": {
+        "low": 0,
+        "high": 1
+      },
+      "description": "True if utilities included in rent"
+    },
+    {
+      "key": "number_bedrooms",
+      "full_name": "Number of Bedrooms",
+      "type": "numeric",
+      "is_objective": true,
+      "goal": "max",
+      "range": {
+        "low": 1,
+        "high": 5
+      },
+      "format": "number:0 | taSuffix:' bed'",
+      "description": "Number of bedrooms in house"
+    },
+    {
+      "key": "number_bathrooms",
+      "full_name": "Number of Bedrooms",
+      "type": "numeric",
+      "is_objective": true,
+      "goal": "max",
+      "range": {
+        "low": 1,
+        "high": 5
+      },
+      "format": "number:0 | taSuffix:' bath'",
+      "description": "Number of bathrooms in house"
+    },
+    {
+      "key": "property_type",
+      "full_name": "Property Type",
+      "type": "text",
+      "is_objective": false,
+      "description": "Type of property"
+    }
+  ],
+  "options": [
+    {
+      "key": 0,
+      "address": "tempor",
+      "values": {
+        "square_footage": 11234,
+        "price": 224680,
+        "utilities": 1,
+        "number_bedrooms": 2.2468,
+        "number_bathrooms": 3.2468
+      }
+    },
+    {
+      "key": 1,
+      "address": "eiusmod",
+      "values": {
+        "square_footage": 6914,
+        "price": 138280,
+        "utilities": 0,
+        "number_bedrooms": 1.3828,
+        "number_bathrooms": 2.3828
+      }
+    },
+    {
+      "key": 2,
+      "address": "laboris",
+      "values": {
+        "square_footage": 8624,
+        "price": 172480,
+        "utilities": 1,
+        "number_bedrooms": 1.7248,
+        "number_bathrooms": 2.7248
+      }
+    },
+    {
+      "key": 3,
+      "address": "incididunt",
+      "values": {
+        "square_footage": 9851,
+        "price": 197020,
+        "utilities": 0,
+        "number_bedrooms": 1.9702,
+        "number_bathrooms": 2.9702
+      }
+    },
+    {
+      "key": 4,
+      "address": "culpa",
+      "values": {
+        "square_footage": 23600,
+        "price": 472000,
+        "utilities": 1,
+        "number_bedrooms": 4.72,
+        "number_bathrooms": 5.72
+      }
+    },
+    {
+      "key": 5,
+      "address": "eu",
+      "values": {
+        "square_footage": 13402,
+        "price": 268040,
+        "utilities": 0,
+        "number_bedrooms": 2.6804,
+        "number_bathrooms": 3.6804
+      }
+    },
+    {
+      "key": 6,
+      "address": "id",
+      "values": {
+        "square_footage": 7214,
+        "price": 144280,
+        "utilities": 0,
+        "number_bedrooms": 1.4428,
+        "number_bathrooms": 2.4428
+      }
+    },
+    {
+      "key": 7,
+      "address": "fugiat",
+      "values": {
+        "square_footage": 15864,
+        "price": 317280,
+        "utilities": 1,
+        "number_bedrooms": 3.1728,
+        "number_bathrooms": 4.1728
+      }
+    },
+    {
+      "key": 8,
+      "address": "esse",
+      "values": {
+        "square_footage": 23439,
+        "price": 468780,
+        "utilities": 1,
+        "number_bedrooms": 4.6878,
+        "number_bathrooms": 5.6878
+      }
+    },
+    {
+      "key": 9,
+      "address": "aute",
+      "values": {
+        "square_footage": 3955,
+        "price": 79100,
+        "utilities": 1,
+        "number_bedrooms": 0.791,
+        "number_bathrooms": 1.791
+      }
+    },
+    {
+      "key": 10,
+      "address": "laboris",
+      "values": {
+        "square_footage": 6801,
+        "price": 136020,
+        "utilities": 0,
+        "number_bedrooms": 1.3602,
+        "number_bathrooms": 2.3602
+      }
+    },
+    {
+      "key": 11,
+      "address": "eu",
+      "values": {
+        "square_footage": 9336,
+        "price": 186720,
+        "utilities": 1,
+        "number_bedrooms": 1.8672,
+        "number_bathrooms": 2.8672
+      }
+    },
+    {
+      "key": 12,
+      "address": "cillum",
+      "values": {
+        "square_footage": 18055,
+        "price": 361100,
+        "utilities": 0,
+        "number_bedrooms": 3.611,
+        "number_bathrooms": 4.611
+      }
+    },
+    {
+      "key": 13,
+      "address": "minim",
+      "values": {
+        "square_footage": 24249,
+        "price": 484980,
+        "utilities": 1,
+        "number_bedrooms": 4.8498,
+        "number_bathrooms": 5.8498
+      }
+    },
+    {
+      "key": 14,
+      "address": "fugiat",
+      "values": {
+        "square_footage": 5107,
+        "price": 102140,
+        "utilities": 0,
+        "number_bedrooms": 1.0214,
+        "number_bathrooms": 2.0214
+      }
+    },
+    {
+      "key": 15,
+      "address": "dolore",
+      "values": {
+        "square_footage": 20667,
+        "price": 413340,
+        "utilities": 1,
+        "number_bedrooms": 4.1334,
+        "number_bathrooms": 5.1334
+      }
+    },
+    {
+      "key": 16,
+      "address": "non",
+      "values": {
+        "square_footage": 8286,
+        "price": 165720,
+        "utilities": 0,
+        "number_bedrooms": 1.6572,
+        "number_bathrooms": 2.6572
+      }
+    },
+    {
+      "key": 17,
+      "address": "ipsum",
+      "values": {
+        "square_footage": 14861,
+        "price": 297220,
+        "utilities": 1,
+        "number_bedrooms": 2.9722,
+        "number_bathrooms": 3.9722
+      }
+    },
+    {
+      "key": 18,
+      "address": "eu",
+      "values": {
+        "square_footage": 12876,
+        "price": 257520,
+        "utilities": 0,
+        "number_bedrooms": 2.5752,
+        "number_bathrooms": 3.5752
+      }
+    },
+    {
+      "key": 19,
+      "address": "occaecat",
+      "values": {
+        "square_footage": 4847,
+        "price": 96940,
+        "utilities": 0,
+        "number_bedrooms": 0.9694,
+        "number_bathrooms": 1.9694
+      }
+    },
+    {
+      "key": 20,
+      "address": "eiusmod",
+      "values": {
+        "square_footage": 17385,
+        "price": 347700,
+        "utilities": 1,
+        "number_bedrooms": 3.477,
+        "number_bathrooms": 4.477
+      }
+    },
+    {
+      "key": 21,
+      "address": "labore",
+      "values": {
+        "square_footage": 17127,
+        "price": 342540,
+        "utilities": 0,
+        "number_bedrooms": 3.4254,
+        "number_bathrooms": 4.4254
+      }
+    },
+    {
+      "key": 22,
+      "address": "ex",
+      "values": {
+        "square_footage": 15548,
+        "price": 310960,
+        "utilities": 0,
+        "number_bedrooms": 3.1096,
+        "number_bathrooms": 4.1096
+      }
+    },
+    {
+      "key": 23,
+      "address": "aliquip",
+      "values": {
+        "square_footage": 21039,
+        "price": 420780,
+        "utilities": 1,
+        "number_bedrooms": 4.2078,
+        "number_bathrooms": 5.2078
+      }
+    },
+    {
+      "key": 24,
+      "address": "adipisicing",
+      "values": {
+        "square_footage": 5959,
+        "price": 119180,
+        "utilities": 1,
+        "number_bedrooms": 1.1918,
+        "number_bathrooms": 2.1918
+      }
+    },
+    {
+      "key": 25,
+      "address": "consequat",
+      "values": {
+        "square_footage": 13118,
+        "price": 262360,
+        "utilities": 0,
+        "number_bedrooms": 2.6236,
+        "number_bathrooms": 3.6236
+      }
+    },
+    {
+      "key": 26,
+      "address": "exercitation",
+      "values": {
+        "square_footage": 19656,
+        "price": 393120,
+        "utilities": 1,
+        "number_bedrooms": 3.9312,
+        "number_bathrooms": 4.9312
+      }
+    },
+    {
+      "key": 27,
+      "address": "incididunt",
+      "values": {
+        "square_footage": 11508,
+        "price": 230160,
+        "utilities": 1,
+        "number_bedrooms": 2.3016,
+        "number_bathrooms": 3.3016
+      }
+    },
+    {
+      "key": 28,
+      "address": "anim",
+      "values": {
+        "square_footage": 21990,
+        "price": 439800,
+        "utilities": 0,
+        "number_bedrooms": 4.398,
+        "number_bathrooms": 5.398
+      }
+    },
+    {
+      "key": 29,
+      "address": "ullamco",
+      "values": {
+        "square_footage": 5652,
+        "price": 113040,
+        "utilities": 0,
+        "number_bedrooms": 1.1304,
+        "number_bathrooms": 2.1304
+      }
+    },
+    {
+      "key": 30,
+      "address": "nostrud",
+      "values": {
+        "square_footage": 3890,
+        "price": 77800,
+        "utilities": 1,
+        "number_bedrooms": 0.778,
+        "number_bathrooms": 1.778
+      }
+    },
+    {
+      "key": 31,
+      "address": "non",
+      "values": {
+        "square_footage": 21409,
+        "price": 428180,
+        "utilities": 0,
+        "number_bedrooms": 4.2818,
+        "number_bathrooms": 5.2818
+      }
+    },
+    {
+      "key": 32,
+      "address": "officia",
+      "values": {
+        "square_footage": 9588,
+        "price": 191760,
+        "utilities": 1,
+        "number_bedrooms": 1.9176,
+        "number_bathrooms": 2.9176
+      }
+    },
+    {
+      "key": 33,
+      "address": "sunt",
+      "values": {
+        "square_footage": 21684,
+        "price": 433680,
+        "utilities": 1,
+        "number_bedrooms": 4.3368,
+        "number_bathrooms": 5.3368
+      }
+    },
+    {
+      "key": 34,
+      "address": "incididunt",
+      "values": {
+        "square_footage": 23053,
+        "price": 461060,
+        "utilities": 0,
+        "number_bedrooms": 4.6106,
+        "number_bathrooms": 5.6106
+      }
+    },
+    {
+      "key": 35,
+      "address": "sunt",
+      "values": {
+        "square_footage": 1333,
+        "price": 26660,
+        "utilities": 1,
+        "number_bedrooms": 0.2666,
+        "number_bathrooms": 1.2666
+      }
+    },
+    {
+      "key": 36,
+      "address": "veniam",
+      "values": {
+        "square_footage": 1683,
+        "price": 33660,
+        "utilities": 1,
+        "number_bedrooms": 0.3366,
+        "number_bathrooms": 1.3366
+      }
+    },
+    {
+      "key": 37,
+      "address": "cupidatat",
+      "values": {
+        "square_footage": 20122,
+        "price": 402440,
+        "utilities": 0,
+        "number_bedrooms": 4.0244,
+        "number_bathrooms": 5.0244
+      }
+    },
+    {
+      "key": 38,
+      "address": "ea",
+      "values": {
+        "square_footage": 2016,
+        "price": 40320,
+        "utilities": 1,
+        "number_bedrooms": 0.4032,
+        "number_bathrooms": 1.4032
+      }
+    },
+    {
+      "key": 39,
+      "address": "nulla",
+      "values": {
+        "square_footage": 15374,
+        "price": 307480,
+        "utilities": 0,
+        "number_bedrooms": 3.0748,
+        "number_bathrooms": 4.0748
+      }
+    },
+    {
+      "key": 40,
+      "address": "quis",
+      "values": {
+        "square_footage": 19542,
+        "price": 390840,
+        "utilities": 1,
+        "number_bedrooms": 3.9084,
+        "number_bathrooms": 4.9084
+      }
+    },
+    {
+      "key": 41,
+      "address": "cillum",
+      "values": {
+        "square_footage": 1208,
+        "price": 24160,
+        "utilities": 1,
+        "number_bedrooms": 0.2416,
+        "number_bathrooms": 1.2416
+      }
+    },
+    {
+      "key": 42,
+      "address": "sint",
+      "values": {
+        "square_footage": 16416,
+        "price": 328320,
+        "utilities": 0,
+        "number_bedrooms": 3.2832,
+        "number_bathrooms": 4.2832
+      }
+    },
+    {
+      "key": 43,
+      "address": "ad",
+      "values": {
+        "square_footage": 11521,
+        "price": 230420,
+        "utilities": 0,
+        "number_bedrooms": 2.3042,
+        "number_bathrooms": 3.3042
+      }
+    },
+    {
+      "key": 44,
+      "address": "labore",
+      "values": {
+        "square_footage": 22108,
+        "price": 442160,
+        "utilities": 0,
+        "number_bedrooms": 4.4216,
+        "number_bathrooms": 5.4216
+      }
+    },
+    {
+      "key": 45,
+      "address": "consectetur",
+      "values": {
+        "square_footage": 22999,
+        "price": 459980,
+        "utilities": 0,
+        "number_bedrooms": 4.5998,
+        "number_bathrooms": 5.5998
+      }
+    },
+    {
+      "key": 46,
+      "address": "irure",
+      "values": {
+        "square_footage": 7495,
+        "price": 149900,
+        "utilities": 1,
+        "number_bedrooms": 1.499,
+        "number_bathrooms": 2.499
+      }
+    },
+    {
+      "key": 47,
+      "address": "amet",
+      "values": {
+        "square_footage": 8528,
+        "price": 170560,
+        "utilities": 1,
+        "number_bedrooms": 1.7056,
+        "number_bathrooms": 2.7056
+      }
+    },
+    {
+      "key": 48,
+      "address": "deserunt",
+      "values": {
+        "square_footage": 3980,
+        "price": 79600,
+        "utilities": 0,
+        "number_bedrooms": 0.796,
+        "number_bathrooms": 1.796
+      }
+    },
+    {
+      "key": 49,
+      "address": "nostrud",
+      "values": {
+        "square_footage": 14568,
+        "price": 291360,
+        "utilities": 1,
+        "number_bedrooms": 2.9136,
+        "number_bathrooms": 3.9136
+      }
+    },
+    {
+      "key": 50,
+      "address": "ut",
+      "values": {
+        "square_footage": 24195,
+        "price": 483900,
+        "utilities": 1,
+        "number_bedrooms": 4.839,
+        "number_bathrooms": 5.839
+      }
+    },
+    {
+      "key": 51,
+      "address": "aute",
+      "values": {
+        "square_footage": 19468,
+        "price": 389360,
+        "utilities": 1,
+        "number_bedrooms": 3.8936,
+        "number_bathrooms": 4.8936
+      }
+    },
+    {
+      "key": 52,
+      "address": "ipsum",
+      "values": {
+        "square_footage": 23403,
+        "price": 468060,
+        "utilities": 1,
+        "number_bedrooms": 4.6806,
+        "number_bathrooms": 5.6806
+      }
+    },
+    {
+      "key": 53,
+      "address": "mollit",
+      "values": {
+        "square_footage": 1152,
+        "price": 23040,
+        "utilities": 0,
+        "number_bedrooms": 0.2304,
+        "number_bathrooms": 1.2304
+      }
+    },
+    {
+      "key": 54,
+      "address": "officia",
+      "values": {
+        "square_footage": 10210,
+        "price": 204200,
+        "utilities": 1,
+        "number_bedrooms": 2.042,
+        "number_bathrooms": 3.042
+      }
+    },
+    {
+      "key": 55,
+      "address": "do",
+      "values": {
+        "square_footage": 21918,
+        "price": 438360,
+        "utilities": 0,
+        "number_bedrooms": 4.3836,
+        "number_bathrooms": 5.3836
+      }
+    },
+    {
+      "key": 56,
+      "address": "eu",
+      "values": {
+        "square_footage": 24535,
+        "price": 490700,
+        "utilities": 0,
+        "number_bedrooms": 4.907,
+        "number_bathrooms": 5.907
+      }
+    },
+    {
+      "key": 57,
+      "address": "voluptate",
+      "values": {
+        "square_footage": 15812,
+        "price": 316240,
+        "utilities": 1,
+        "number_bedrooms": 3.1624,
+        "number_bathrooms": 4.1624
+      }
+    },
+    {
+      "key": 58,
+      "address": "et",
+      "values": {
+        "square_footage": 1256,
+        "price": 25120,
+        "utilities": 0,
+        "number_bedrooms": 0.2512,
+        "number_bathrooms": 1.2512
+      }
+    },
+    {
+      "key": 59,
+      "address": "ullamco",
+      "values": {
+        "square_footage": 9756,
+        "price": 195120,
+        "utilities": 0,
+        "number_bedrooms": 1.9512,
+        "number_bathrooms": 2.9512
+      }
+    },
+    {
+      "key": 60,
+      "address": "anim",
+      "values": {
+        "square_footage": 13717,
+        "price": 274340,
+        "utilities": 0,
+        "number_bedrooms": 2.7434,
+        "number_bathrooms": 3.7434
+      }
+    },
+    {
+      "key": 61,
+      "address": "officia",
+      "values": {
+        "square_footage": 23504,
+        "price": 470080,
+        "utilities": 1,
+        "number_bedrooms": 4.7008,
+        "number_bathrooms": 5.7008
+      }
+    },
+    {
+      "key": 62,
+      "address": "sint",
+      "values": {
+        "square_footage": 19067,
+        "price": 381340,
+        "utilities": 1,
+        "number_bedrooms": 3.8134,
+        "number_bathrooms": 4.8134
+      }
+    },
+    {
+      "key": 63,
+      "address": "mollit",
+      "values": {
+        "square_footage": 9797,
+        "price": 195940,
+        "utilities": 1,
+        "number_bedrooms": 1.9594,
+        "number_bathrooms": 2.9594
+      }
+    },
+    {
+      "key": 64,
+      "address": "minim",
+      "values": {
+        "square_footage": 22745,
+        "price": 454900,
+        "utilities": 1,
+        "number_bedrooms": 4.549,
+        "number_bathrooms": 5.549
+      }
+    },
+    {
+      "key": 65,
+      "address": "mollit",
+      "values": {
+        "square_footage": 8036,
+        "price": 160720,
+        "utilities": 1,
+        "number_bedrooms": 1.6072,
+        "number_bathrooms": 2.6072
+      }
+    },
+    {
+      "key": 66,
+      "address": "sint",
+      "values": {
+        "square_footage": 11720,
+        "price": 234400,
+        "utilities": 0,
+        "number_bedrooms": 2.344,
+        "number_bathrooms": 3.344
+      }
+    },
+    {
+      "key": 67,
+      "address": "irure",
+      "values": {
+        "square_footage": 12039,
+        "price": 240780,
+        "utilities": 1,
+        "number_bedrooms": 2.4078,
+        "number_bathrooms": 3.4078
+      }
+    },
+    {
+      "key": 68,
+      "address": "mollit",
+      "values": {
+        "square_footage": 22441,
+        "price": 448820,
+        "utilities": 1,
+        "number_bedrooms": 4.4882,
+        "number_bathrooms": 5.4882
+      }
+    },
+    {
+      "key": 69,
+      "address": "dolor",
+      "values": {
+        "square_footage": 4766,
+        "price": 95320,
+        "utilities": 1,
+        "number_bedrooms": 0.9532,
+        "number_bathrooms": 1.9532
+      }
+    },
+    {
+      "key": 70,
+      "address": "eu",
+      "values": {
+        "square_footage": 10894,
+        "price": 217880,
+        "utilities": 0,
+        "number_bedrooms": 2.1788,
+        "number_bathrooms": 3.1788
+      }
+    },
+    {
+      "key": 71,
+      "address": "minim",
+      "values": {
+        "square_footage": 21206,
+        "price": 424120,
+        "utilities": 1,
+        "number_bedrooms": 4.2412,
+        "number_bathrooms": 5.2412
+      }
+    },
+    {
+      "key": 72,
+      "address": "magna",
+      "values": {
+        "square_footage": 13962,
+        "price": 279240,
+        "utilities": 1,
+        "number_bedrooms": 2.7924,
+        "number_bathrooms": 3.7924
+      }
+    },
+    {
+      "key": 73,
+      "address": "elit",
+      "values": {
+        "square_footage": 13610,
+        "price": 272200,
+        "utilities": 1,
+        "number_bedrooms": 2.722,
+        "number_bathrooms": 3.722
+      }
+    },
+    {
+      "key": 74,
+      "address": "culpa",
+      "values": {
+        "square_footage": 22980,
+        "price": 459600,
+        "utilities": 0,
+        "number_bedrooms": 4.596,
+        "number_bathrooms": 5.596
+      }
+    },
+    {
+      "key": 75,
+      "address": "tempor",
+      "values": {
+        "square_footage": 4567,
+        "price": 91340,
+        "utilities": 0,
+        "number_bedrooms": 0.9134,
+        "number_bathrooms": 1.9134
+      }
+    },
+    {
+      "key": 76,
+      "address": "amet",
+      "values": {
+        "square_footage": 22794,
+        "price": 455880,
+        "utilities": 1,
+        "number_bedrooms": 4.5588,
+        "number_bathrooms": 5.5588
+      }
+    },
+    {
+      "key": 77,
+      "address": "nostrud",
+      "values": {
+        "square_footage": 14126,
+        "price": 282520,
+        "utilities": 0,
+        "number_bedrooms": 2.8252,
+        "number_bathrooms": 3.8252
+      }
+    },
+    {
+      "key": 78,
+      "address": "eiusmod",
+      "values": {
+        "square_footage": 14370,
+        "price": 287400,
+        "utilities": 1,
+        "number_bedrooms": 2.874,
+        "number_bathrooms": 3.874
+      }
+    },
+    {
+      "key": 79,
+      "address": "amet",
+      "values": {
+        "square_footage": 22342,
+        "price": 446840,
+        "utilities": 1,
+        "number_bedrooms": 4.4684,
+        "number_bathrooms": 5.4684
+      }
+    },
+    {
+      "key": 80,
+      "address": "nostrud",
+      "values": {
+        "square_footage": 7740,
+        "price": 154800,
+        "utilities": 0,
+        "number_bedrooms": 1.548,
+        "number_bathrooms": 2.548
+      }
+    },
+    {
+      "key": 81,
+      "address": "excepteur",
+      "values": {
+        "square_footage": 8505,
+        "price": 170100,
+        "utilities": 0,
+        "number_bedrooms": 1.701,
+        "number_bathrooms": 2.701
+      }
+    },
+    {
+      "key": 82,
+      "address": "pariatur",
+      "values": {
+        "square_footage": 6096,
+        "price": 121920,
+        "utilities": 0,
+        "number_bedrooms": 1.2192,
+        "number_bathrooms": 2.2192
+      }
+    },
+    {
+      "key": 83,
+      "address": "consequat",
+      "values": {
+        "square_footage": 7884,
+        "price": 157680,
+        "utilities": 0,
+        "number_bedrooms": 1.5768,
+        "number_bathrooms": 2.5768
+      }
+    },
+    {
+      "key": 84,
+      "address": "est",
+      "values": {
+        "square_footage": 16713,
+        "price": 334260,
+        "utilities": 0,
+        "number_bedrooms": 3.3426,
+        "number_bathrooms": 4.3426
+      }
+    },
+    {
+      "key": 85,
+      "address": "labore",
+      "values": {
+        "square_footage": 20284,
+        "price": 405680,
+        "utilities": 0,
+        "number_bedrooms": 4.0568,
+        "number_bathrooms": 5.0568
+      }
+    },
+    {
+      "key": 86,
+      "address": "incididunt",
+      "values": {
+        "square_footage": 7275,
+        "price": 145500,
+        "utilities": 1,
+        "number_bedrooms": 1.455,
+        "number_bathrooms": 2.455
+      }
+    },
+    {
+      "key": 87,
+      "address": "esse",
+      "values": {
+        "square_footage": 3064,
+        "price": 61280,
+        "utilities": 1,
+        "number_bedrooms": 0.6128,
+        "number_bathrooms": 1.6128
+      }
+    },
+    {
+      "key": 88,
+      "address": "non",
+      "values": {
+        "square_footage": 23407,
+        "price": 468140,
+        "utilities": 0,
+        "number_bedrooms": 4.6814,
+        "number_bathrooms": 5.6814
+      }
+    },
+    {
+      "key": 89,
+      "address": "Lorem",
+      "values": {
+        "square_footage": 14164,
+        "price": 283280,
+        "utilities": 1,
+        "number_bedrooms": 2.8328,
+        "number_bathrooms": 3.8328
+      }
+    },
+    {
+      "key": 90,
+      "address": "consectetur",
+      "values": {
+        "square_footage": 1755,
+        "price": 35100,
+        "utilities": 1,
+        "number_bedrooms": 0.351,
+        "number_bathrooms": 1.351
+      }
+    },
+    {
+      "key": 91,
+      "address": "enim",
+      "values": {
+        "square_footage": 22514,
+        "price": 450280,
+        "utilities": 1,
+        "number_bedrooms": 4.5028,
+        "number_bathrooms": 5.5028
+      }
+    },
+    {
+      "key": 92,
+      "address": "sit",
+      "values": {
+        "square_footage": 7242,
+        "price": 144840,
+        "utilities": 1,
+        "number_bedrooms": 1.4484,
+        "number_bathrooms": 2.4484
+      }
+    },
+    {
+      "key": 93,
+      "address": "nulla",
+      "values": {
+        "square_footage": 20648,
+        "price": 412960,
+        "utilities": 0,
+        "number_bedrooms": 4.1296,
+        "number_bathrooms": 5.1296
+      }
+    },
+    {
+      "key": 94,
+      "address": "anim",
+      "values": {
+        "square_footage": 21713,
+        "price": 434260,
+        "utilities": 0,
+        "number_bedrooms": 4.3426,
+        "number_bathrooms": 5.3426
+      }
+    },
+    {
+      "key": 95,
+      "address": "ex",
+      "values": {
+        "square_footage": 16600,
+        "price": 332000,
+        "utilities": 0,
+        "number_bedrooms": 3.32,
+        "number_bathrooms": 4.32
+      }
+    },
+    {
+      "key": 96,
+      "address": "pariatur",
+      "values": {
+        "square_footage": 2954,
+        "price": 59080,
+        "utilities": 0,
+        "number_bedrooms": 0.5908,
+        "number_bathrooms": 1.5908
+      }
+    },
+    {
+      "key": 97,
+      "address": "esse",
+      "values": {
+        "square_footage": 21418,
+        "price": 428360,
+        "utilities": 1,
+        "number_bedrooms": 4.2836,
+        "number_bathrooms": 5.2836
+      }
+    },
+    {
+      "key": 98,
+      "address": "minim",
+      "values": {
+        "square_footage": 19862,
+        "price": 397240,
+        "utilities": 0,
+        "number_bedrooms": 3.9724,
+        "number_bathrooms": 4.9724
+      }
+    },
+    {
+      "key": 99,
+      "address": "do",
+      "values": {
+        "square_footage": 24033,
+        "price": 480660,
+        "utilities": 0,
+        "number_bedrooms": 4.8066,
+        "number_bathrooms": 5.8066
+      }
+    },
+    {
+    "key": 100,
+    "address": "eu",
+    "values": {
+      "square_footage": 21881,
+      "price": 437620,
+      "utilities": 0,
+      "number_bedrooms": 4.3762,
+      "number_bathrooms": 5.3762
+    }
+  },
+  {
+    "key": 101,
+    "address": "laboris",
+    "values": {
+      "square_footage": 21288,
+      "price": 425760,
+      "utilities": 0,
+      "number_bedrooms": 4.2576,
+      "number_bathrooms": 5.2576
+    }
+  },
+  {
+    "key": 102,
+    "address": "tempor",
+    "values": {
+      "square_footage": 21822,
+      "price": 436440,
+      "utilities": 0,
+      "number_bedrooms": 4.3644,
+      "number_bathrooms": 5.3644
+    }
+  },
+  {
+    "key": 103,
+    "address": "officia",
+    "values": {
+      "square_footage": 22836,
+      "price": 456720,
+      "utilities": 0,
+      "number_bedrooms": 4.5672,
+      "number_bathrooms": 5.5672
+    }
+  },
+  {
+    "key": 104,
+    "address": "magna",
+    "values": {
+      "square_footage": 24666,
+      "price": 493320,
+      "utilities": 0,
+      "number_bedrooms": 4.9332,
+      "number_bathrooms": 5.9332
+    }
+  },
+  {
+    "key": 105,
+    "address": "ex",
+    "values": {
+      "square_footage": 20600,
+      "price": 412000,
+      "utilities": 1,
+      "number_bedrooms": 4.12,
+      "number_bathrooms": 5.12
+    }
+  },
+  {
+    "key": 106,
+    "address": "ipsum",
+    "values": {
+      "square_footage": 16658,
+      "price": 333160,
+      "utilities": 1,
+      "number_bedrooms": 3.3316,
+      "number_bathrooms": 4.3316
+    }
+  },
+  {
+    "key": 107,
+    "address": "incididunt",
+    "values": {
+      "square_footage": 9089,
+      "price": 181780,
+      "utilities": 1,
+      "number_bedrooms": 1.8178,
+      "number_bathrooms": 2.8178
+    }
+  },
+  {
+    "key": 108,
+    "address": "tempor",
+    "values": {
+      "square_footage": 20150,
+      "price": 403000,
+      "utilities": 1,
+      "number_bedrooms": 4.03,
+      "number_bathrooms": 5.03
+    }
+  },
+  {
+    "key": 109,
+    "address": "exercitation",
+    "values": {
+      "square_footage": 17187,
+      "price": 343740,
+      "utilities": 0,
+      "number_bedrooms": 3.4374,
+      "number_bathrooms": 4.4374
+    }
+  },
+  {
+    "key": 110,
+    "address": "cupidatat",
+    "values": {
+      "square_footage": 8585,
+      "price": 171700,
+      "utilities": 1,
+      "number_bedrooms": 1.717,
+      "number_bathrooms": 2.717
+    }
+  },
+  {
+    "key": 111,
+    "address": "ullamco",
+    "values": {
+      "square_footage": 11380,
+      "price": 227600,
+      "utilities": 1,
+      "number_bedrooms": 2.276,
+      "number_bathrooms": 3.276
+    }
+  },
+  {
+    "key": 112,
+    "address": "ullamco",
+    "values": {
+      "square_footage": 19464,
+      "price": 389280,
+      "utilities": 1,
+      "number_bedrooms": 3.8928,
+      "number_bathrooms": 4.8928
+    }
+  },
+  {
+    "key": 113,
+    "address": "proident",
+    "values": {
+      "square_footage": 23740,
+      "price": 474800,
+      "utilities": 0,
+      "number_bedrooms": 4.748,
+      "number_bathrooms": 5.748
+    }
+  },
+  {
+    "key": 114,
+    "address": "tempor",
+    "values": {
+      "square_footage": 2860,
+      "price": 57200,
+      "utilities": 0,
+      "number_bedrooms": 0.572,
+      "number_bathrooms": 1.572
+    }
+  },
+  {
+    "key": 115,
+    "address": "deserunt",
+    "values": {
+      "square_footage": 5005,
+      "price": 100100,
+      "utilities": 0,
+      "number_bedrooms": 1.001,
+      "number_bathrooms": 2.001
+    }
+  },
+  {
+    "key": 116,
+    "address": "eu",
+    "values": {
+      "square_footage": 19114,
+      "price": 382280,
+      "utilities": 1,
+      "number_bedrooms": 3.8228,
+      "number_bathrooms": 4.8228
+    }
+  },
+  {
+    "key": 117,
+    "address": "tempor",
+    "values": {
+      "square_footage": 19952,
+      "price": 399040,
+      "utilities": 0,
+      "number_bedrooms": 3.9904,
+      "number_bathrooms": 4.9904
+    }
+  },
+  {
+    "key": 118,
+    "address": "mollit",
+    "values": {
+      "square_footage": 14090,
+      "price": 281800,
+      "utilities": 1,
+      "number_bedrooms": 2.818,
+      "number_bathrooms": 3.818
+    }
+  },
+  {
+    "key": 119,
+    "address": "consequat",
+    "values": {
+      "square_footage": 18749,
+      "price": 374980,
+      "utilities": 1,
+      "number_bedrooms": 3.7498,
+      "number_bathrooms": 4.7498
+    }
+  },
+  {
+    "key": 120,
+    "address": "exercitation",
+    "values": {
+      "square_footage": 4768,
+      "price": 95360,
+      "utilities": 1,
+      "number_bedrooms": 0.9536,
+      "number_bathrooms": 1.9536
+    }
+  },
+  {
+    "key": 121,
+    "address": "in",
+    "values": {
+      "square_footage": 10812,
+      "price": 216240,
+      "utilities": 0,
+      "number_bedrooms": 2.1624,
+      "number_bathrooms": 3.1624
+    }
+  },
+  {
+    "key": 122,
+    "address": "mollit",
+    "values": {
+      "square_footage": 4823,
+      "price": 96460,
+      "utilities": 0,
+      "number_bedrooms": 0.9646,
+      "number_bathrooms": 1.9646
+    }
+  },
+  {
+    "key": 123,
+    "address": "qui",
+    "values": {
+      "square_footage": 7728,
+      "price": 154560,
+      "utilities": 1,
+      "number_bedrooms": 1.5456,
+      "number_bathrooms": 2.5456
+    }
+  },
+  {
+    "key": 124,
+    "address": "Lorem",
+    "values": {
+      "square_footage": 22903,
+      "price": 458060,
+      "utilities": 0,
+      "number_bedrooms": 4.5806,
+      "number_bathrooms": 5.5806
+    }
+  },
+  {
+    "key": 125,
+    "address": "velit",
+    "values": {
+      "square_footage": 21262,
+      "price": 425240,
+      "utilities": 0,
+      "number_bedrooms": 4.2524,
+      "number_bathrooms": 5.2524
+    }
+  },
+  {
+    "key": 126,
+    "address": "labore",
+    "values": {
+      "square_footage": 1941,
+      "price": 38820,
+      "utilities": 0,
+      "number_bedrooms": 0.3882,
+      "number_bathrooms": 1.3882
+    }
+  },
+  {
+    "key": 127,
+    "address": "ad",
+    "values": {
+      "square_footage": 1517,
+      "price": 30340,
+      "utilities": 1,
+      "number_bedrooms": 0.3034,
+      "number_bathrooms": 1.3034
+    }
+  },
+  {
+    "key": 128,
+    "address": "in",
+    "values": {
+      "square_footage": 12854,
+      "price": 257080,
+      "utilities": 0,
+      "number_bedrooms": 2.5708,
+      "number_bathrooms": 3.5708
+    }
+  },
+  {
+    "key": 129,
+    "address": "culpa",
+    "values": {
+      "square_footage": 1960,
+      "price": 39200,
+      "utilities": 0,
+      "number_bedrooms": 0.392,
+      "number_bathrooms": 1.392
+    }
+  },
+  {
+    "key": 130,
+    "address": "reprehenderit",
+    "values": {
+      "square_footage": 21105,
+      "price": 422100,
+      "utilities": 0,
+      "number_bedrooms": 4.221,
+      "number_bathrooms": 5.221
+    }
+  },
+  {
+    "key": 131,
+    "address": "commodo",
+    "values": {
+      "square_footage": 11622,
+      "price": 232440,
+      "utilities": 0,
+      "number_bedrooms": 2.3244,
+      "number_bathrooms": 3.3244
+    }
+  },
+  {
+    "key": 132,
+    "address": "ipsum",
+    "values": {
+      "square_footage": 7514,
+      "price": 150280,
+      "utilities": 1,
+      "number_bedrooms": 1.5028,
+      "number_bathrooms": 2.5028
+    }
+  },
+  {
+    "key": 133,
+    "address": "commodo",
+    "values": {
+      "square_footage": 23752,
+      "price": 475040,
+      "utilities": 1,
+      "number_bedrooms": 4.7504,
+      "number_bathrooms": 5.7504
+    }
+  },
+  {
+    "key": 134,
+    "address": "proident",
+    "values": {
+      "square_footage": 19349,
+      "price": 386980,
+      "utilities": 0,
+      "number_bedrooms": 3.8698,
+      "number_bathrooms": 4.8698
+    }
+  },
+  {
+    "key": 135,
+    "address": "duis",
+    "values": {
+      "square_footage": 1269,
+      "price": 25380,
+      "utilities": 0,
+      "number_bedrooms": 0.2538,
+      "number_bathrooms": 1.2538
+    }
+  },
+  {
+    "key": 136,
+    "address": "deserunt",
+    "values": {
+      "square_footage": 23164,
+      "price": 463280,
+      "utilities": 0,
+      "number_bedrooms": 4.6328,
+      "number_bathrooms": 5.6328
+    }
+  },
+  {
+    "key": 137,
+    "address": "mollit",
+    "values": {
+      "square_footage": 22808,
+      "price": 456160,
+      "utilities": 0,
+      "number_bedrooms": 4.5616,
+      "number_bathrooms": 5.5616
+    }
+  },
+  {
+    "key": 138,
+    "address": "magna",
+    "values": {
+      "square_footage": 15235,
+      "price": 304700,
+      "utilities": 1,
+      "number_bedrooms": 3.047,
+      "number_bathrooms": 4.047
+    }
+  },
+  {
+    "key": 139,
+    "address": "eu",
+    "values": {
+      "square_footage": 17770,
+      "price": 355400,
+      "utilities": 0,
+      "number_bedrooms": 3.554,
+      "number_bathrooms": 4.554
+    }
+  },
+  {
+    "key": 140,
+    "address": "minim",
+    "values": {
+      "square_footage": 1563,
+      "price": 31260,
+      "utilities": 1,
+      "number_bedrooms": 0.3126,
+      "number_bathrooms": 1.3126
+    }
+  },
+  {
+    "key": 141,
+    "address": "sit",
+    "values": {
+      "square_footage": 6008,
+      "price": 120160,
+      "utilities": 0,
+      "number_bedrooms": 1.2016,
+      "number_bathrooms": 2.2016
+    }
+  },
+  {
+    "key": 142,
+    "address": "excepteur",
+    "values": {
+      "square_footage": 20174,
+      "price": 403480,
+      "utilities": 1,
+      "number_bedrooms": 4.0348,
+      "number_bathrooms": 5.0348
+    }
+  },
+  {
+    "key": 143,
+    "address": "reprehenderit",
+    "values": {
+      "square_footage": 4989,
+      "price": 99780,
+      "utilities": 1,
+      "number_bedrooms": 0.9978,
+      "number_bathrooms": 1.9978
+    }
+  },
+  {
+    "key": 144,
+    "address": "est",
+    "values": {
+      "square_footage": 15791,
+      "price": 315820,
+      "utilities": 1,
+      "number_bedrooms": 3.1582,
+      "number_bathrooms": 4.1582
+    }
+  },
+  {
+    "key": 145,
+    "address": "occaecat",
+    "values": {
+      "square_footage": 13104,
+      "price": 262080,
+      "utilities": 1,
+      "number_bedrooms": 2.6208,
+      "number_bathrooms": 3.6208
+    }
+  },
+  {
+    "key": 146,
+    "address": "anim",
+    "values": {
+      "square_footage": 12512,
+      "price": 250240,
+      "utilities": 0,
+      "number_bedrooms": 2.5024,
+      "number_bathrooms": 3.5024
+    }
+  },
+  {
+    "key": 147,
+    "address": "officia",
+    "values": {
+      "square_footage": 22747,
+      "price": 454940,
+      "utilities": 0,
+      "number_bedrooms": 4.5494,
+      "number_bathrooms": 5.5494
+    }
+  },
+  {
+    "key": 148,
+    "address": "ut",
+    "values": {
+      "square_footage": 4042,
+      "price": 80840,
+      "utilities": 1,
+      "number_bedrooms": 0.8084,
+      "number_bathrooms": 1.8084
+    }
+  },
+  {
+    "key": 149,
+    "address": "minim",
+    "values": {
+      "square_footage": 15221,
+      "price": 304420,
+      "utilities": 0,
+      "number_bedrooms": 3.0442,
+      "number_bathrooms": 4.0442
+    }
+  },
+  {
+    "key": 150,
+    "address": "veniam",
+    "values": {
+      "square_footage": 12410,
+      "price": 248200,
+      "utilities": 1,
+      "number_bedrooms": 2.482,
+      "number_bathrooms": 3.482
+    }
+  },
+  {
+    "key": 151,
+    "address": "culpa",
+    "values": {
+      "square_footage": 9944,
+      "price": 198880,
+      "utilities": 0,
+      "number_bedrooms": 1.9888,
+      "number_bathrooms": 2.9888
+    }
+  },
+  {
+    "key": 152,
+    "address": "sunt",
+    "values": {
+      "square_footage": 22264,
+      "price": 445280,
+      "utilities": 0,
+      "number_bedrooms": 4.4528,
+      "number_bathrooms": 5.4528
+    }
+  },
+  {
+    "key": 153,
+    "address": "aliquip",
+    "values": {
+      "square_footage": 13687,
+      "price": 273740,
+      "utilities": 1,
+      "number_bedrooms": 2.7374,
+      "number_bathrooms": 3.7374
+    }
+  },
+  {
+    "key": 154,
+    "address": "occaecat",
+    "values": {
+      "square_footage": 1227,
+      "price": 24540,
+      "utilities": 0,
+      "number_bedrooms": 0.2454,
+      "number_bathrooms": 1.2454
+    }
+  },
+  {
+    "key": 155,
+    "address": "laborum",
+    "values": {
+      "square_footage": 10723,
+      "price": 214460,
+      "utilities": 0,
+      "number_bedrooms": 2.1446,
+      "number_bathrooms": 3.1446
+    }
+  },
+  {
+    "key": 156,
+    "address": "anim",
+    "values": {
+      "square_footage": 15445,
+      "price": 308900,
+      "utilities": 0,
+      "number_bedrooms": 3.089,
+      "number_bathrooms": 4.089
+    }
+  },
+  {
+    "key": 157,
+    "address": "esse",
+    "values": {
+      "square_footage": 13323,
+      "price": 266460,
+      "utilities": 1,
+      "number_bedrooms": 2.6646,
+      "number_bathrooms": 3.6646
+    }
+  },
+  {
+    "key": 158,
+    "address": "ad",
+    "values": {
+      "square_footage": 24404,
+      "price": 488080,
+      "utilities": 1,
+      "number_bedrooms": 4.8808,
+      "number_bathrooms": 5.8808
+    }
+  },
+  {
+    "key": 159,
+    "address": "qui",
+    "values": {
+      "square_footage": 19175,
+      "price": 383500,
+      "utilities": 1,
+      "number_bedrooms": 3.835,
+      "number_bathrooms": 4.835
+    }
+  },
+  {
+    "key": 160,
+    "address": "occaecat",
+    "values": {
+      "square_footage": 11502,
+      "price": 230040,
+      "utilities": 0,
+      "number_bedrooms": 2.3004,
+      "number_bathrooms": 3.3004
+    }
+  },
+  {
+    "key": 161,
+    "address": "laborum",
+    "values": {
+      "square_footage": 14823,
+      "price": 296460,
+      "utilities": 0,
+      "number_bedrooms": 2.9646,
+      "number_bathrooms": 3.9646
+    }
+  },
+  {
+    "key": 162,
+    "address": "magna",
+    "values": {
+      "square_footage": 10362,
+      "price": 207240,
+      "utilities": 0,
+      "number_bedrooms": 2.0724,
+      "number_bathrooms": 3.0724
+    }
+  },
+  {
+    "key": 163,
+    "address": "laborum",
+    "values": {
+      "square_footage": 17046,
+      "price": 340920,
+      "utilities": 1,
+      "number_bedrooms": 3.4092,
+      "number_bathrooms": 4.4092
+    }
+  },
+  {
+    "key": 164,
+    "address": "velit",
+    "values": {
+      "square_footage": 20686,
+      "price": 413720,
+      "utilities": 1,
+      "number_bedrooms": 4.1372,
+      "number_bathrooms": 5.1372
+    }
+  },
+  {
+    "key": 165,
+    "address": "in",
+    "values": {
+      "square_footage": 13701,
+      "price": 274020,
+      "utilities": 0,
+      "number_bedrooms": 2.7402,
+      "number_bathrooms": 3.7402
+    }
+  },
+  {
+    "key": 166,
+    "address": "Lorem",
+    "values": {
+      "square_footage": 9882,
+      "price": 197640,
+      "utilities": 1,
+      "number_bedrooms": 1.9764,
+      "number_bathrooms": 2.9764
+    }
+  },
+  {
+    "key": 167,
+    "address": "pariatur",
+    "values": {
+      "square_footage": 1959,
+      "price": 39180,
+      "utilities": 0,
+      "number_bedrooms": 0.3918,
+      "number_bathrooms": 1.3918
+    }
+  },
+  {
+    "key": 168,
+    "address": "laborum",
+    "values": {
+      "square_footage": 24853,
+      "price": 497060,
+      "utilities": 1,
+      "number_bedrooms": 4.9706,
+      "number_bathrooms": 5.9706
+    }
+  },
+  {
+    "key": 169,
+    "address": "enim",
+    "values": {
+      "square_footage": 23957,
+      "price": 479140,
+      "utilities": 1,
+      "number_bedrooms": 4.7914,
+      "number_bathrooms": 5.7914
+    }
+  },
+  {
+    "key": 170,
+    "address": "ex",
+    "values": {
+      "square_footage": 6903,
+      "price": 138060,
+      "utilities": 1,
+      "number_bedrooms": 1.3806,
+      "number_bathrooms": 2.3806
+    }
+  },
+  {
+    "key": 171,
+    "address": "ipsum",
+    "values": {
+      "square_footage": 24648,
+      "price": 492960,
+      "utilities": 0,
+      "number_bedrooms": 4.9296,
+      "number_bathrooms": 5.9296
+    }
+  },
+  {
+    "key": 172,
+    "address": "tempor",
+    "values": {
+      "square_footage": 22613,
+      "price": 452260,
+      "utilities": 0,
+      "number_bedrooms": 4.5226,
+      "number_bathrooms": 5.5226
+    }
+  },
+  {
+    "key": 173,
+    "address": "cillum",
+    "values": {
+      "square_footage": 7785,
+      "price": 155700,
+      "utilities": 1,
+      "number_bedrooms": 1.557,
+      "number_bathrooms": 2.557
+    }
+  },
+  {
+    "key": 174,
+    "address": "adipisicing",
+    "values": {
+      "square_footage": 12202,
+      "price": 244040,
+      "utilities": 1,
+      "number_bedrooms": 2.4404,
+      "number_bathrooms": 3.4404
+    }
+  },
+  {
+    "key": 175,
+    "address": "proident",
+    "values": {
+      "square_footage": 24488,
+      "price": 489760,
+      "utilities": 1,
+      "number_bedrooms": 4.8976,
+      "number_bathrooms": 5.8976
+    }
+  },
+  {
+    "key": 176,
+    "address": "proident",
+    "values": {
+      "square_footage": 20041,
+      "price": 400820,
+      "utilities": 0,
+      "number_bedrooms": 4.0082,
+      "number_bathrooms": 5.0082
+    }
+  },
+  {
+    "key": 177,
+    "address": "commodo",
+    "values": {
+      "square_footage": 7796,
+      "price": 155920,
+      "utilities": 0,
+      "number_bedrooms": 1.5592,
+      "number_bathrooms": 2.5592
+    }
+  },
+  {
+    "key": 178,
+    "address": "cupidatat",
+    "values": {
+      "square_footage": 9863,
+      "price": 197260,
+      "utilities": 0,
+      "number_bedrooms": 1.9726,
+      "number_bathrooms": 2.9726
+    }
+  },
+  {
+    "key": 179,
+    "address": "enim",
+    "values": {
+      "square_footage": 22167,
+      "price": 443340,
+      "utilities": 1,
+      "number_bedrooms": 4.4334,
+      "number_bathrooms": 5.4334
+    }
+  },
+  {
+    "key": 180,
+    "address": "tempor",
+    "values": {
+      "square_footage": 20978,
+      "price": 419560,
+      "utilities": 1,
+      "number_bedrooms": 4.1956,
+      "number_bathrooms": 5.1956
+    }
+  },
+  {
+    "key": 181,
+    "address": "aliquip",
+    "values": {
+      "square_footage": 17004,
+      "price": 340080,
+      "utilities": 1,
+      "number_bedrooms": 3.4008,
+      "number_bathrooms": 4.4008
+    }
+  },
+  {
+    "key": 182,
+    "address": "pariatur",
+    "values": {
+      "square_footage": 9995,
+      "price": 199900,
+      "utilities": 1,
+      "number_bedrooms": 1.999,
+      "number_bathrooms": 2.999
+    }
+  },
+  {
+    "key": 183,
+    "address": "aute",
+    "values": {
+      "square_footage": 24277,
+      "price": 485540,
+      "utilities": 1,
+      "number_bedrooms": 4.8554,
+      "number_bathrooms": 5.8554
+    }
+  },
+  {
+    "key": 184,
+    "address": "cupidatat",
+    "values": {
+      "square_footage": 24748,
+      "price": 494960,
+      "utilities": 1,
+      "number_bedrooms": 4.9496,
+      "number_bathrooms": 5.9496
+    }
+  },
+  {
+    "key": 185,
+    "address": "irure",
+    "values": {
+      "square_footage": 12935,
+      "price": 258700,
+      "utilities": 0,
+      "number_bedrooms": 2.587,
+      "number_bathrooms": 3.587
+    }
+  },
+  {
+    "key": 186,
+    "address": "culpa",
+    "values": {
+      "square_footage": 21919,
+      "price": 438380,
+      "utilities": 1,
+      "number_bedrooms": 4.3838,
+      "number_bathrooms": 5.3838
+    }
+  },
+  {
+    "key": 187,
+    "address": "laborum",
+    "values": {
+      "square_footage": 15651,
+      "price": 313020,
+      "utilities": 1,
+      "number_bedrooms": 3.1302,
+      "number_bathrooms": 4.1302
+    }
+  },
+  {
+    "key": 188,
+    "address": "ex",
+    "values": {
+      "square_footage": 22190,
+      "price": 443800,
+      "utilities": 0,
+      "number_bedrooms": 4.438,
+      "number_bathrooms": 5.438
+    }
+  },
+  {
+    "key": 189,
+    "address": "adipisicing",
+    "values": {
+      "square_footage": 1202,
+      "price": 24040,
+      "utilities": 1,
+      "number_bedrooms": 0.2404,
+      "number_bathrooms": 1.2404
+    }
+  },
+  {
+    "key": 190,
+    "address": "magna",
+    "values": {
+      "square_footage": 12969,
+      "price": 259380,
+      "utilities": 1,
+      "number_bedrooms": 2.5938,
+      "number_bathrooms": 3.5938
+    }
+  },
+  {
+    "key": 191,
+    "address": "nostrud",
+    "values": {
+      "square_footage": 19037,
+      "price": 380740,
+      "utilities": 1,
+      "number_bedrooms": 3.8074,
+      "number_bathrooms": 4.8074
+    }
+  },
+  {
+    "key": 192,
+    "address": "pariatur",
+    "values": {
+      "square_footage": 23019,
+      "price": 460380,
+      "utilities": 0,
+      "number_bedrooms": 4.6038,
+      "number_bathrooms": 5.6038
+    }
+  },
+  {
+    "key": 193,
+    "address": "fugiat",
+    "values": {
+      "square_footage": 22462,
+      "price": 449240,
+      "utilities": 0,
+      "number_bedrooms": 4.4924,
+      "number_bathrooms": 5.4924
+    }
+  },
+  {
+    "key": 194,
+    "address": "ullamco",
+    "values": {
+      "square_footage": 22683,
+      "price": 453660,
+      "utilities": 1,
+      "number_bedrooms": 4.5366,
+      "number_bathrooms": 5.5366
+    }
+  },
+  {
+    "key": 195,
+    "address": "eu",
+    "values": {
+      "square_footage": 21855,
+      "price": 437100,
+      "utilities": 0,
+      "number_bedrooms": 4.371,
+      "number_bathrooms": 5.371
+    }
+  },
+  {
+    "key": 196,
+    "address": "culpa",
+    "values": {
+      "square_footage": 1290,
+      "price": 25800,
+      "utilities": 1,
+      "number_bedrooms": 0.258,
+      "number_bathrooms": 1.258
+    }
+  },
+  {
+    "key": 197,
+    "address": "magna",
+    "values": {
+      "square_footage": 14411,
+      "price": 288220,
+      "utilities": 1,
+      "number_bedrooms": 2.8822,
+      "number_bathrooms": 3.8822
+    }
+  },
+  {
+    "key": 198,
+    "address": "amet",
+    "values": {
+      "square_footage": 23299,
+      "price": 465980,
+      "utilities": 1,
+      "number_bedrooms": 4.6598,
+      "number_bathrooms": 5.6598
+    }
+  },
+  {
+    "key": 199,
+    "address": "adipisicing",
+    "values": {
+      "square_footage": 4241,
+      "price": 84820,
+      "utilities": 1,
+      "number_bedrooms": 0.8482,
+      "number_bathrooms": 1.8482
+    }
+  },
+  {
+    "key": 200,
+    "address": "aliquip",
+    "values": {
+      "square_footage": 7163,
+      "price": 143260,
+      "utilities": 0,
+      "number_bedrooms": 1.4326,
+      "number_bathrooms": 2.4326
+    }
+  },
+  {
+    "key": 201,
+    "address": "in",
+    "values": {
+      "square_footage": 5337,
+      "price": 106740,
+      "utilities": 1,
+      "number_bedrooms": 1.0674,
+      "number_bathrooms": 2.0674
+    }
+  },
+  {
+    "key": 202,
+    "address": "aliquip",
+    "values": {
+      "square_footage": 6688,
+      "price": 133760,
+      "utilities": 1,
+      "number_bedrooms": 1.3376,
+      "number_bathrooms": 2.3376
+    }
+  },
+  {
+    "key": 203,
+    "address": "ullamco",
+    "values": {
+      "square_footage": 9949,
+      "price": 198980,
+      "utilities": 1,
+      "number_bedrooms": 1.9898,
+      "number_bathrooms": 2.9898
+    }
+  },
+  {
+    "key": 204,
+    "address": "in",
+    "values": {
+      "square_footage": 15097,
+      "price": 301940,
+      "utilities": 0,
+      "number_bedrooms": 3.0194,
+      "number_bathrooms": 4.0194
+    }
+  },
+  {
+    "key": 205,
+    "address": "quis",
+    "values": {
+      "square_footage": 16214,
+      "price": 324280,
+      "utilities": 0,
+      "number_bedrooms": 3.2428,
+      "number_bathrooms": 4.2428
+    }
+  },
+  {
+    "key": 206,
+    "address": "labore",
+    "values": {
+      "square_footage": 9991,
+      "price": 199820,
+      "utilities": 1,
+      "number_bedrooms": 1.9982,
+      "number_bathrooms": 2.9982
+    }
+  },
+  {
+    "key": 207,
+    "address": "elit",
+    "values": {
+      "square_footage": 4476,
+      "price": 89520,
+      "utilities": 1,
+      "number_bedrooms": 0.8952,
+      "number_bathrooms": 1.8952
+    }
+  },
+  {
+    "key": 208,
+    "address": "commodo",
+    "values": {
+      "square_footage": 6577,
+      "price": 131540,
+      "utilities": 0,
+      "number_bedrooms": 1.3154,
+      "number_bathrooms": 2.3154
+    }
+  },
+  {
+    "key": 209,
+    "address": "nisi",
+    "values": {
+      "square_footage": 23849,
+      "price": 476980,
+      "utilities": 0,
+      "number_bedrooms": 4.7698,
+      "number_bathrooms": 5.7698
+    }
+  },
+  {
+    "key": 210,
+    "address": "culpa",
+    "values": {
+      "square_footage": 16658,
+      "price": 333160,
+      "utilities": 0,
+      "number_bedrooms": 3.3316,
+      "number_bathrooms": 4.3316
+    }
+  },
+  {
+    "key": 211,
+    "address": "nostrud",
+    "values": {
+      "square_footage": 22513,
+      "price": 450260,
+      "utilities": 0,
+      "number_bedrooms": 4.5026,
+      "number_bathrooms": 5.5026
+    }
+  },
+  {
+    "key": 212,
+    "address": "duis",
+    "values": {
+      "square_footage": 14465,
+      "price": 289300,
+      "utilities": 1,
+      "number_bedrooms": 2.893,
+      "number_bathrooms": 3.893
+    }
+  },
+  {
+    "key": 213,
+    "address": "ut",
+    "values": {
+      "square_footage": 12086,
+      "price": 241720,
+      "utilities": 1,
+      "number_bedrooms": 2.4172,
+      "number_bathrooms": 3.4172
+    }
+  },
+  {
+    "key": 214,
+    "address": "esse",
+    "values": {
+      "square_footage": 22019,
+      "price": 440380,
+      "utilities": 1,
+      "number_bedrooms": 4.4038,
+      "number_bathrooms": 5.4038
+    }
+  },
+  {
+    "key": 215,
+    "address": "Lorem",
+    "values": {
+      "square_footage": 21506,
+      "price": 430120,
+      "utilities": 1,
+      "number_bedrooms": 4.3012,
+      "number_bathrooms": 5.3012
+    }
+  },
+  {
+    "key": 216,
+    "address": "sint",
+    "values": {
+      "square_footage": 13708,
+      "price": 274160,
+      "utilities": 0,
+      "number_bedrooms": 2.7416,
+      "number_bathrooms": 3.7416
+    }
+  },
+  {
+    "key": 217,
+    "address": "qui",
+    "values": {
+      "square_footage": 20832,
+      "price": 416640,
+      "utilities": 0,
+      "number_bedrooms": 4.1664,
+      "number_bathrooms": 5.1664
+    }
+  },
+  {
+    "key": 218,
+    "address": "consectetur",
+    "values": {
+      "square_footage": 23554,
+      "price": 471080,
+      "utilities": 0,
+      "number_bedrooms": 4.7108,
+      "number_bathrooms": 5.7108
+    }
+  },
+  {
+    "key": 219,
+    "address": "dolor",
+    "values": {
+      "square_footage": 1314,
+      "price": 26280,
+      "utilities": 0,
+      "number_bedrooms": 0.2628,
+      "number_bathrooms": 1.2628
+    }
+  },
+  {
+    "key": 220,
+    "address": "laborum",
+    "values": {
+      "square_footage": 16655,
+      "price": 333100,
+      "utilities": 0,
+      "number_bedrooms": 3.331,
+      "number_bathrooms": 4.331
+    }
+  },
+  {
+    "key": 221,
+    "address": "dolor",
+    "values": {
+      "square_footage": 11593,
+      "price": 231860,
+      "utilities": 0,
+      "number_bedrooms": 2.3186,
+      "number_bathrooms": 3.3186
+    }
+  },
+  {
+    "key": 222,
+    "address": "est",
+    "values": {
+      "square_footage": 5050,
+      "price": 101000,
+      "utilities": 1,
+      "number_bedrooms": 1.01,
+      "number_bathrooms": 2.01
+    }
+  },
+  {
+    "key": 223,
+    "address": "ullamco",
+    "values": {
+      "square_footage": 24326,
+      "price": 486520,
+      "utilities": 1,
+      "number_bedrooms": 4.8652,
+      "number_bathrooms": 5.8652
+    }
+  },
+  {
+    "key": 224,
+    "address": "cupidatat",
+    "values": {
+      "square_footage": 23267,
+      "price": 465340,
+      "utilities": 0,
+      "number_bedrooms": 4.6534,
+      "number_bathrooms": 5.6534
+    }
+  },
+  {
+    "key": 225,
+    "address": "anim",
+    "values": {
+      "square_footage": 1705,
+      "price": 34100,
+      "utilities": 0,
+      "number_bedrooms": 0.341,
+      "number_bathrooms": 1.341
+    }
+  },
+  {
+    "key": 226,
+    "address": "ex",
+    "values": {
+      "square_footage": 20933,
+      "price": 418660,
+      "utilities": 1,
+      "number_bedrooms": 4.1866,
+      "number_bathrooms": 5.1866
+    }
+  },
+  {
+    "key": 227,
+    "address": "ipsum",
+    "values": {
+      "square_footage": 3869,
+      "price": 77380,
+      "utilities": 0,
+      "number_bedrooms": 0.7738,
+      "number_bathrooms": 1.7738
+    }
+  },
+  {
+    "key": 228,
+    "address": "aliqua",
+    "values": {
+      "square_footage": 13292,
+      "price": 265840,
+      "utilities": 0,
+      "number_bedrooms": 2.6584,
+      "number_bathrooms": 3.6584
+    }
+  },
+  {
+    "key": 229,
+    "address": "do",
+    "values": {
+      "square_footage": 22591,
+      "price": 451820,
+      "utilities": 0,
+      "number_bedrooms": 4.5182,
+      "number_bathrooms": 5.5182
+    }
+  },
+  {
+    "key": 230,
+    "address": "fugiat",
+    "values": {
+      "square_footage": 16693,
+      "price": 333860,
+      "utilities": 0,
+      "number_bedrooms": 3.3386,
+      "number_bathrooms": 4.3386
+    }
+  },
+  {
+    "key": 231,
+    "address": "elit",
+    "values": {
+      "square_footage": 3773,
+      "price": 75460,
+      "utilities": 1,
+      "number_bedrooms": 0.7546,
+      "number_bathrooms": 1.7546
+    }
+  },
+  {
+    "key": 232,
+    "address": "reprehenderit",
+    "values": {
+      "square_footage": 1026,
+      "price": 20520,
+      "utilities": 1,
+      "number_bedrooms": 0.2052,
+      "number_bathrooms": 1.2052
+    }
+  },
+  {
+    "key": 233,
+    "address": "minim",
+    "values": {
+      "square_footage": 21167,
+      "price": 423340,
+      "utilities": 1,
+      "number_bedrooms": 4.2334,
+      "number_bathrooms": 5.2334
+    }
+  },
+  {
+    "key": 234,
+    "address": "in",
+    "values": {
+      "square_footage": 22590,
+      "price": 451800,
+      "utilities": 1,
+      "number_bedrooms": 4.518,
+      "number_bathrooms": 5.518
+    }
+  },
+  {
+    "key": 235,
+    "address": "veniam",
+    "values": {
+      "square_footage": 22469,
+      "price": 449380,
+      "utilities": 0,
+      "number_bedrooms": 4.4938,
+      "number_bathrooms": 5.4938
+    }
+  },
+  {
+    "key": 236,
+    "address": "labore",
+    "values": {
+      "square_footage": 16641,
+      "price": 332820,
+      "utilities": 0,
+      "number_bedrooms": 3.3282,
+      "number_bathrooms": 4.3282
+    }
+  },
+  {
+    "key": 237,
+    "address": "nisi",
+    "values": {
+      "square_footage": 21061,
+      "price": 421220,
+      "utilities": 0,
+      "number_bedrooms": 4.2122,
+      "number_bathrooms": 5.2122
+    }
+  },
+  {
+    "key": 238,
+    "address": "do",
+    "values": {
+      "square_footage": 20515,
+      "price": 410300,
+      "utilities": 1,
+      "number_bedrooms": 4.103,
+      "number_bathrooms": 5.103
+    }
+  },
+  {
+    "key": 239,
+    "address": "ea",
+    "values": {
+      "square_footage": 13739,
+      "price": 274780,
+      "utilities": 1,
+      "number_bedrooms": 2.7478,
+      "number_bathrooms": 3.7478
+    }
+  },
+  {
+    "key": 240,
+    "address": "ut",
+    "values": {
+      "square_footage": 22423,
+      "price": 448460,
+      "utilities": 1,
+      "number_bedrooms": 4.4846,
+      "number_bathrooms": 5.4846
+    }
+  },
+  {
+    "key": 241,
+    "address": "sit",
+    "values": {
+      "square_footage": 4026,
+      "price": 80520,
+      "utilities": 0,
+      "number_bedrooms": 0.8052,
+      "number_bathrooms": 1.8052
+    }
+  },
+  {
+    "key": 242,
+    "address": "laborum",
+    "values": {
+      "square_footage": 9641,
+      "price": 192820,
+      "utilities": 0,
+      "number_bedrooms": 1.9282,
+      "number_bathrooms": 2.9282
+    }
+  },
+  {
+    "key": 243,
+    "address": "duis",
+    "values": {
+      "square_footage": 21807,
+      "price": 436140,
+      "utilities": 0,
+      "number_bedrooms": 4.3614,
+      "number_bathrooms": 5.3614
+    }
+  },
+  {
+    "key": 244,
+    "address": "laboris",
+    "values": {
+      "square_footage": 19928,
+      "price": 398560,
+      "utilities": 1,
+      "number_bedrooms": 3.9856,
+      "number_bathrooms": 4.9856
+    }
+  },
+  {
+    "key": 245,
+    "address": "mollit",
+    "values": {
+      "square_footage": 7700,
+      "price": 154000,
+      "utilities": 1,
+      "number_bedrooms": 1.54,
+      "number_bathrooms": 2.54
+    }
+  },
+  {
+    "key": 246,
+    "address": "aliquip",
+    "values": {
+      "square_footage": 3793,
+      "price": 75860,
+      "utilities": 1,
+      "number_bedrooms": 0.7586,
+      "number_bathrooms": 1.7586
+    }
+  },
+  {
+    "key": 247,
+    "address": "est",
+    "values": {
+      "square_footage": 12045,
+      "price": 240900,
+      "utilities": 0,
+      "number_bedrooms": 2.409,
+      "number_bathrooms": 3.409
+    }
+  },
+  {
+    "key": 248,
+    "address": "enim",
+    "values": {
+      "square_footage": 6009,
+      "price": 120180,
+      "utilities": 1,
+      "number_bedrooms": 1.2018,
+      "number_bathrooms": 2.2018
+    }
+  },
+  {
+    "key": 249,
+    "address": "veniam",
+    "values": {
+      "square_footage": 11047,
+      "price": 220940,
+      "utilities": 1,
+      "number_bedrooms": 2.2094,
+      "number_bathrooms": 3.2094
+    }
+  },
+  {
+    "key": 250,
+    "address": "ad",
+    "values": {
+      "square_footage": 8327,
+      "price": 166540,
+      "utilities": 1,
+      "number_bedrooms": 1.6654,
+      "number_bathrooms": 2.6654
+    }
+  },
+  {
+    "key": 251,
+    "address": "nostrud",
+    "values": {
+      "square_footage": 22960,
+      "price": 459200,
+      "utilities": 1,
+      "number_bedrooms": 4.592,
+      "number_bathrooms": 5.592
+    }
+  },
+  {
+    "key": 252,
+    "address": "eiusmod",
+    "values": {
+      "square_footage": 22996,
+      "price": 459920,
+      "utilities": 0,
+      "number_bedrooms": 4.5992,
+      "number_bathrooms": 5.5992
+    }
+  },
+  {
+    "key": 253,
+    "address": "reprehenderit",
+    "values": {
+      "square_footage": 12744,
+      "price": 254880,
+      "utilities": 1,
+      "number_bedrooms": 2.5488,
+      "number_bathrooms": 3.5488
+    }
+  },
+  {
+    "key": 254,
+    "address": "nisi",
+    "values": {
+      "square_footage": 10030,
+      "price": 200600,
+      "utilities": 0,
+      "number_bedrooms": 2.006,
+      "number_bathrooms": 3.006
+    }
+  },
+  {
+    "key": 255,
+    "address": "sit",
+    "values": {
+      "square_footage": 17508,
+      "price": 350160,
+      "utilities": 1,
+      "number_bedrooms": 3.5016,
+      "number_bathrooms": 4.5016
+    }
+  },
+  {
+    "key": 256,
+    "address": "magna",
+    "values": {
+      "square_footage": 7017,
+      "price": 140340,
+      "utilities": 1,
+      "number_bedrooms": 1.4034,
+      "number_bathrooms": 2.4034
+    }
+  },
+  {
+    "key": 257,
+    "address": "occaecat",
+    "values": {
+      "square_footage": 7784,
+      "price": 155680,
+      "utilities": 1,
+      "number_bedrooms": 1.5568,
+      "number_bathrooms": 2.5568
+    }
+  },
+  {
+    "key": 258,
+    "address": "et",
+    "values": {
+      "square_footage": 5757,
+      "price": 115140,
+      "utilities": 1,
+      "number_bedrooms": 1.1514,
+      "number_bathrooms": 2.1514
+    }
+  },
+  {
+    "key": 259,
+    "address": "mollit",
+    "values": {
+      "square_footage": 14828,
+      "price": 296560,
+      "utilities": 1,
+      "number_bedrooms": 2.9656,
+      "number_bathrooms": 3.9656
+    }
+  },
+  {
+    "key": 260,
+    "address": "consequat",
+    "values": {
+      "square_footage": 17406,
+      "price": 348120,
+      "utilities": 1,
+      "number_bedrooms": 3.4812,
+      "number_bathrooms": 4.4812
+    }
+  },
+  {
+    "key": 261,
+    "address": "id",
+    "values": {
+      "square_footage": 9951,
+      "price": 199020,
+      "utilities": 1,
+      "number_bedrooms": 1.9902,
+      "number_bathrooms": 2.9902
+    }
+  },
+  {
+    "key": 262,
+    "address": "aliquip",
+    "values": {
+      "square_footage": 6212,
+      "price": 124240,
+      "utilities": 1,
+      "number_bedrooms": 1.2424,
+      "number_bathrooms": 2.2424
+    }
+  },
+  {
+    "key": 263,
+    "address": "sunt",
+    "values": {
+      "square_footage": 8028,
+      "price": 160560,
+      "utilities": 0,
+      "number_bedrooms": 1.6056,
+      "number_bathrooms": 2.6056
+    }
+  },
+  {
+    "key": 264,
+    "address": "incididunt",
+    "values": {
+      "square_footage": 6206,
+      "price": 124120,
+      "utilities": 1,
+      "number_bedrooms": 1.2412,
+      "number_bathrooms": 2.2412
+    }
+  },
+  {
+    "key": 265,
+    "address": "laborum",
+    "values": {
+      "square_footage": 22548,
+      "price": 450960,
+      "utilities": 1,
+      "number_bedrooms": 4.5096,
+      "number_bathrooms": 5.5096
+    }
+  },
+  {
+    "key": 266,
+    "address": "labore",
+    "values": {
+      "square_footage": 12821,
+      "price": 256420,
+      "utilities": 0,
+      "number_bedrooms": 2.5642,
+      "number_bathrooms": 3.5642
+    }
+  },
+  {
+    "key": 267,
+    "address": "voluptate",
+    "values": {
+      "square_footage": 22134,
+      "price": 442680,
+      "utilities": 0,
+      "number_bedrooms": 4.4268,
+      "number_bathrooms": 5.4268
+    }
+  },
+  {
+    "key": 268,
+    "address": "laboris",
+    "values": {
+      "square_footage": 11547,
+      "price": 230940,
+      "utilities": 0,
+      "number_bedrooms": 2.3094,
+      "number_bathrooms": 3.3094
+    }
+  },
+  {
+    "key": 269,
+    "address": "consequat",
+    "values": {
+      "square_footage": 9164,
+      "price": 183280,
+      "utilities": 1,
+      "number_bedrooms": 1.8328,
+      "number_bathrooms": 2.8328
+    }
+  },
+  {
+    "key": 270,
+    "address": "veniam",
+    "values": {
+      "square_footage": 18764,
+      "price": 375280,
+      "utilities": 1,
+      "number_bedrooms": 3.7528,
+      "number_bathrooms": 4.7528
+    }
+  },
+  {
+    "key": 271,
+    "address": "irure",
+    "values": {
+      "square_footage": 6245,
+      "price": 124900,
+      "utilities": 0,
+      "number_bedrooms": 1.249,
+      "number_bathrooms": 2.249
+    }
+  },
+  {
+    "key": 272,
+    "address": "velit",
+    "values": {
+      "square_footage": 7840,
+      "price": 156800,
+      "utilities": 1,
+      "number_bedrooms": 1.568,
+      "number_bathrooms": 2.568
+    }
+  },
+  {
+    "key": 273,
+    "address": "exercitation",
+    "values": {
+      "square_footage": 6806,
+      "price": 136120,
+      "utilities": 1,
+      "number_bedrooms": 1.3612,
+      "number_bathrooms": 2.3612
+    }
+  },
+  {
+    "key": 274,
+    "address": "proident",
+    "values": {
+      "square_footage": 17136,
+      "price": 342720,
+      "utilities": 0,
+      "number_bedrooms": 3.4272,
+      "number_bathrooms": 4.4272
+    }
+  },
+  {
+    "key": 275,
+    "address": "amet",
+    "values": {
+      "square_footage": 14068,
+      "price": 281360,
+      "utilities": 1,
+      "number_bedrooms": 2.8136,
+      "number_bathrooms": 3.8136
+    }
+  },
+  {
+    "key": 276,
+    "address": "velit",
+    "values": {
+      "square_footage": 13136,
+      "price": 262720,
+      "utilities": 0,
+      "number_bedrooms": 2.6272,
+      "number_bathrooms": 3.6272
+    }
+  },
+  {
+    "key": 277,
+    "address": "id",
+    "values": {
+      "square_footage": 19535,
+      "price": 390700,
+      "utilities": 1,
+      "number_bedrooms": 3.907,
+      "number_bathrooms": 4.907
+    }
+  },
+  {
+    "key": 278,
+    "address": "quis",
+    "values": {
+      "square_footage": 24096,
+      "price": 481920,
+      "utilities": 1,
+      "number_bedrooms": 4.8192,
+      "number_bathrooms": 5.8192
+    }
+  },
+  {
+    "key": 279,
+    "address": "irure",
+    "values": {
+      "square_footage": 5416,
+      "price": 108320,
+      "utilities": 1,
+      "number_bedrooms": 1.0832,
+      "number_bathrooms": 2.0832
+    }
+  },
+  {
+    "key": 280,
+    "address": "occaecat",
+    "values": {
+      "square_footage": 18443,
+      "price": 368860,
+      "utilities": 1,
+      "number_bedrooms": 3.6886,
+      "number_bathrooms": 4.6886
+    }
+  },
+  {
+    "key": 281,
+    "address": "esse",
+    "values": {
+      "square_footage": 4513,
+      "price": 90260,
+      "utilities": 1,
+      "number_bedrooms": 0.9026,
+      "number_bathrooms": 1.9026
+    }
+  },
+  {
+    "key": 282,
+    "address": "do",
+    "values": {
+      "square_footage": 7728,
+      "price": 154560,
+      "utilities": 0,
+      "number_bedrooms": 1.5456,
+      "number_bathrooms": 2.5456
+    }
+  },
+  {
+    "key": 283,
+    "address": "reprehenderit",
+    "values": {
+      "square_footage": 9921,
+      "price": 198420,
+      "utilities": 0,
+      "number_bedrooms": 1.9842,
+      "number_bathrooms": 2.9842
+    }
+  },
+  {
+    "key": 284,
+    "address": "nisi",
+    "values": {
+      "square_footage": 4716,
+      "price": 94320,
+      "utilities": 0,
+      "number_bedrooms": 0.9432,
+      "number_bathrooms": 1.9432
+    }
+  },
+  {
+    "key": 285,
+    "address": "nisi",
+    "values": {
+      "square_footage": 2514,
+      "price": 50280,
+      "utilities": 1,
+      "number_bedrooms": 0.5028,
+      "number_bathrooms": 1.5028
+    }
+  },
+  {
+    "key": 286,
+    "address": "laboris",
+    "values": {
+      "square_footage": 1898,
+      "price": 37960,
+      "utilities": 0,
+      "number_bedrooms": 0.3796,
+      "number_bathrooms": 1.3796
+    }
+  },
+  {
+    "key": 287,
+    "address": "labore",
+    "values": {
+      "square_footage": 16793,
+      "price": 335860,
+      "utilities": 1,
+      "number_bedrooms": 3.3586,
+      "number_bathrooms": 4.3586
+    }
+  },
+  {
+    "key": 288,
+    "address": "nulla",
+    "values": {
+      "square_footage": 11285,
+      "price": 225700,
+      "utilities": 1,
+      "number_bedrooms": 2.257,
+      "number_bathrooms": 3.257
+    }
+  },
+  {
+    "key": 289,
+    "address": "cillum",
+    "values": {
+      "square_footage": 24077,
+      "price": 481540,
+      "utilities": 1,
+      "number_bedrooms": 4.8154,
+      "number_bathrooms": 5.8154
+    }
+  },
+  {
+    "key": 290,
+    "address": "dolor",
+    "values": {
+      "square_footage": 3884,
+      "price": 77680,
+      "utilities": 1,
+      "number_bedrooms": 0.7768,
+      "number_bathrooms": 1.7768
+    }
+  },
+  {
+    "key": 291,
+    "address": "voluptate",
+    "values": {
+      "square_footage": 22732,
+      "price": 454640,
+      "utilities": 1,
+      "number_bedrooms": 4.5464,
+      "number_bathrooms": 5.5464
+    }
+  },
+  {
+    "key": 292,
+    "address": "qui",
+    "values": {
+      "square_footage": 19327,
+      "price": 386540,
+      "utilities": 0,
+      "number_bedrooms": 3.8654,
+      "number_bathrooms": 4.8654
+    }
+  },
+  {
+    "key": 293,
+    "address": "amet",
+    "values": {
+      "square_footage": 4231,
+      "price": 84620,
+      "utilities": 1,
+      "number_bedrooms": 0.8462,
+      "number_bathrooms": 1.8462
+    }
+  },
+  {
+    "key": 294,
+    "address": "esse",
+    "values": {
+      "square_footage": 16408,
+      "price": 328160,
+      "utilities": 0,
+      "number_bedrooms": 3.2816,
+      "number_bathrooms": 4.2816
+    }
+  },
+  {
+    "key": 295,
+    "address": "dolor",
+    "values": {
+      "square_footage": 3517,
+      "price": 70340,
+      "utilities": 1,
+      "number_bedrooms": 0.7034,
+      "number_bathrooms": 1.7034
+    }
+  },
+  {
+    "key": 296,
+    "address": "deserunt",
+    "values": {
+      "square_footage": 17229,
+      "price": 344580,
+      "utilities": 1,
+      "number_bedrooms": 3.4458,
+      "number_bathrooms": 4.4458
+    }
+  },
+  {
+    "key": 297,
+    "address": "dolor",
+    "values": {
+      "square_footage": 23818,
+      "price": 476360,
+      "utilities": 0,
+      "number_bedrooms": 4.7636,
+      "number_bathrooms": 5.7636
+    }
+  },
+  {
+    "key": 298,
+    "address": "consequat",
+    "values": {
+      "square_footage": 11342,
+      "price": 226840,
+      "utilities": 1,
+      "number_bedrooms": 2.2684,
+      "number_bathrooms": 3.2684
+    }
+  },
+  {
+    "key": 299,
+    "address": "id",
+    "values": {
+      "square_footage": 5039,
+      "price": 100780,
+      "utilities": 1,
+      "number_bedrooms": 1.0078,
+      "number_bathrooms": 2.0078
+    }
+  },
+  {
+    "key": 300,
+    "address": "veniam",
+    "values": {
+      "square_footage": 9868,
+      "price": 197360,
+      "utilities": 0,
+      "number_bedrooms": 1.9736,
+      "number_bathrooms": 2.9736
+    }
+  },
+  {
+    "key": 301,
+    "address": "id",
+    "values": {
+      "square_footage": 18974,
+      "price": 379480,
+      "utilities": 0,
+      "number_bedrooms": 3.7948,
+      "number_bathrooms": 4.7948
+    }
+  },
+  {
+    "key": 302,
+    "address": "enim",
+    "values": {
+      "square_footage": 9220,
+      "price": 184400,
+      "utilities": 1,
+      "number_bedrooms": 1.844,
+      "number_bathrooms": 2.844
+    }
+  },
+  {
+    "key": 303,
+    "address": "pariatur",
+    "values": {
+      "square_footage": 11354,
+      "price": 227080,
+      "utilities": 1,
+      "number_bedrooms": 2.2708,
+      "number_bathrooms": 3.2708
+    }
+  },
+  {
+    "key": 304,
+    "address": "et",
+    "values": {
+      "square_footage": 11041,
+      "price": 220820,
+      "utilities": 0,
+      "number_bedrooms": 2.2082,
+      "number_bathrooms": 3.2082
+    }
+  },
+  {
+    "key": 305,
+    "address": "qui",
+    "values": {
+      "square_footage": 17341,
+      "price": 346820,
+      "utilities": 1,
+      "number_bedrooms": 3.4682,
+      "number_bathrooms": 4.4682
+    }
+  },
+  {
+    "key": 306,
+    "address": "nisi",
+    "values": {
+      "square_footage": 16097,
+      "price": 321940,
+      "utilities": 0,
+      "number_bedrooms": 3.2194,
+      "number_bathrooms": 4.2194
+    }
+  },
+  {
+    "key": 307,
+    "address": "ea",
+    "values": {
+      "square_footage": 19425,
+      "price": 388500,
+      "utilities": 1,
+      "number_bedrooms": 3.885,
+      "number_bathrooms": 4.885
+    }
+  },
+  {
+    "key": 308,
+    "address": "nostrud",
+    "values": {
+      "square_footage": 19296,
+      "price": 385920,
+      "utilities": 0,
+      "number_bedrooms": 3.8592,
+      "number_bathrooms": 4.8592
+    }
+  },
+  {
+    "key": 309,
+    "address": "velit",
+    "values": {
+      "square_footage": 3071,
+      "price": 61420,
+      "utilities": 0,
+      "number_bedrooms": 0.6142,
+      "number_bathrooms": 1.6142
+    }
+  },
+  {
+    "key": 310,
+    "address": "exercitation",
+    "values": {
+      "square_footage": 12543,
+      "price": 250860,
+      "utilities": 1,
+      "number_bedrooms": 2.5086,
+      "number_bathrooms": 3.5086
+    }
+  },
+  {
+    "key": 311,
+    "address": "ipsum",
+    "values": {
+      "square_footage": 2341,
+      "price": 46820,
+      "utilities": 0,
+      "number_bedrooms": 0.4682,
+      "number_bathrooms": 1.4682
+    }
+  },
+  {
+    "key": 312,
+    "address": "sit",
+    "values": {
+      "square_footage": 7004,
+      "price": 140080,
+      "utilities": 0,
+      "number_bedrooms": 1.4008,
+      "number_bathrooms": 2.4008
+    }
+  },
+  {
+    "key": 313,
+    "address": "Lorem",
+    "values": {
+      "square_footage": 15088,
+      "price": 301760,
+      "utilities": 1,
+      "number_bedrooms": 3.0176,
+      "number_bathrooms": 4.0176
+    }
+  },
+  {
+    "key": 314,
+    "address": "incididunt",
+    "values": {
+      "square_footage": 7298,
+      "price": 145960,
+      "utilities": 1,
+      "number_bedrooms": 1.4596,
+      "number_bathrooms": 2.4596
+    }
+  },
+  {
+    "key": 315,
+    "address": "adipisicing",
+    "values": {
+      "square_footage": 12359,
+      "price": 247180,
+      "utilities": 1,
+      "number_bedrooms": 2.4718,
+      "number_bathrooms": 3.4718
+    }
+  },
+  {
+    "key": 316,
+    "address": "quis",
+    "values": {
+      "square_footage": 3116,
+      "price": 62320,
+      "utilities": 1,
+      "number_bedrooms": 0.6232,
+      "number_bathrooms": 1.6232
+    }
+  },
+  {
+    "key": 317,
+    "address": "ullamco",
+    "values": {
+      "square_footage": 11750,
+      "price": 235000,
+      "utilities": 1,
+      "number_bedrooms": 2.35,
+      "number_bathrooms": 3.35
+    }
+  },
+  {
+    "key": 318,
+    "address": "nostrud",
+    "values": {
+      "square_footage": 3463,
+      "price": 69260,
+      "utilities": 0,
+      "number_bedrooms": 0.6926,
+      "number_bathrooms": 1.6926
+    }
+  },
+  {
+    "key": 319,
+    "address": "exercitation",
+    "values": {
+      "square_footage": 16459,
+      "price": 329180,
+      "utilities": 0,
+      "number_bedrooms": 3.2918,
+      "number_bathrooms": 4.2918
+    }
+  },
+  {
+    "key": 320,
+    "address": "voluptate",
+    "values": {
+      "square_footage": 4103,
+      "price": 82060,
+      "utilities": 1,
+      "number_bedrooms": 0.8206,
+      "number_bathrooms": 1.8206
+    }
+  },
+  {
+    "key": 321,
+    "address": "est",
+    "values": {
+      "square_footage": 18545,
+      "price": 370900,
+      "utilities": 0,
+      "number_bedrooms": 3.709,
+      "number_bathrooms": 4.709
+    }
+  },
+  {
+    "key": 322,
+    "address": "ad",
+    "values": {
+      "square_footage": 19964,
+      "price": 399280,
+      "utilities": 0,
+      "number_bedrooms": 3.9928,
+      "number_bathrooms": 4.9928
+    }
+  },
+  {
+    "key": 323,
+    "address": "sunt",
+    "values": {
+      "square_footage": 14228,
+      "price": 284560,
+      "utilities": 0,
+      "number_bedrooms": 2.8456,
+      "number_bathrooms": 3.8456
+    }
+  },
+  {
+    "key": 324,
+    "address": "nostrud",
+    "values": {
+      "square_footage": 11024,
+      "price": 220480,
+      "utilities": 0,
+      "number_bedrooms": 2.2048,
+      "number_bathrooms": 3.2048
+    }
+  },
+  {
+    "key": 325,
+    "address": "laboris",
+    "values": {
+      "square_footage": 11414,
+      "price": 228280,
+      "utilities": 0,
+      "number_bedrooms": 2.2828,
+      "number_bathrooms": 3.2828
+    }
+  },
+  {
+    "key": 326,
+    "address": "duis",
+    "values": {
+      "square_footage": 12895,
+      "price": 257900,
+      "utilities": 1,
+      "number_bedrooms": 2.579,
+      "number_bathrooms": 3.579
+    }
+  },
+  {
+    "key": 327,
+    "address": "nulla",
+    "values": {
+      "square_footage": 24021,
+      "price": 480420,
+      "utilities": 1,
+      "number_bedrooms": 4.8042,
+      "number_bathrooms": 5.8042
+    }
+  },
+  {
+    "key": 328,
+    "address": "nulla",
+    "values": {
+      "square_footage": 2269,
+      "price": 45380,
+      "utilities": 1,
+      "number_bedrooms": 0.4538,
+      "number_bathrooms": 1.4538
+    }
+  },
+  {
+    "key": 329,
+    "address": "nostrud",
+    "values": {
+      "square_footage": 13909,
+      "price": 278180,
+      "utilities": 0,
+      "number_bedrooms": 2.7818,
+      "number_bathrooms": 3.7818
+    }
+  },
+  {
+    "key": 330,
+    "address": "exercitation",
+    "values": {
+      "square_footage": 2805,
+      "price": 56100,
+      "utilities": 0,
+      "number_bedrooms": 0.561,
+      "number_bathrooms": 1.561
+    }
+  },
+  {
+    "key": 331,
+    "address": "et",
+    "values": {
+      "square_footage": 7120,
+      "price": 142400,
+      "utilities": 0,
+      "number_bedrooms": 1.424,
+      "number_bathrooms": 2.424
+    }
+  },
+  {
+    "key": 332,
+    "address": "reprehenderit",
+    "values": {
+      "square_footage": 13225,
+      "price": 264500,
+      "utilities": 0,
+      "number_bedrooms": 2.645,
+      "number_bathrooms": 3.645
+    }
+  },
+  {
+    "key": 333,
+    "address": "aliqua",
+    "values": {
+      "square_footage": 4976,
+      "price": 99520,
+      "utilities": 1,
+      "number_bedrooms": 0.9952,
+      "number_bathrooms": 1.9952
+    }
+  },
+  {
+    "key": 334,
+    "address": "cupidatat",
+    "values": {
+      "square_footage": 10955,
+      "price": 219100,
+      "utilities": 1,
+      "number_bedrooms": 2.191,
+      "number_bathrooms": 3.191
+    }
+  },
+  {
+    "key": 335,
+    "address": "pariatur",
+    "values": {
+      "square_footage": 13220,
+      "price": 264400,
+      "utilities": 0,
+      "number_bedrooms": 2.644,
+      "number_bathrooms": 3.644
+    }
+  },
+  {
+    "key": 336,
+    "address": "exercitation",
+    "values": {
+      "square_footage": 15743,
+      "price": 314860,
+      "utilities": 0,
+      "number_bedrooms": 3.1486,
+      "number_bathrooms": 4.1486
+    }
+  },
+  {
+    "key": 337,
+    "address": "culpa",
+    "values": {
+      "square_footage": 21403,
+      "price": 428060,
+      "utilities": 1,
+      "number_bedrooms": 4.2806,
+      "number_bathrooms": 5.2806
+    }
+  },
+  {
+    "key": 338,
+    "address": "laboris",
+    "values": {
+      "square_footage": 13222,
+      "price": 264440,
+      "utilities": 1,
+      "number_bedrooms": 2.6444,
+      "number_bathrooms": 3.6444
+    }
+  },
+  {
+    "key": 339,
+    "address": "sunt",
+    "values": {
+      "square_footage": 24391,
+      "price": 487820,
+      "utilities": 0,
+      "number_bedrooms": 4.8782,
+      "number_bathrooms": 5.8782
+    }
+  },
+  {
+    "key": 340,
+    "address": "proident",
+    "values": {
+      "square_footage": 11707,
+      "price": 234140,
+      "utilities": 1,
+      "number_bedrooms": 2.3414,
+      "number_bathrooms": 3.3414
+    }
+  },
+  {
+    "key": 341,
+    "address": "anim",
+    "values": {
+      "square_footage": 24961,
+      "price": 499220,
+      "utilities": 1,
+      "number_bedrooms": 4.9922,
+      "number_bathrooms": 5.9922
+    }
+  },
+  {
+    "key": 342,
+    "address": "incididunt",
+    "values": {
+      "square_footage": 22799,
+      "price": 455980,
+      "utilities": 1,
+      "number_bedrooms": 4.5598,
+      "number_bathrooms": 5.5598
+    }
+  },
+  {
+    "key": 343,
+    "address": "enim",
+    "values": {
+      "square_footage": 14187,
+      "price": 283740,
+      "utilities": 1,
+      "number_bedrooms": 2.8374,
+      "number_bathrooms": 3.8374
+    }
+  },
+  {
+    "key": 344,
+    "address": "qui",
+    "values": {
+      "square_footage": 18528,
+      "price": 370560,
+      "utilities": 0,
+      "number_bedrooms": 3.7056,
+      "number_bathrooms": 4.7056
+    }
+  },
+  {
+    "key": 345,
+    "address": "non",
+    "values": {
+      "square_footage": 6672,
+      "price": 133440,
+      "utilities": 0,
+      "number_bedrooms": 1.3344,
+      "number_bathrooms": 2.3344
+    }
+  },
+  {
+    "key": 346,
+    "address": "ut",
+    "values": {
+      "square_footage": 17296,
+      "price": 345920,
+      "utilities": 1,
+      "number_bedrooms": 3.4592,
+      "number_bathrooms": 4.4592
+    }
+  },
+  {
+    "key": 347,
+    "address": "veniam",
+    "values": {
+      "square_footage": 4083,
+      "price": 81660,
+      "utilities": 1,
+      "number_bedrooms": 0.8166,
+      "number_bathrooms": 1.8166
+    }
+  },
+  {
+    "key": 348,
+    "address": "ullamco",
+    "values": {
+      "square_footage": 16692,
+      "price": 333840,
+      "utilities": 0,
+      "number_bedrooms": 3.3384,
+      "number_bathrooms": 4.3384
+    }
+  },
+  {
+    "key": 349,
+    "address": "occaecat",
+    "values": {
+      "square_footage": 11338,
+      "price": 226760,
+      "utilities": 0,
+      "number_bedrooms": 2.2676,
+      "number_bathrooms": 3.2676
+    }
+  },
+  {
+    "key": 350,
+    "address": "tempor",
+    "values": {
+      "square_footage": 5690,
+      "price": 113800,
+      "utilities": 0,
+      "number_bedrooms": 1.138,
+      "number_bathrooms": 2.138
+    }
+  },
+  {
+    "key": 351,
+    "address": "ut",
+    "values": {
+      "square_footage": 16063,
+      "price": 321260,
+      "utilities": 1,
+      "number_bedrooms": 3.2126,
+      "number_bathrooms": 4.2126
+    }
+  },
+  {
+    "key": 352,
+    "address": "anim",
+    "values": {
+      "square_footage": 8206,
+      "price": 164120,
+      "utilities": 1,
+      "number_bedrooms": 1.6412,
+      "number_bathrooms": 2.6412
+    }
+  },
+  {
+    "key": 353,
+    "address": "et",
+    "values": {
+      "square_footage": 18683,
+      "price": 373660,
+      "utilities": 0,
+      "number_bedrooms": 3.7366,
+      "number_bathrooms": 4.7366
+    }
+  },
+  {
+    "key": 354,
+    "address": "consectetur",
+    "values": {
+      "square_footage": 6108,
+      "price": 122160,
+      "utilities": 1,
+      "number_bedrooms": 1.2216,
+      "number_bathrooms": 2.2216
+    }
+  },
+  {
+    "key": 355,
+    "address": "culpa",
+    "values": {
+      "square_footage": 8811,
+      "price": 176220,
+      "utilities": 0,
+      "number_bedrooms": 1.7622,
+      "number_bathrooms": 2.7622
+    }
+  },
+  {
+    "key": 356,
+    "address": "eu",
+    "values": {
+      "square_footage": 3098,
+      "price": 61960,
+      "utilities": 0,
+      "number_bedrooms": 0.6196,
+      "number_bathrooms": 1.6196
+    }
+  },
+  {
+    "key": 357,
+    "address": "est",
+    "values": {
+      "square_footage": 19053,
+      "price": 381060,
+      "utilities": 0,
+      "number_bedrooms": 3.8106,
+      "number_bathrooms": 4.8106
+    }
+  },
+  {
+    "key": 358,
+    "address": "eiusmod",
+    "values": {
+      "square_footage": 21636,
+      "price": 432720,
+      "utilities": 0,
+      "number_bedrooms": 4.3272,
+      "number_bathrooms": 5.3272
+    }
+  },
+  {
+    "key": 359,
+    "address": "anim",
+    "values": {
+      "square_footage": 14786,
+      "price": 295720,
+      "utilities": 0,
+      "number_bedrooms": 2.9572,
+      "number_bathrooms": 3.9572
+    }
+  },
+  {
+    "key": 360,
+    "address": "Lorem",
+    "values": {
+      "square_footage": 1149,
+      "price": 22980,
+      "utilities": 1,
+      "number_bedrooms": 0.2298,
+      "number_bathrooms": 1.2298
+    }
+  },
+  {
+    "key": 361,
+    "address": "anim",
+    "values": {
+      "square_footage": 3181,
+      "price": 63620,
+      "utilities": 1,
+      "number_bedrooms": 0.6362,
+      "number_bathrooms": 1.6362
+    }
+  },
+  {
+    "key": 362,
+    "address": "sint",
+    "values": {
+      "square_footage": 11590,
+      "price": 231800,
+      "utilities": 0,
+      "number_bedrooms": 2.318,
+      "number_bathrooms": 3.318
+    }
+  },
+  {
+    "key": 363,
+    "address": "ullamco",
+    "values": {
+      "square_footage": 12795,
+      "price": 255900,
+      "utilities": 1,
+      "number_bedrooms": 2.559,
+      "number_bathrooms": 3.559
+    }
+  },
+  {
+    "key": 364,
+    "address": "incididunt",
+    "values": {
+      "square_footage": 6174,
+      "price": 123480,
+      "utilities": 0,
+      "number_bedrooms": 1.2348,
+      "number_bathrooms": 2.2348
+    }
+  },
+  {
+    "key": 365,
+    "address": "officia",
+    "values": {
+      "square_footage": 10013,
+      "price": 200260,
+      "utilities": 0,
+      "number_bedrooms": 2.0026,
+      "number_bathrooms": 3.0026
+    }
+  },
+  {
+    "key": 366,
+    "address": "cupidatat",
+    "values": {
+      "square_footage": 15137,
+      "price": 302740,
+      "utilities": 0,
+      "number_bedrooms": 3.0274,
+      "number_bathrooms": 4.0274
+    }
+  },
+  {
+    "key": 367,
+    "address": "quis",
+    "values": {
+      "square_footage": 24277,
+      "price": 485540,
+      "utilities": 1,
+      "number_bedrooms": 4.8554,
+      "number_bathrooms": 5.8554
+    }
+  },
+  {
+    "key": 368,
+    "address": "ullamco",
+    "values": {
+      "square_footage": 2401,
+      "price": 48020,
+      "utilities": 1,
+      "number_bedrooms": 0.4802,
+      "number_bathrooms": 1.4802
+    }
+  },
+  {
+    "key": 369,
+    "address": "mollit",
+    "values": {
+      "square_footage": 6880,
+      "price": 137600,
+      "utilities": 0,
+      "number_bedrooms": 1.376,
+      "number_bathrooms": 2.376
+    }
+  },
+  {
+    "key": 370,
+    "address": "sint",
+    "values": {
+      "square_footage": 12144,
+      "price": 242880,
+      "utilities": 0,
+      "number_bedrooms": 2.4288,
+      "number_bathrooms": 3.4288
+    }
+  },
+  {
+    "key": 371,
+    "address": "sit",
+    "values": {
+      "square_footage": 19500,
+      "price": 390000,
+      "utilities": 0,
+      "number_bedrooms": 3.9,
+      "number_bathrooms": 4.9
+    }
+  },
+  {
+    "key": 372,
+    "address": "proident",
+    "values": {
+      "square_footage": 14964,
+      "price": 299280,
+      "utilities": 0,
+      "number_bedrooms": 2.9928,
+      "number_bathrooms": 3.9928
+    }
+  },
+  {
+    "key": 373,
+    "address": "occaecat",
+    "values": {
+      "square_footage": 10235,
+      "price": 204700,
+      "utilities": 1,
+      "number_bedrooms": 2.047,
+      "number_bathrooms": 3.047
+    }
+  },
+  {
+    "key": 374,
+    "address": "aliquip",
+    "values": {
+      "square_footage": 22986,
+      "price": 459720,
+      "utilities": 1,
+      "number_bedrooms": 4.5972,
+      "number_bathrooms": 5.5972
+    }
+  },
+  {
+    "key": 375,
+    "address": "cillum",
+    "values": {
+      "square_footage": 14365,
+      "price": 287300,
+      "utilities": 1,
+      "number_bedrooms": 2.873,
+      "number_bathrooms": 3.873
+    }
+  },
+  {
+    "key": 376,
+    "address": "adipisicing",
+    "values": {
+      "square_footage": 3359,
+      "price": 67180,
+      "utilities": 0,
+      "number_bedrooms": 0.6718,
+      "number_bathrooms": 1.6718
+    }
+  },
+  {
+    "key": 377,
+    "address": "adipisicing",
+    "values": {
+      "square_footage": 4028,
+      "price": 80560,
+      "utilities": 1,
+      "number_bedrooms": 0.8056,
+      "number_bathrooms": 1.8056
+    }
+  },
+  {
+    "key": 378,
+    "address": "est",
+    "values": {
+      "square_footage": 11640,
+      "price": 232800,
+      "utilities": 1,
+      "number_bedrooms": 2.328,
+      "number_bathrooms": 3.328
+    }
+  },
+  {
+    "key": 379,
+    "address": "aliquip",
+    "values": {
+      "square_footage": 2966,
+      "price": 59320,
+      "utilities": 0,
+      "number_bedrooms": 0.5932,
+      "number_bathrooms": 1.5932
+    }
+  },
+  {
+    "key": 380,
+    "address": "velit",
+    "values": {
+      "square_footage": 23342,
+      "price": 466840,
+      "utilities": 1,
+      "number_bedrooms": 4.6684,
+      "number_bathrooms": 5.6684
+    }
+  },
+  {
+    "key": 381,
+    "address": "eiusmod",
+    "values": {
+      "square_footage": 15731,
+      "price": 314620,
+      "utilities": 1,
+      "number_bedrooms": 3.1462,
+      "number_bathrooms": 4.1462
+    }
+  },
+  {
+    "key": 382,
+    "address": "velit",
+    "values": {
+      "square_footage": 24878,
+      "price": 497560,
+      "utilities": 1,
+      "number_bedrooms": 4.9756,
+      "number_bathrooms": 5.9756
+    }
+  },
+  {
+    "key": 383,
+    "address": "deserunt",
+    "values": {
+      "square_footage": 22251,
+      "price": 445020,
+      "utilities": 1,
+      "number_bedrooms": 4.4502,
+      "number_bathrooms": 5.4502
+    }
+  },
+  {
+    "key": 384,
+    "address": "ex",
+    "values": {
+      "square_footage": 20963,
+      "price": 419260,
+      "utilities": 0,
+      "number_bedrooms": 4.1926,
+      "number_bathrooms": 5.1926
+    }
+  },
+  {
+    "key": 385,
+    "address": "magna",
+    "values": {
+      "square_footage": 17241,
+      "price": 344820,
+      "utilities": 0,
+      "number_bedrooms": 3.4482,
+      "number_bathrooms": 4.4482
+    }
+  },
+  {
+    "key": 386,
+    "address": "et",
+    "values": {
+      "square_footage": 20622,
+      "price": 412440,
+      "utilities": 0,
+      "number_bedrooms": 4.1244,
+      "number_bathrooms": 5.1244
+    }
+  },
+  {
+    "key": 387,
+    "address": "et",
+    "values": {
+      "square_footage": 24446,
+      "price": 488920,
+      "utilities": 1,
+      "number_bedrooms": 4.8892,
+      "number_bathrooms": 5.8892
+    }
+  },
+  {
+    "key": 388,
+    "address": "ea",
+    "values": {
+      "square_footage": 22935,
+      "price": 458700,
+      "utilities": 1,
+      "number_bedrooms": 4.587,
+      "number_bathrooms": 5.587
+    }
+  },
+  {
+    "key": 389,
+    "address": "excepteur",
+    "values": {
+      "square_footage": 16267,
+      "price": 325340,
+      "utilities": 0,
+      "number_bedrooms": 3.2534,
+      "number_bathrooms": 4.2534
+    }
+  },
+  {
+    "key": 390,
+    "address": "dolore",
+    "values": {
+      "square_footage": 8969,
+      "price": 179380,
+      "utilities": 1,
+      "number_bedrooms": 1.7938,
+      "number_bathrooms": 2.7938
+    }
+  },
+  {
+    "key": 391,
+    "address": "eiusmod",
+    "values": {
+      "square_footage": 8044,
+      "price": 160880,
+      "utilities": 1,
+      "number_bedrooms": 1.6088,
+      "number_bathrooms": 2.6088
+    }
+  },
+  {
+    "key": 392,
+    "address": "veniam",
+    "values": {
+      "square_footage": 6845,
+      "price": 136900,
+      "utilities": 1,
+      "number_bedrooms": 1.369,
+      "number_bathrooms": 2.369
+    }
+  },
+  {
+    "key": 393,
+    "address": "aliqua",
+    "values": {
+      "square_footage": 1469,
+      "price": 29380,
+      "utilities": 0,
+      "number_bedrooms": 0.2938,
+      "number_bathrooms": 1.2938
+    }
+  },
+  {
+    "key": 394,
+    "address": "laboris",
+    "values": {
+      "square_footage": 21405,
+      "price": 428100,
+      "utilities": 1,
+      "number_bedrooms": 4.281,
+      "number_bathrooms": 5.281
+    }
+  },
+  {
+    "key": 395,
+    "address": "ad",
+    "values": {
+      "square_footage": 19018,
+      "price": 380360,
+      "utilities": 1,
+      "number_bedrooms": 3.8036,
+      "number_bathrooms": 4.8036
+    }
+  },
+  {
+    "key": 396,
+    "address": "sint",
+    "values": {
+      "square_footage": 16848,
+      "price": 336960,
+      "utilities": 1,
+      "number_bedrooms": 3.3696,
+      "number_bathrooms": 4.3696
+    }
+  },
+  {
+    "key": 397,
+    "address": "enim",
+    "values": {
+      "square_footage": 17254,
+      "price": 345080,
+      "utilities": 0,
+      "number_bedrooms": 3.4508,
+      "number_bathrooms": 4.4508
+    }
+  },
+  {
+    "key": 398,
+    "address": "quis",
+    "values": {
+      "square_footage": 9035,
+      "price": 180700,
+      "utilities": 1,
+      "number_bedrooms": 1.807,
+      "number_bathrooms": 2.807
+    }
+  },
+  {
+    "key": 399,
+    "address": "incididunt",
+    "values": {
+      "square_footage": 12605,
+      "price": 252100,
+      "utilities": 1,
+      "number_bedrooms": 2.521,
+      "number_bathrooms": 3.521
+    }
+  },
+  {
+    "key": 400,
+    "address": "ut",
+    "values": {
+      "square_footage": 1293,
+      "price": 25860,
+      "utilities": 1,
+      "number_bedrooms": 0.2586,
+      "number_bathrooms": 1.2586
+    }
+  },
+  {
+    "key": 401,
+    "address": "commodo",
+    "values": {
+      "square_footage": 22069,
+      "price": 441380,
+      "utilities": 0,
+      "number_bedrooms": 4.4138,
+      "number_bathrooms": 5.4138
+    }
+  },
+  {
+    "key": 402,
+    "address": "ad",
+    "values": {
+      "square_footage": 13278,
+      "price": 265560,
+      "utilities": 0,
+      "number_bedrooms": 2.6556,
+      "number_bathrooms": 3.6556
+    }
+  },
+  {
+    "key": 403,
+    "address": "esse",
+    "values": {
+      "square_footage": 14632,
+      "price": 292640,
+      "utilities": 0,
+      "number_bedrooms": 2.9264,
+      "number_bathrooms": 3.9264
+    }
+  },
+  {
+    "key": 404,
+    "address": "eu",
+    "values": {
+      "square_footage": 16238,
+      "price": 324760,
+      "utilities": 1,
+      "number_bedrooms": 3.2476,
+      "number_bathrooms": 4.2476
+    }
+  },
+  {
+    "key": 405,
+    "address": "ullamco",
+    "values": {
+      "square_footage": 2000,
+      "price": 40000,
+      "utilities": 0,
+      "number_bedrooms": 0.4,
+      "number_bathrooms": 1.4
+    }
+  },
+  {
+    "key": 406,
+    "address": "aliquip",
+    "values": {
+      "square_footage": 5030,
+      "price": 100600,
+      "utilities": 0,
+      "number_bedrooms": 1.006,
+      "number_bathrooms": 2.006
+    }
+  },
+  {
+    "key": 407,
+    "address": "magna",
+    "values": {
+      "square_footage": 19011,
+      "price": 380220,
+      "utilities": 1,
+      "number_bedrooms": 3.8022,
+      "number_bathrooms": 4.8022
+    }
+  },
+  {
+    "key": 408,
+    "address": "adipisicing",
+    "values": {
+      "square_footage": 19150,
+      "price": 383000,
+      "utilities": 0,
+      "number_bedrooms": 3.83,
+      "number_bathrooms": 4.83
+    }
+  },
+  {
+    "key": 409,
+    "address": "anim",
+    "values": {
+      "square_footage": 12570,
+      "price": 251400,
+      "utilities": 0,
+      "number_bedrooms": 2.514,
+      "number_bathrooms": 3.514
+    }
+  },
+  {
+    "key": 410,
+    "address": "amet",
+    "values": {
+      "square_footage": 7747,
+      "price": 154940,
+      "utilities": 1,
+      "number_bedrooms": 1.5494,
+      "number_bathrooms": 2.5494
+    }
+  },
+  {
+    "key": 411,
+    "address": "sit",
+    "values": {
+      "square_footage": 2131,
+      "price": 42620,
+      "utilities": 1,
+      "number_bedrooms": 0.4262,
+      "number_bathrooms": 1.4262
+    }
+  },
+  {
+    "key": 412,
+    "address": "reprehenderit",
+    "values": {
+      "square_footage": 24723,
+      "price": 494460,
+      "utilities": 1,
+      "number_bedrooms": 4.9446,
+      "number_bathrooms": 5.9446
+    }
+  },
+  {
+    "key": 413,
+    "address": "enim",
+    "values": {
+      "square_footage": 3368,
+      "price": 67360,
+      "utilities": 0,
+      "number_bedrooms": 0.6736,
+      "number_bathrooms": 1.6736
+    }
+  },
+  {
+    "key": 414,
+    "address": "cillum",
+    "values": {
+      "square_footage": 22214,
+      "price": 444280,
+      "utilities": 0,
+      "number_bedrooms": 4.4428,
+      "number_bathrooms": 5.4428
+    }
+  },
+  {
+    "key": 415,
+    "address": "exercitation",
+    "values": {
+      "square_footage": 22789,
+      "price": 455780,
+      "utilities": 0,
+      "number_bedrooms": 4.5578,
+      "number_bathrooms": 5.5578
+    }
+  },
+  {
+    "key": 416,
+    "address": "qui",
+    "values": {
+      "square_footage": 12120,
+      "price": 242400,
+      "utilities": 0,
+      "number_bedrooms": 2.424,
+      "number_bathrooms": 3.424
+    }
+  },
+  {
+    "key": 417,
+    "address": "ipsum",
+    "values": {
+      "square_footage": 14208,
+      "price": 284160,
+      "utilities": 0,
+      "number_bedrooms": 2.8416,
+      "number_bathrooms": 3.8416
+    }
+  },
+  {
+    "key": 418,
+    "address": "ullamco",
+    "values": {
+      "square_footage": 12600,
+      "price": 252000,
+      "utilities": 0,
+      "number_bedrooms": 2.52,
+      "number_bathrooms": 3.52
+    }
+  },
+  {
+    "key": 419,
+    "address": "reprehenderit",
+    "values": {
+      "square_footage": 24201,
+      "price": 484020,
+      "utilities": 1,
+      "number_bedrooms": 4.8402,
+      "number_bathrooms": 5.8402
+    }
+  },
+  {
+    "key": 420,
+    "address": "est",
+    "values": {
+      "square_footage": 22995,
+      "price": 459900,
+      "utilities": 1,
+      "number_bedrooms": 4.599,
+      "number_bathrooms": 5.599
+    }
+  },
+  {
+    "key": 421,
+    "address": "officia",
+    "values": {
+      "square_footage": 13963,
+      "price": 279260,
+      "utilities": 0,
+      "number_bedrooms": 2.7926,
+      "number_bathrooms": 3.7926
+    }
+  },
+  {
+    "key": 422,
+    "address": "in",
+    "values": {
+      "square_footage": 11479,
+      "price": 229580,
+      "utilities": 0,
+      "number_bedrooms": 2.2958,
+      "number_bathrooms": 3.2958
+    }
+  },
+  {
+    "key": 423,
+    "address": "consequat",
+    "values": {
+      "square_footage": 20318,
+      "price": 406360,
+      "utilities": 1,
+      "number_bedrooms": 4.0636,
+      "number_bathrooms": 5.0636
+    }
+  },
+  {
+    "key": 424,
+    "address": "dolor",
+    "values": {
+      "square_footage": 10181,
+      "price": 203620,
+      "utilities": 0,
+      "number_bedrooms": 2.0362,
+      "number_bathrooms": 3.0362
+    }
+  },
+  {
+    "key": 425,
+    "address": "reprehenderit",
+    "values": {
+      "square_footage": 5528,
+      "price": 110560,
+      "utilities": 1,
+      "number_bedrooms": 1.1056,
+      "number_bathrooms": 2.1056
+    }
+  },
+  {
+    "key": 426,
+    "address": "non",
+    "values": {
+      "square_footage": 23833,
+      "price": 476660,
+      "utilities": 0,
+      "number_bedrooms": 4.7666,
+      "number_bathrooms": 5.7666
+    }
+  },
+  {
+    "key": 427,
+    "address": "tempor",
+    "values": {
+      "square_footage": 22496,
+      "price": 449920,
+      "utilities": 0,
+      "number_bedrooms": 4.4992,
+      "number_bathrooms": 5.4992
+    }
+  },
+  {
+    "key": 428,
+    "address": "qui",
+    "values": {
+      "square_footage": 11791,
+      "price": 235820,
+      "utilities": 1,
+      "number_bedrooms": 2.3582,
+      "number_bathrooms": 3.3582
+    }
+  },
+  {
+    "key": 429,
+    "address": "laboris",
+    "values": {
+      "square_footage": 7877,
+      "price": 157540,
+      "utilities": 0,
+      "number_bedrooms": 1.5754,
+      "number_bathrooms": 2.5754
+    }
+  },
+  {
+    "key": 430,
+    "address": "consectetur",
+    "values": {
+      "square_footage": 13797,
+      "price": 275940,
+      "utilities": 1,
+      "number_bedrooms": 2.7594,
+      "number_bathrooms": 3.7594
+    }
+  },
+  {
+    "key": 431,
+    "address": "mollit",
+    "values": {
+      "square_footage": 6133,
+      "price": 122660,
+      "utilities": 1,
+      "number_bedrooms": 1.2266,
+      "number_bathrooms": 2.2266
+    }
+  },
+  {
+    "key": 432,
+    "address": "eiusmod",
+    "values": {
+      "square_footage": 3751,
+      "price": 75020,
+      "utilities": 1,
+      "number_bedrooms": 0.7502,
+      "number_bathrooms": 1.7502
+    }
+  },
+  {
+    "key": 433,
+    "address": "excepteur",
+    "values": {
+      "square_footage": 17417,
+      "price": 348340,
+      "utilities": 0,
+      "number_bedrooms": 3.4834,
+      "number_bathrooms": 4.4834
+    }
+  },
+  {
+    "key": 434,
+    "address": "nisi",
+    "values": {
+      "square_footage": 18920,
+      "price": 378400,
+      "utilities": 1,
+      "number_bedrooms": 3.784,
+      "number_bathrooms": 4.784
+    }
+  },
+  {
+    "key": 435,
+    "address": "aute",
+    "values": {
+      "square_footage": 21460,
+      "price": 429200,
+      "utilities": 1,
+      "number_bedrooms": 4.292,
+      "number_bathrooms": 5.292
+    }
+  },
+  {
+    "key": 436,
+    "address": "ad",
+    "values": {
+      "square_footage": 24793,
+      "price": 495860,
+      "utilities": 1,
+      "number_bedrooms": 4.9586,
+      "number_bathrooms": 5.9586
+    }
+  },
+  {
+    "key": 437,
+    "address": "incididunt",
+    "values": {
+      "square_footage": 2506,
+      "price": 50120,
+      "utilities": 1,
+      "number_bedrooms": 0.5012,
+      "number_bathrooms": 1.5012
+    }
+  },
+  {
+    "key": 438,
+    "address": "in",
+    "values": {
+      "square_footage": 1738,
+      "price": 34760,
+      "utilities": 1,
+      "number_bedrooms": 0.3476,
+      "number_bathrooms": 1.3476
+    }
+  },
+  {
+    "key": 439,
+    "address": "officia",
+    "values": {
+      "square_footage": 24148,
+      "price": 482960,
+      "utilities": 1,
+      "number_bedrooms": 4.8296,
+      "number_bathrooms": 5.8296
+    }
+  },
+  {
+    "key": 440,
+    "address": "pariatur",
+    "values": {
+      "square_footage": 17736,
+      "price": 354720,
+      "utilities": 0,
+      "number_bedrooms": 3.5472,
+      "number_bathrooms": 4.5472
+    }
+  },
+  {
+    "key": 441,
+    "address": "aliqua",
+    "values": {
+      "square_footage": 7081,
+      "price": 141620,
+      "utilities": 0,
+      "number_bedrooms": 1.4162,
+      "number_bathrooms": 2.4162
+    }
+  },
+  {
+    "key": 442,
+    "address": "laboris",
+    "values": {
+      "square_footage": 6312,
+      "price": 126240,
+      "utilities": 0,
+      "number_bedrooms": 1.2624,
+      "number_bathrooms": 2.2624
+    }
+  },
+  {
+    "key": 443,
+    "address": "velit",
+    "values": {
+      "square_footage": 2885,
+      "price": 57700,
+      "utilities": 0,
+      "number_bedrooms": 0.577,
+      "number_bathrooms": 1.577
+    }
+  },
+  {
+    "key": 444,
+    "address": "sunt",
+    "values": {
+      "square_footage": 2378,
+      "price": 47560,
+      "utilities": 0,
+      "number_bedrooms": 0.4756,
+      "number_bathrooms": 1.4756
+    }
+  },
+  {
+    "key": 445,
+    "address": "voluptate",
+    "values": {
+      "square_footage": 8180,
+      "price": 163600,
+      "utilities": 0,
+      "number_bedrooms": 1.636,
+      "number_bathrooms": 2.636
+    }
+  },
+  {
+    "key": 446,
+    "address": "veniam",
+    "values": {
+      "square_footage": 24845,
+      "price": 496900,
+      "utilities": 0,
+      "number_bedrooms": 4.969,
+      "number_bathrooms": 5.969
+    }
+  },
+  {
+    "key": 447,
+    "address": "ipsum",
+    "values": {
+      "square_footage": 1393,
+      "price": 27860,
+      "utilities": 0,
+      "number_bedrooms": 0.2786,
+      "number_bathrooms": 1.2786
+    }
+  },
+  {
+    "key": 448,
+    "address": "consectetur",
+    "values": {
+      "square_footage": 3361,
+      "price": 67220,
+      "utilities": 1,
+      "number_bedrooms": 0.6722,
+      "number_bathrooms": 1.6722
+    }
+  },
+  {
+    "key": 449,
+    "address": "elit",
+    "values": {
+      "square_footage": 8125,
+      "price": 162500,
+      "utilities": 1,
+      "number_bedrooms": 1.625,
+      "number_bathrooms": 2.625
+    }
+  },
+  {
+    "key": 450,
+    "address": "nulla",
+    "values": {
+      "square_footage": 20000,
+      "price": 400000,
+      "utilities": 1,
+      "number_bedrooms": 4,
+      "number_bathrooms": 5
+    }
+  },
+  {
+    "key": 451,
+    "address": "sunt",
+    "values": {
+      "square_footage": 22608,
+      "price": 452160,
+      "utilities": 1,
+      "number_bedrooms": 4.5216,
+      "number_bathrooms": 5.5216
+    }
+  },
+  {
+    "key": 452,
+    "address": "minim",
+    "values": {
+      "square_footage": 17032,
+      "price": 340640,
+      "utilities": 1,
+      "number_bedrooms": 3.4064,
+      "number_bathrooms": 4.4064
+    }
+  },
+  {
+    "key": 453,
+    "address": "nisi",
+    "values": {
+      "square_footage": 18037,
+      "price": 360740,
+      "utilities": 0,
+      "number_bedrooms": 3.6074,
+      "number_bathrooms": 4.6074
+    }
+  },
+  {
+    "key": 454,
+    "address": "nulla",
+    "values": {
+      "square_footage": 13838,
+      "price": 276760,
+      "utilities": 0,
+      "number_bedrooms": 2.7676,
+      "number_bathrooms": 3.7676
+    }
+  },
+  {
+    "key": 455,
+    "address": "esse",
+    "values": {
+      "square_footage": 14169,
+      "price": 283380,
+      "utilities": 0,
+      "number_bedrooms": 2.8338,
+      "number_bathrooms": 3.8338
+    }
+  },
+  {
+    "key": 456,
+    "address": "officia",
+    "values": {
+      "square_footage": 15352,
+      "price": 307040,
+      "utilities": 0,
+      "number_bedrooms": 3.0704,
+      "number_bathrooms": 4.0704
+    }
+  },
+  {
+    "key": 457,
+    "address": "sit",
+    "values": {
+      "square_footage": 6322,
+      "price": 126440,
+      "utilities": 1,
+      "number_bedrooms": 1.2644,
+      "number_bathrooms": 2.2644
+    }
+  },
+  {
+    "key": 458,
+    "address": "elit",
+    "values": {
+      "square_footage": 19206,
+      "price": 384120,
+      "utilities": 1,
+      "number_bedrooms": 3.8412,
+      "number_bathrooms": 4.8412
+    }
+  },
+  {
+    "key": 459,
+    "address": "nulla",
+    "values": {
+      "square_footage": 1385,
+      "price": 27700,
+      "utilities": 1,
+      "number_bedrooms": 0.277,
+      "number_bathrooms": 1.277
+    }
+  },
+  {
+    "key": 460,
+    "address": "aliquip",
+    "values": {
+      "square_footage": 17097,
+      "price": 341940,
+      "utilities": 0,
+      "number_bedrooms": 3.4194,
+      "number_bathrooms": 4.4194
+    }
+  },
+  {
+    "key": 461,
+    "address": "enim",
+    "values": {
+      "square_footage": 15341,
+      "price": 306820,
+      "utilities": 1,
+      "number_bedrooms": 3.0682,
+      "number_bathrooms": 4.0682
+    }
+  },
+  {
+    "key": 462,
+    "address": "veniam",
+    "values": {
+      "square_footage": 7786,
+      "price": 155720,
+      "utilities": 1,
+      "number_bedrooms": 1.5572,
+      "number_bathrooms": 2.5572
+    }
+  },
+  {
+    "key": 463,
+    "address": "in",
+    "values": {
+      "square_footage": 13046,
+      "price": 260920,
+      "utilities": 0,
+      "number_bedrooms": 2.6092,
+      "number_bathrooms": 3.6092
+    }
+  },
+  {
+    "key": 464,
+    "address": "exercitation",
+    "values": {
+      "square_footage": 7494,
+      "price": 149880,
+      "utilities": 1,
+      "number_bedrooms": 1.4988,
+      "number_bathrooms": 2.4988
+    }
+  },
+  {
+    "key": 465,
+    "address": "eu",
+    "values": {
+      "square_footage": 5434,
+      "price": 108680,
+      "utilities": 1,
+      "number_bedrooms": 1.0868,
+      "number_bathrooms": 2.0868
+    }
+  },
+  {
+    "key": 466,
+    "address": "mollit",
+    "values": {
+      "square_footage": 2117,
+      "price": 42340,
+      "utilities": 1,
+      "number_bedrooms": 0.4234,
+      "number_bathrooms": 1.4234
+    }
+  },
+  {
+    "key": 467,
+    "address": "tempor",
+    "values": {
+      "square_footage": 8731,
+      "price": 174620,
+      "utilities": 0,
+      "number_bedrooms": 1.7462,
+      "number_bathrooms": 2.7462
+    }
+  },
+  {
+    "key": 468,
+    "address": "consequat",
+    "values": {
+      "square_footage": 17111,
+      "price": 342220,
+      "utilities": 0,
+      "number_bedrooms": 3.4222,
+      "number_bathrooms": 4.4222
+    }
+  },
+  {
+    "key": 469,
+    "address": "ex",
+    "values": {
+      "square_footage": 24435,
+      "price": 488700,
+      "utilities": 1,
+      "number_bedrooms": 4.887,
+      "number_bathrooms": 5.887
+    }
+  },
+  {
+    "key": 470,
+    "address": "cupidatat",
+    "values": {
+      "square_footage": 22027,
+      "price": 440540,
+      "utilities": 0,
+      "number_bedrooms": 4.4054,
+      "number_bathrooms": 5.4054
+    }
+  },
+  {
+    "key": 471,
+    "address": "aliquip",
+    "values": {
+      "square_footage": 9530,
+      "price": 190600,
+      "utilities": 0,
+      "number_bedrooms": 1.906,
+      "number_bathrooms": 2.906
+    }
+  },
+  {
+    "key": 472,
+    "address": "eu",
+    "values": {
+      "square_footage": 11378,
+      "price": 227560,
+      "utilities": 0,
+      "number_bedrooms": 2.2756,
+      "number_bathrooms": 3.2756
+    }
+  },
+  {
+    "key": 473,
+    "address": "cupidatat",
+    "values": {
+      "square_footage": 4077,
+      "price": 81540,
+      "utilities": 0,
+      "number_bedrooms": 0.8154,
+      "number_bathrooms": 1.8154
+    }
+  },
+  {
+    "key": 474,
+    "address": "pariatur",
+    "values": {
+      "square_footage": 20391,
+      "price": 407820,
+      "utilities": 1,
+      "number_bedrooms": 4.0782,
+      "number_bathrooms": 5.0782
+    }
+  },
+  {
+    "key": 475,
+    "address": "sunt",
+    "values": {
+      "square_footage": 24769,
+      "price": 495380,
+      "utilities": 1,
+      "number_bedrooms": 4.9538,
+      "number_bathrooms": 5.9538
+    }
+  },
+  {
+    "key": 476,
+    "address": "non",
+    "values": {
+      "square_footage": 17999,
+      "price": 359980,
+      "utilities": 1,
+      "number_bedrooms": 3.5998,
+      "number_bathrooms": 4.5998
+    }
+  },
+  {
+    "key": 477,
+    "address": "consequat",
+    "values": {
+      "square_footage": 19475,
+      "price": 389500,
+      "utilities": 0,
+      "number_bedrooms": 3.895,
+      "number_bathrooms": 4.895
+    }
+  },
+  {
+    "key": 478,
+    "address": "incididunt",
+    "values": {
+      "square_footage": 24621,
+      "price": 492420,
+      "utilities": 0,
+      "number_bedrooms": 4.9242,
+      "number_bathrooms": 5.9242
+    }
+  },
+  {
+    "key": 479,
+    "address": "aute",
+    "values": {
+      "square_footage": 1452,
+      "price": 29040,
+      "utilities": 0,
+      "number_bedrooms": 0.2904,
+      "number_bathrooms": 1.2904
+    }
+  },
+  {
+    "key": 480,
+    "address": "proident",
+    "values": {
+      "square_footage": 7162,
+      "price": 143240,
+      "utilities": 1,
+      "number_bedrooms": 1.4324,
+      "number_bathrooms": 2.4324
+    }
+  },
+  {
+    "key": 481,
+    "address": "labore",
+    "values": {
+      "square_footage": 20654,
+      "price": 413080,
+      "utilities": 1,
+      "number_bedrooms": 4.1308,
+      "number_bathrooms": 5.1308
+    }
+  },
+  {
+    "key": 482,
+    "address": "enim",
+    "values": {
+      "square_footage": 13178,
+      "price": 263560,
+      "utilities": 0,
+      "number_bedrooms": 2.6356,
+      "number_bathrooms": 3.6356
+    }
+  },
+  {
+    "key": 483,
+    "address": "commodo",
+    "values": {
+      "square_footage": 4787,
+      "price": 95740,
+      "utilities": 1,
+      "number_bedrooms": 0.9574,
+      "number_bathrooms": 1.9574
+    }
+  },
+  {
+    "key": 484,
+    "address": "consequat",
+    "values": {
+      "square_footage": 13087,
+      "price": 261740,
+      "utilities": 1,
+      "number_bedrooms": 2.6174,
+      "number_bathrooms": 3.6174
+    }
+  },
+  {
+    "key": 485,
+    "address": "aliqua",
+    "values": {
+      "square_footage": 5470,
+      "price": 109400,
+      "utilities": 0,
+      "number_bedrooms": 1.094,
+      "number_bathrooms": 2.094
+    }
+  },
+  {
+    "key": 486,
+    "address": "in",
+    "values": {
+      "square_footage": 20228,
+      "price": 404560,
+      "utilities": 1,
+      "number_bedrooms": 4.0456,
+      "number_bathrooms": 5.0456
+    }
+  },
+  {
+    "key": 487,
+    "address": "pariatur",
+    "values": {
+      "square_footage": 3572,
+      "price": 71440,
+      "utilities": 1,
+      "number_bedrooms": 0.7144,
+      "number_bathrooms": 1.7144
+    }
+  },
+  {
+    "key": 488,
+    "address": "aute",
+    "values": {
+      "square_footage": 13844,
+      "price": 276880,
+      "utilities": 1,
+      "number_bedrooms": 2.7688,
+      "number_bathrooms": 3.7688
+    }
+  },
+  {
+    "key": 489,
+    "address": "ad",
+    "values": {
+      "square_footage": 3912,
+      "price": 78240,
+      "utilities": 0,
+      "number_bedrooms": 0.7824,
+      "number_bathrooms": 1.7824
+    }
+  },
+  {
+    "key": 490,
+    "address": "consequat",
+    "values": {
+      "square_footage": 4567,
+      "price": 91340,
+      "utilities": 1,
+      "number_bedrooms": 0.9134,
+      "number_bathrooms": 1.9134
+    }
+  },
+  {
+    "key": 491,
+    "address": "dolore",
+    "values": {
+      "square_footage": 7578,
+      "price": 151560,
+      "utilities": 1,
+      "number_bedrooms": 1.5156,
+      "number_bathrooms": 2.5156
+    }
+  },
+  {
+    "key": 492,
+    "address": "nostrud",
+    "values": {
+      "square_footage": 14485,
+      "price": 289700,
+      "utilities": 1,
+      "number_bedrooms": 2.897,
+      "number_bathrooms": 3.897
+    }
+  },
+  {
+    "key": 493,
+    "address": "fugiat",
+    "values": {
+      "square_footage": 15409,
+      "price": 308180,
+      "utilities": 1,
+      "number_bedrooms": 3.0818,
+      "number_bathrooms": 4.0818
+    }
+  },
+  {
+    "key": 494,
+    "address": "nulla",
+    "values": {
+      "square_footage": 14595,
+      "price": 291900,
+      "utilities": 1,
+      "number_bedrooms": 2.919,
+      "number_bathrooms": 3.919
+    }
+  },
+  {
+    "key": 495,
+    "address": "occaecat",
+    "values": {
+      "square_footage": 21355,
+      "price": 427100,
+      "utilities": 0,
+      "number_bedrooms": 4.271,
+      "number_bathrooms": 5.271
+    }
+  },
+  {
+    "key": 496,
+    "address": "ex",
+    "values": {
+      "square_footage": 20090,
+      "price": 401800,
+      "utilities": 1,
+      "number_bedrooms": 4.018,
+      "number_bathrooms": 5.018
+    }
+  },
+  {
+    "key": 497,
+    "address": "ad",
+    "values": {
+      "square_footage": 14951,
+      "price": 299020,
+      "utilities": 1,
+      "number_bedrooms": 2.9902,
+      "number_bathrooms": 3.9902
+    }
+  },
+  {
+    "key": 498,
+    "address": "commodo",
+    "values": {
+      "square_footage": 12461,
+      "price": 249220,
+      "utilities": 0,
+      "number_bedrooms": 2.4922,
+      "number_bathrooms": 3.4922
+    }
+  },
+  {
+    "key": 499,
+    "address": "ex",
+    "values": {
+      "square_footage": 1464,
+      "price": 29280,
+      "utilities": 1,
+      "number_bedrooms": 0.2928,
+      "number_bathrooms": 1.2928
+    }
+  }
+]
+}
