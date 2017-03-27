@@ -13,8 +13,6 @@ import org.json.*;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.ibm.watson.developer_cloud.tradeoff_analytics.v1.TradeoffAnalytics;
 import com.ibm.watson.developer_cloud.tradeoff_analytics.v1.model.Problem;
 
@@ -67,7 +65,7 @@ public class houselist {
     }
 
     public String make_request() {
-       /* return "{\"options\": [\n" +
+       /*return "{\"options\": [\n" +
                 "    {\n" +
                 "      \"key\": 0,\n" +
                 "      \"address\": \"1701 NCC Enterprise St.\",\n" +
@@ -151,10 +149,76 @@ public class houselist {
         return this_house;
     }
 
-    public String convert_to_gson() {
-        Gson gson = new Gson();
-        JsonElement jsonElement = gson.toJsonTree(avgScores).getAsJsonObject();
-        return jsonElement.getAsString();
+    public String convert_to_json() {
+        /* return "{\"avg_scores\": [\n" +
+                "    {\n" +
+                "      \"key\": 0,\n" +
+                "      \"address\": \"1701 NCC Enterprise St.\",\n" +
+                "      \"values\": {\n" +
+                "        \"price\": 38308,\n" +
+                "        \"square_footage\": 17909,\n" +
+                "        \"utilities\": 0,\n" +
+                "        \"number_bedrooms\": 0,\n" +
+                "        \"number_bathrooms\": 2\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"key\": 1,\n" +
+                "      \"address\": \"1701 NCC Enterprise St.\",\n" +
+                "      \"values\": {\n" +
+                "        \"price\": 35744,\n" +
+                "        \"square_footage\": 1523,\n" +
+                "        \"utilities\": 0,\n" +
+                "        \"number_bedrooms\": 2,\n" +
+                "        \"number_bathrooms\": 5\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"key\": 2,\n" +
+                "      \"address\": \"1701 NCC Enterprise St.\",\n" +
+                "      \"values\": {\n" +
+                "        \"price\": 216190,\n" +
+                "        \"square_footage\": 8043,\n" +
+                "        \"utilities\": 1,\n" +
+                "        \"number_bedrooms\": 5,\n" +
+                "        \"number_bathrooms\": 4\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"key\": 3,\n" +
+                "      \"address\": \"1701 NCC Enterprise St.\",\n" +
+                "      \"values\": {\n" +
+                "        \"price\": 75325,\n" +
+                "        \"square_footage\": 5519,\n" +
+                "        \"utilities\": 1,\n" +
+                "        \"number_bedrooms\": 4,\n" +
+                "        \"number_bathrooms\": 0\n" +
+                "      }\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"key\": 4,\n" +
+                "      \"address\": \"1701 NCC Enterprise St.\",\n" +
+                "      \"values\": {\n" +
+                "        \"price\": 113001,\n" +
+                "        \"square_footage\": 22621,\n" +
+                "        \"utilities\": 1,\n" +
+                "        \"number_bedrooms\": 3,\n" +
+                "        \"number_bathrooms\": 0\n" +
+                "      }\n" +
+                "    }]}";
+                */
+        JSONObject json = new JSONObject();
+        JSONObject avg = new JSONObject();
+        try {
+            avg.put("Price_Avg", avgScores.getPrice_avg());
+            avg.put("Bath_Avg", avgScores.getBath_avg());
+            avg.put("Bed_Avg", avgScores.getBed_avg());
+            avg.put("Util_Avg", avgScores.getUt_avg());
+            avg.put("Sqft_Avg", avgScores.getSqft_avg());
+            json.put("avg", avg);
+        } catch (JSONException e) { Log.v("HOUSE LIST", "MALFORMED JSON");}
+
+        return json.toString();
     }
 
     public void set_feedback(int like) {
@@ -198,7 +262,7 @@ public class houselist {
 
 
         private String makeHttpReq(URL url) throws IOException {
-            String avgData = convert_to_gson();
+            String avgData = convert_to_json();
             String response = "";
             HttpURLConnection urlCon = null;
             OutputStream outStr = null;
